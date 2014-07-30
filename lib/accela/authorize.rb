@@ -9,5 +9,39 @@ module Accela
       @environment = environment
     end
 
+    def login(username, password, scope)
+      complete_body = body.merge({
+        "username" => username,
+        "password" => password,
+        "scope" => scope
+      })
+
+      response = HTTParty.post("https://apis.accela.com/oauth2/token",
+                               headers: headers,
+                               body: complete_body)
+      if response.code == 200
+        response.parsed_response
+      end
+    end
+
+    private
+
+    def headers
+      headers = {
+        "Content-Type" => "application/x-www-form-urlencoded",
+        "x-accela-appid" => "abcd"
+      }
+    end
+
+    def body
+      body =  {
+        "grant_type" => "password",
+        "agency_name" => agency,
+        "environment" => environment,
+        "client_id" => app_id,
+        "client_secret" => app_secret
+      }
+    end
+
   end
 end
