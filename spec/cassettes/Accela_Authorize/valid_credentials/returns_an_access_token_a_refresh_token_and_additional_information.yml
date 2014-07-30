@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=ISLANDTON-APP&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - abcd
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140730151951038-4aa8c42c
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 30 Jul 2014 15:19:51 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"uSvHZVI0AwzVPU59fwr83Lxj2ka0D3OnK7RCO24V-a711ekObu5meEJFBfBZiqvWMjEJ51m3cHdHBjUEDl2YsNoTYqMjjCKGafihh83UEGn8_8PslolFWpHgfg-CVer-zTAv8UHHWn-czRvV2bu86vU1iF5X5a9qlV0Ne_YBpXi2PfV07QIiR4KY0JUedewPFSA0qpg5jFt0tc_A66vE8y4EugcTyKG3VEpbrsVCXnJCd9017RVAD45szgR7iqfkiE-A_UUzCMTMmlzwxvtzRsELKgf76-IEGpNApRQi7WerIyY-Kfngdo5gXsBC2RdHQG2e4GuVvFW8jfxHVPcyGbqX3uOeZPoZKxaNOvzGJc7FSEJw7kQ8TIq7Z_PUkT4VV-js8dfF0H0pxqf8xXPabub4f1VYNNCG45E5fVQnEWYJoZTvmLwhWCc3aON0Dps10","token_type":"bearer","expires_in":"86400","refresh_token":"f4YS!IAAAACgkveIejOG3bveW5JqHzTbxYP6SuMoS4YOY8KNpU4t04QAAAAH_f6-S0jklzTPQETO8zaeJ_VT6OtKd8n3_VGNg-sYI8dnjbYEKY1VeAX6QR5WmqgvSUwOISq4_2atDRaenD1KXO6UbSjZ7LHhei3RZ1Q_z_Jy5cv5G91Xm-lHU4RdPpuzEmu2TMMR5UL028ggJcpdK6-__JrekaWx0Z0I0agKDLICDjm_hMd-0ARsns4Onmg7HU6kNoyD1pL2zgGm1bggOtICoQE1at-S5ouFAvAKYleHUj4nCXUfpR0ELEnp6r6AzHiuxx-_z5yhovMGX_zMigfNp2JHsQeuAUNlmhyHgaQ","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Wed, 30 Jul 2014 15:19:51 GMT
+recorded_with: VCR 2.9.2
