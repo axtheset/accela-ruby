@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + "/../spec_helper")
 
-describe Accela::Authorize do
-  it "returns an access token, a refresh token and additional information", :vcr do
+describe Accela::Authorize, :vcr do
+  it "returns an access token, a refresh token and additional information" do
     app_id = "635395466279594650"
     app_secret ="3b1e4026d95e4478a0f8dd1f7a1b7028"
     agency = "ISLANDTON-APP"
