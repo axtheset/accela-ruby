@@ -10,4 +10,10 @@ unless defined?(SPEC_HELPER_LOADED)
   accela_lib = "#{project_root}/lib"
   $LOAD_PATH << accela_lib
   require "accela"
+
+  Accela::Configuration.app_id = "635395466279594650"
+  Accela::Configuration.app_secret = "3b1e4026d95e4478a0f8dd1f7a1b7028"
+  Accela::Configuration.agency = "ISLANDTON-APP"
+  Accela::Configuration.environment = "TEST"
+
 end

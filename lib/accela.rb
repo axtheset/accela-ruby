@@ -1,3 +1,6 @@
+require "accela/api"
 require "accela/authorize"
+require "accela/configuration"
+require "accela/exceptions"
 require "accela/token"
 require "accela/version"

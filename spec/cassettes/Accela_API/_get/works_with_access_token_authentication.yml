@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=ISLANDTON-APP&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - abcd
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140730202433659-dc43ce0b
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 30 Jul 2014 20:24:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"cuvu42z1wcxNI_8bhTHaFtWFIeJnVKaPmc-AM27F8QKoEqI7qUxGk85sflwtwlJTs71s6BzWWh_wPeGWZ9HE6dX6bBG7a_mTEUEdO7QqiCqElYhlV2uUcmz7HrDhdLY_IytnAl20idYjEbnK7tSbWHyuGerQGlCOuvVcKyPQ-_829Ma4y3UN_XUdYX8brBP5Dcj2IXvz8FS9-7mvo2C0ReEfCEvksJkAV9mE5GTacx558NjTEdbVTHeuxgxZQXZ6FE_Qc186OmEyeJuPM9erZ4RQuOW7GF03xKYyP44o-k7PYZ94C0wBgXYkm-P1aPzEyH75Y4Nr_bklG2JWgpg8Si1DXR6swb_2r1n4u0rdSTD0lVhwAaipEWKWI12OkvPCgPEZ3oR7XNKEB1gV0jDquXRDUVS_BEgRMaousGRjI8oUhVW6sSZsxNorcr8wRuMC0","token_type":"bearer","expires_in":"86400","refresh_token":"f4YS!IAAAALcvlak1xxd8RoTFfMkD8EiG-mvwYR-nqK1-PiPVbZOW4QAAAAHwek46Y5CgQIhyR1LnRuh8beA1-l4x_enP-QEb_Kc1MSeX4S9ggGLcbFL2YAfgaaDaaUdLBZPWRJt8n3z12ifX1-KcKPKDvHN3DjQ4T1zxSp3Qe1SLOCn2D-UdqYqqHHQoQndUgapSAdkrbx4q1_H6A_9nJcR4hVwZ3MhSRBQg6Qw9QSJ5q3I-5PHWjWtpf3X9UQ1hsTrn7JQ0J0A4CRcMaKrkyVDPUkxyTBegFAMJjAUPUvPoHs-rPSqMiyXu_h3jYSKN8I--xyr-2Vrvtiwe6as8ffM4DQTRLuWZ0cGOuA","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Wed, 30 Jul 2014 20:24:34 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/records/ISLANDTON-DUB14-00000-0000H
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - cuvu42z1wcxNI_8bhTHaFtWFIeJnVKaPmc-AM27F8QKoEqI7qUxGk85sflwtwlJTs71s6BzWWh_wPeGWZ9HE6dX6bBG7a_mTEUEdO7QqiCqElYhlV2uUcmz7HrDhdLY_IytnAl20idYjEbnK7tSbWHyuGerQGlCOuvVcKyPQ-_829Ma4y3UN_XUdYX8brBP5Dcj2IXvz8FS9-7mvo2C0ReEfCEvksJkAV9mE5GTacx558NjTEdbVTHeuxgxZQXZ6FE_Qc186OmEyeJuPM9erZ4RQuOW7GF03xKYyP44o-k7PYZ94C0wBgXYkm-P1aPzEyH75Y4Nr_bklG2JWgpg8Si1DXR6swb_2r1n4u0rdSTD0lVhwAaipEWKWI12OkvPCgPEZ3oR7XNKEB1gV0jDquXRDUVS_BEgRMaousGRjI8oUhVW6sSZsxNorcr8wRuMC0
+      X-Accela-Agency:
+      - ISLANDTON-APP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '993'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140730202435438-4e5d764e
+      Date:
+      - Wed, 30 Jul 2014 20:24:35 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":[{"id":"ISLANDTON-DUB14-00000-0000H","type":{"module":"AMS","value":"AMS/Facilities/Building/Repair","type":"Facilities","id":"AMS-Facilities-Building-Repair","category":"Repair","text":"Facilities
+        Building Repair","group":"AMS","subType":"Building"},"description":"","module":"AMS","status":{"value":"Open","text":"Open"},"serviceProviderCode":"ISLANDTON","statusDate":"2014-05-15
+        00:05:36","totalJobCost":0.0,"reportedChannel":{"value":"Call Center","text":"Call
+        Center"},"reportedDate":"2014-05-15 00:00:00","balance":0.0,"createdBy":"DEVELOPER","totalFee":0.0,"totalPay":0.0,"initiatedProduct":"AV360","undistributedCost":0.0,"infraction":false,"jobValue":0.0,"booking":false,"customId":"14CAP-00000004","publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"recordClass":"COMPLETE","openedDate":"2014-05-15
+        00:00:00","trackingId":200780568,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"value":"DUB14-00000-0000H"}],"status":200}'
+    http_version: 
+  recorded_at: Wed, 30 Jul 2014 20:24:34 GMT
+recorded_with: VCR 2.9.2
