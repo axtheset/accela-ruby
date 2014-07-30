@@ -20,7 +20,7 @@ module Accela
                                headers: headers,
                                body: complete_body)
       if response.code == 200
-        response.parsed_response
+        Token.new(response.parsed_response)
       end
     end
 

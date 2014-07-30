@@ -12,11 +12,12 @@ describe Accela::Authorize, :vcr do
     scope = "records addresses"
 
     auth = Accela::Authorize.new(app_id, app_secret, agency, environment)
-    response = auth.login(username, password, scope)
+    token = auth.login(username, password, scope)
 
-    expected_keys = ["access_token", "token_type", "expires_in",
-                     "refresh_token", "scope"]
-
-    expected_keys.each {|key| expect(response.fetch(key)).to be_truthy }
+    expect(token.access_token).to be_truthy
+    expect(token.token_type).to be_truthy
+    expect(token.expires_in).to be_truthy
+    expect(token.refresh_token).to be_truthy
+    expect(token.scope).to be_truthy
   end
 end
