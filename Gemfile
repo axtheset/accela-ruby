@@ -6,3 +6,5 @@ gem 'rake'
 
 gem 'rspec'
 gem 'pry'
+gem 'vcr'
+gem 'webmock'
