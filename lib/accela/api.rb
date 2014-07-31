@@ -47,10 +47,7 @@ module Accela
     end
 
     def auth
-      Authorize.new(config.app_id,
-                    config.app_secret,
-                    config.agency,
-                    config.environment)
+      Authorize.new(config)
     end
 
     def config

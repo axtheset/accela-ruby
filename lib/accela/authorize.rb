@@ -1,12 +1,9 @@
 module Accela
   class Authorize
-    attr_reader :app_id, :app_secret, :agency, :environment
+    attr_reader :config
 
-    def initialize(app_id, app_secret, agency, environment)
-      @app_id = app_id
-      @app_secret = app_secret
-      @agency = agency
-      @environment = environment
+    def initialize(config=Configuration)
+      @config = config
     end
 
     def login(username, password, scope)
@@ -29,17 +26,17 @@ module Accela
     def headers
       headers = {
         "Content-Type" => "application/x-www-form-urlencoded",
-        "x-accela-appid" => "abcd"
+        "x-accela-appid" => config.app_id
       }
     end
 
     def body
       body =  {
         "grant_type" => "password",
-        "agency_name" => agency,
-        "environment" => environment,
-        "client_id" => app_id,
-        "client_secret" => app_secret
+        "agency_name" => config.agency,
+        "environment" => config.environment,
+        "client_id" => config.app_id,
+        "client_secret" => config.app_secret
       }
     end
 

@@ -9,7 +9,16 @@ describe Accela::Authorize, :vcr do
   let(:password) { "accela" }
   let(:scope) { "records addresses" }
 
-  let(:auth) { Accela::Authorize.new(app_id, app_secret, agency, environment) }
+  let(:config) {
+    Accela::Configuration.new(
+      app_id: app_id,
+      app_secret: app_secret,
+      agency: agency,
+      environment: environment
+    )
+  }
+
+  let(:auth) { Accela::Authorize.new(config) }
   let(:token) { auth.login(username, password, scope) }
 
   context "valid credentials" do
