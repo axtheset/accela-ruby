@@ -3,6 +3,7 @@ module Accela
 
   class InvalidTokenError < AccelaError; end
 
+  class AuthorizationError < AccelaError; end
   class UnsupportedAuthTypeError < AccelaError; end
 
   class ConfigurationError < AccelaError

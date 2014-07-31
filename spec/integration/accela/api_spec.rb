@@ -18,6 +18,11 @@ describe Accela::API, :vcr do
       expect(response.code).to eq 200
     end
 
+    it "fails when using the wrong auth type" do
+      response = api.get "/v4/records/1234/comments", :no_auth
+      expect(response.code).to eq 401
+    end
+
   end
 
 end
