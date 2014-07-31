@@ -1,3 +1,5 @@
+require "httparty"
+
 require "accela/api"
 require "accela/api/base"
 require "accela/api/v4/get_all_records"

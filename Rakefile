@@ -19,7 +19,7 @@ end
 
 desc "Run developer console with pry"
 task :console do
-  sh 'pry', '--gem'
+  sh 'pry', '--gem', '-I', 'env', '-r', 'development'
 end
 
 task clean: %w[clean:gem clean:cassettes]
