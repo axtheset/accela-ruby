@@ -54,7 +54,7 @@ module Accela
     end
 
     def config
-      Accela::Configuration
+      Configuration
     end
 
   end
