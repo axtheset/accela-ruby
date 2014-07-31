@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=ISLANDTON-APP&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140731160511218-42b63e78
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 31 Jul 2014 16:05:11 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"bNZ6jSYi8ByRk5PNDTEJZIVMkimzX3vsFoOB6IToDIiCsnnNLG_5m635W3sCC1Zhqk5Q2NS3q1SXyQJJ6I1VdYbUW6K5SzZKNju8YZWsUyFma2varcOz_U3rs8Aakq72mPnpyrA6SEgZfsU1-OzHn_LsQstGyFPi-4lRy_3k5e_ct_fyEL9NCfOxyrQmSaRWhXKJ6UGyWrSOPof-JZ9N0upgflzqyK6gqd9byd8FG-QAiIL2mW-yBXEpWX-GW4-knyjPECZNznnAwu2SQPO7UD5YKWAT4Zf3a5nQN_02jbalEcLjYgOA_OqXrhYuNfxY7muCmsViH5Ae8V8qREGX3hHsJIa6ECq_5aipQmNNInP7_ND6ff8gU9ugltCl8O0jQTet4ihZHzilPXFdiVbCa8dk54Z3l9V1iZI1fZRAFUmZyV8cFHd0U9Ajc_3d35jy0","token_type":"bearer","expires_in":"86400","refresh_token":"f4YS!IAAAAMx2FWU93OPTGFj4wpsvSE3KVlXYlvWdJm90E19K6pfZ4QAAAAENZKI6Sz2yA4RwF7iXAF1FW5XnYmP07EMe1jeMobnMwc4zD2osE--m98JujAW9dnNzkLaOKSt6sixVv4xk4c3qgRbC2OG8PjLZuw8hgRn7ZVT-k4hMxF9I9OVaPEFvhZ5AlD8pMUnY_RbHoqfU4wZk9bS8pLSAW_JBlHEk4-Ch-QJ6LZZJepMI-y8Tcj70JnIImjAMjPxKYTXpogXukFPxW8vxwmK35cYZX6PB8FfayyA2FuyYXKT-TIo6fOmi8GB5RJEzWcFSU4rxFpRIowKOIX2AmZyRAYoX8kDa8ZB2GA","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Thu, 31 Jul 2014 16:05:12 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/records/ISLANDTON-DUB14-00000-0000H,ISLANDTON-DUB14-00000-0000G
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - bNZ6jSYi8ByRk5PNDTEJZIVMkimzX3vsFoOB6IToDIiCsnnNLG_5m635W3sCC1Zhqk5Q2NS3q1SXyQJJ6I1VdYbUW6K5SzZKNju8YZWsUyFma2varcOz_U3rs8Aakq72mPnpyrA6SEgZfsU1-OzHn_LsQstGyFPi-4lRy_3k5e_ct_fyEL9NCfOxyrQmSaRWhXKJ6UGyWrSOPof-JZ9N0upgflzqyK6gqd9byd8FG-QAiIL2mW-yBXEpWX-GW4-knyjPECZNznnAwu2SQPO7UD5YKWAT4Zf3a5nQN_02jbalEcLjYgOA_OqXrhYuNfxY7muCmsViH5Ae8V8qREGX3hHsJIa6ECq_5aipQmNNInP7_ND6ff8gU9ugltCl8O0jQTet4ihZHzilPXFdiVbCa8dk54Z3l9V1iZI1fZRAFUmZyV8cFHd0U9Ajc_3d35jy0
+      X-Accela-Agency:
+      - ISLANDTON-APP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1928'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140731160512806-c7269d73
+      Date:
+      - Thu, 31 Jul 2014 16:05:13 GMT
+    body:
+      encoding: UTF-8
+      string: '{"result":[{"id":"ISLANDTON-DUB14-00000-0000G","type":{"module":"AMS","value":"AMS/Parks/Park/Install","type":"Parks","id":"AMS-Parks-Park-Install","category":"Install","text":"Park
+        Installation","group":"AMS","subType":"Park"},"description":"","module":"AMS","status":{"value":"Open","text":"Open"},"serviceProviderCode":"ISLANDTON","statusDate":"2014-05-14
+        23:55:26","totalJobCost":0.0,"reportedChannel":{"value":"Call Center","text":"Call
+        Center"},"reportedDate":"2014-05-14 00:00:00","balance":0.0,"createdBy":"DEVELOPER","totalFee":0.0,"totalPay":0.0,"initiatedProduct":"AV360","undistributedCost":0.0,"infraction":false,"jobValue":0.0,"booking":false,"customId":"14CAP-00000003","publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"recordClass":"COMPLETE","openedDate":"2014-05-14
+        00:00:00","trackingId":277456273,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"value":"DUB14-00000-0000G"},{"id":"ISLANDTON-DUB14-00000-0000H","type":{"module":"AMS","value":"AMS/Facilities/Building/Repair","type":"Facilities","id":"AMS-Facilities-Building-Repair","category":"Repair","text":"Facilities
+        Building Repair","group":"AMS","subType":"Building"},"description":"","module":"AMS","status":{"value":"Open","text":"Open"},"serviceProviderCode":"ISLANDTON","statusDate":"2014-05-15
+        00:05:36","totalJobCost":0.0,"reportedChannel":{"value":"Call Center","text":"Call
+        Center"},"reportedDate":"2014-05-15 00:00:00","balance":0.0,"createdBy":"DEVELOPER","totalFee":0.0,"totalPay":0.0,"initiatedProduct":"AV360","undistributedCost":0.0,"infraction":false,"jobValue":0.0,"booking":false,"customId":"14CAP-00000004","publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"recordClass":"COMPLETE","openedDate":"2014-05-15
+        00:00:00","trackingId":200780568,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"value":"DUB14-00000-0000H"}],"status":200}'
+    http_version: 
+  recorded_at: Thu, 31 Jul 2014 16:05:13 GMT
+recorded_with: VCR 2.9.2

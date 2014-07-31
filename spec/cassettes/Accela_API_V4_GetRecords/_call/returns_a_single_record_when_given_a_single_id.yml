@@ -29,19 +29,19 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140731160021848-eb702fda
+      - 140731160018090-df6f8b15
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Thu, 31 Jul 2014 16:00:23 GMT
+      - Thu, 31 Jul 2014 16:00:19 GMT
     body:
       encoding: UTF-8
-      string: '{"access_token":"bNZ6jSYi8ByRk5PNDTEJZOJNQPDrl0hnUsSOO_P5krQQE4fbgV-GDpOY2NIgmvwBCkrFAObFaP4J0djS4c030ttduHhpCi1ouxT14q546WsXf0HR63JcbAVtDSLZVnrZLiKtWsF2VaVVjqjN5VvjLzYlHns_8929iTZGt2bA8sYW8u3rzZkZLo56pX-bk7dMlXAIjrLJnhWU0xm5sQKD7D4g51k4_IVAqoeMnJ113hVBIuXhDPhzzLIewZxian2WFDGLbGEGYlp9C4q3-MUeWbBK-48G_rkOB0KAaMlM8Cj6YMbpZDnI-xfaYNKSrJjqHc-bI-QnaXthV0Boe_tTJ3tok__TzhwjN0BIFDV6uhPVusEyiHoKx27iZb3puQWJ6WUt_wWW45-CECqc-r3nUXBKyMMPh63ylACOwd2pR7_eEMMzA4-MhganRjX-IG2M0","token_type":"bearer","expires_in":"86400","refresh_token":"f4YS!IAAAAK02FTP6ILh8XdRkAfLILS3TQD3XKSIxoU9uKy4hMoG04QAAAAHxJAKwOEEExCblcdMg7vHeIQ7As3wrIQSFoNHf4K5VsE-Jg5AsSZTOAWfTm2SVRh_iMDIfOAMkxKUq89RBv6RD2UdwsWYOT0W1MBeceAOHLMrFEB2c5ms1B4YAucFOumZ3oHvMQ71oKeaEW0gn9Kf-5i7BR-Rcibs5-v9IbXe4o5xzsRow6BjuORwc6zIXdsk6N4dUWLrGsg_kd3OOQcfRSm10mFME2th_tFuZ-Cd2HD_cOk7-ztMVzdl_xND2Y7Uz0GEkUVuz3Eu_O4TkAa8in2WIxQmDZzPiHB-A4NRWRQ","scope":"addresses
+      string: '{"access_token":"bNZ6jSYi8ByRk5PNDTEJZJjXsmmRPdK_mkm4iEiI2uX93WT8JMakN292VRMBHP8yayR6yj5LrQ8SLmbtYWIMmWWlmPCvz_myU9p7JehjsxxUgo6n6A-64tMGePOE_Wtflh0wDZIqni951yduLUYof1UtCaCRBc-n6Ee8rTTck2EUhFURnWuarejah7dhPcyA_DI5691e812QbkwnhA6kaFiAohv7ty3Alr5pR7SGQWroiGGB0d38hsxjec_MhK9RSW-0VvqGlkmS1AtxNzE9pkPMgwrriXu37bziC1znMZ-RpUFXAX5tTaVtEWrVeb-7PdYG1owODNj3zz0Yzz74IpoMbqoSjYFcWh3ybPhO-yNfx0BfEGeYE5Y0hAamTGVvceXqDIxM_qISxtTGcnrl2bMzRMoZ7ZSmOSynwMWfPE4qNqjK55sNH6dKFegCvH900","token_type":"bearer","expires_in":"86400","refresh_token":"f4YS!IAAAAAm8PwsQkTa_DRTAfmtsjj5CtcRPzEECjxZfq0QlM3AP4QAAAAHb2fNxe8f5Ttfew_XRVDWcsztX2A2SS6BzvsUfT_Xci42OcxMJ9nXBedR66sI1OoBmoxXR2CN9MLjC_VENDyGhG43OO96wOvgJJD_2XXqoH3tiOca10FcrXRvidadSQYLUS_XwQ2HDy4Lk6X1uC28RTiWJqDOl2c3lgejM3j7Gf8gEGxjALXDbmVvd5q-viHaIIuWnoWLfGcdxnrXucBkExzhnE_r0WbSVZUfRNHvdferQgWXvpkCM36l9Ly7f80onJyHL8wf02DcgfmA4Ell7uSp5PcE-zl3N7c89lPEO4w","scope":"addresses
         get_civicid_profile records"}'
     http_version: 
-  recorded_at: Thu, 31 Jul 2014 16:00:22 GMT
+  recorded_at: Thu, 31 Jul 2014 16:00:19 GMT
 - request:
     method: get
     uri: https://apis.accela.com/v4/records/ISLANDTON-DUB14-00000-0000H
@@ -56,7 +56,7 @@ http_interactions:
       X-Accela-Appid:
       - '635395466279594650'
       Authorization:
-      - bNZ6jSYi8ByRk5PNDTEJZOJNQPDrl0hnUsSOO_P5krQQE4fbgV-GDpOY2NIgmvwBCkrFAObFaP4J0djS4c030ttduHhpCi1ouxT14q546WsXf0HR63JcbAVtDSLZVnrZLiKtWsF2VaVVjqjN5VvjLzYlHns_8929iTZGt2bA8sYW8u3rzZkZLo56pX-bk7dMlXAIjrLJnhWU0xm5sQKD7D4g51k4_IVAqoeMnJ113hVBIuXhDPhzzLIewZxian2WFDGLbGEGYlp9C4q3-MUeWbBK-48G_rkOB0KAaMlM8Cj6YMbpZDnI-xfaYNKSrJjqHc-bI-QnaXthV0Boe_tTJ3tok__TzhwjN0BIFDV6uhPVusEyiHoKx27iZb3puQWJ6WUt_wWW45-CECqc-r3nUXBKyMMPh63ylACOwd2pR7_eEMMzA4-MhganRjX-IG2M0
+      - bNZ6jSYi8ByRk5PNDTEJZJjXsmmRPdK_mkm4iEiI2uX93WT8JMakN292VRMBHP8yayR6yj5LrQ8SLmbtYWIMmWWlmPCvz_myU9p7JehjsxxUgo6n6A-64tMGePOE_Wtflh0wDZIqni951yduLUYof1UtCaCRBc-n6Ee8rTTck2EUhFURnWuarejah7dhPcyA_DI5691e812QbkwnhA6kaFiAohv7ty3Alr5pR7SGQWroiGGB0d38hsxjec_MhK9RSW-0VvqGlkmS1AtxNzE9pkPMgwrriXu37bziC1znMZ-RpUFXAX5tTaVtEWrVeb-7PdYG1owODNj3zz0Yzz74IpoMbqoSjYFcWh3ybPhO-yNfx0BfEGeYE5Y0hAamTGVvceXqDIxM_qISxtTGcnrl2bMzRMoZ7ZSmOSynwMWfPE4qNqjK55sNH6dKFegCvH900
       X-Accela-Agency:
       - ISLANDTON-APP
   response:
@@ -86,11 +86,9 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140731160023356-2ab211d5
+      - 140731160020082-1db02036
       Date:
-      - Thu, 31 Jul 2014 16:00:24 GMT
-      Connection:
-      - close
+      - Thu, 31 Jul 2014 16:00:20 GMT
     body:
       encoding: UTF-8
       string: '{"result":[{"id":"ISLANDTON-DUB14-00000-0000H","type":{"module":"AMS","value":"AMS/Facilities/Building/Repair","type":"Facilities","id":"AMS-Facilities-Building-Repair","category":"Repair","text":"Facilities
@@ -99,5 +97,5 @@ http_interactions:
         Center"},"reportedDate":"2014-05-15 00:00:00","balance":0.0,"createdBy":"DEVELOPER","totalFee":0.0,"totalPay":0.0,"initiatedProduct":"AV360","undistributedCost":0.0,"infraction":false,"jobValue":0.0,"booking":false,"customId":"14CAP-00000004","publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"recordClass":"COMPLETE","openedDate":"2014-05-15
         00:00:00","trackingId":200780568,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"value":"DUB14-00000-0000H"}],"status":200}'
     http_version: 
-  recorded_at: Thu, 31 Jul 2014 16:00:24 GMT
+  recorded_at: Thu, 31 Jul 2014 16:00:20 GMT
 recorded_with: VCR 2.9.2

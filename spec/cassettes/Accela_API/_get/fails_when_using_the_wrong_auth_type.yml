@@ -35,7 +35,7 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140731142945871-d2a3bdcf
+      - 140731160025223-71a1ffd2
       X-Accela-Resp-Message:
       - Token is required.
       X-Aspnet-Version:
@@ -43,10 +43,10 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Thu, 31 Jul 2014 14:29:45 GMT
+      - Thu, 31 Jul 2014 16:00:24 GMT
     body:
       encoding: UTF-8
-      string: '{"status":401,"code":"no_token","message":"Token is required.","traceId":"140731142945871-d2a3bdcf"}'
+      string: '{"status":401,"code":"no_token","message":"Token is required.","traceId":"140731160025223-71a1ffd2"}'
     http_version: 
-  recorded_at: Thu, 31 Jul 2014 14:29:45 GMT
+  recorded_at: Thu, 31 Jul 2014 16:00:25 GMT
 recorded_with: VCR 2.9.2

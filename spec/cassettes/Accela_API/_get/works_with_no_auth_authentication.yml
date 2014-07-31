@@ -44,9 +44,11 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140731142940565-94b2165e
+      - 140731160020574-e6682602
       Date:
-      - Thu, 31 Jul 2014 14:29:42 GMT
+      - Thu, 31 Jul 2014 16:00:20 GMT
+      Connection:
+      - close
     body:
       encoding: UTF-8
       string: '{"result":[{"id":"ISLANDTON-DUB14-00000-0000H","type":{"module":"AMS","value":"AMS/Facilities/Building/Repair","type":"Facilities","id":"AMS-Facilities-Building-Repair","category":"Repair","text":"Facilities
@@ -77,5 +79,5 @@ http_interactions:
         Nuisance","group":"ServiceRequest","subType":"Animal Nuisance"},"module":"ServiceRequest","status":{"value":"Received","text":"Received"},"serviceProviderCode":"ISLANDTON","createdBy":"DEVELOPER","customId":"SR14-00001","openedDate":"2014-03-10
         00:00:00","trackingId":254443095,"value":"DUB14-00000-00001"}],"page":{"offset":0,"limit":25,"hasmore":false},"status":200}'
     http_version: 
-  recorded_at: Thu, 31 Jul 2014 14:29:42 GMT
+  recorded_at: Thu, 31 Jul 2014 16:00:21 GMT
 recorded_with: VCR 2.9.2

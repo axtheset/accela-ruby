@@ -1,6 +1,7 @@
 require "accela/api"
 require "accela/api/base"
 require "accela/api/v4/get_all_records"
+require "accela/api/v4/get_records"
 require "accela/authorize"
 require "accela/configuration"
 require "accela/exceptions"
