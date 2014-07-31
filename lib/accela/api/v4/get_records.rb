@@ -5,7 +5,7 @@ module Accela
         extend Accela::API::Base
 
         def self.call(*ids)
-          ids_string = ids.map(&:to_s).join(",")
+          ids_string = ids.flatten.map(&:to_s).join(",")
           handle(API.connection.get("/v4/records/#{ids_string}", :access_token))
         end
 
