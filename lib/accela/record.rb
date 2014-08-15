@@ -9,6 +9,10 @@ module Accela
     end
 
     def self.all
+      payload = Accela::API::V4::GetAllRecords.call
+      record_hashes = payload["result"]
+      raws = RecordTranslator.json_to_ruby(record_hashes)
+      raws.map {|raw| new(raw) }
     end
 
   end
