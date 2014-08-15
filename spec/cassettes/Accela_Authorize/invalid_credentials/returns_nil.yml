@@ -31,17 +31,17 @@ http_interactions:
       X-Accela-Resp-Message:
       - Invalid user name or password.
       X-Accela-Traceid:
-      - 140815151949198-9902e4ac
+      - 140815190345428-61d4240b
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Fri, 15 Aug 2014 15:19:49 GMT
+      - Fri, 15 Aug 2014 19:03:46 GMT
     body:
       encoding: UTF-8
       string: '{"error":"invalid_request","error_description":"Invalid user name or
         password."}'
     http_version: 
-  recorded_at: Fri, 15 Aug 2014 15:19:49 GMT
+  recorded_at: Fri, 15 Aug 2014 19:03:46 GMT
 recorded_with: VCR 2.9.2

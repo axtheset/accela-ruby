@@ -1,17 +1,23 @@
 module Accela
-  class Repository
+  class Translator
+
+    def json_to_ruby(hashes=[])
+      hashes.map &json_to_ruby_lambda
+    end
 
     private
 
-    def update_from_hash(object, hash)
-      hash.each do |prop, val|
-        type = prop_map[prop.to_sym]
-        transform = type_map[type]
-        method = (to_snake_case(prop) + '=').to_sym
-        if object.respond_to?(method)
-          object.public_send(method, transform.call(val))
-        end
-      end
+    def json_to_ruby_lambda
+      ->(hash) {
+        translation.inject({}) {|memo, tuple|
+          ruby, json, type = tuple
+          if hash.has_key?(json.to_s)
+            memo.merge({ ruby => hash[json.to_s] })
+          else
+            memo
+          end
+        }
+      }
     end
 
     def type_map
@@ -36,10 +42,6 @@ module Accela
 
     def from_date
       ->(i) { i.strftime("%F") }
-    end
-
-    def to_snake_case(str)
-      str.to_s.gsub(/([A-Z])/, '_\1').downcase
     end
 
   end

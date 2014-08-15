@@ -44,11 +44,9 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140815151942251-d17e7bef
+      - 140815190340014-f22525b4
       Date:
-      - Fri, 15 Aug 2014 15:19:41 GMT
-      Connection:
-      - close
+      - Fri, 15 Aug 2014 19:03:40 GMT
     body:
       encoding: UTF-8
       string: '{"result":[{"id":"ISLANDTON-DUB14-00000-0000I","type":{"module":"Building","value":"Building/Mobile/Mobile/Tony","type":"Mobile","id":"Building-Mobile-Mobile-Tony","category":"Tony","text":"Building/Mobile/Mobile/Tony","group":"Building","subType":"Mobile"},"module":"Building","status":{"value":"Ready
@@ -83,5 +81,5 @@ http_interactions:
         Nuisance","group":"ServiceRequest","subType":"Animal Nuisance"},"module":"ServiceRequest","status":{"value":"Received","text":"Received"},"serviceProviderCode":"ISLANDTON","createdBy":"DEVELOPER","customId":"SR14-00001","openedDate":"2014-03-10
         00:00:00","trackingId":254443095,"value":"DUB14-00000-00001"}],"page":{"offset":0,"limit":25,"hasmore":false},"status":200}'
     http_version: 
-  recorded_at: Fri, 15 Aug 2014 15:19:42 GMT
+  recorded_at: Fri, 15 Aug 2014 19:03:40 GMT
 recorded_with: VCR 2.9.2
