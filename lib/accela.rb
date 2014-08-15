@@ -1,5 +1,8 @@
+require "date"
+
 require "httparty"
 
+require "accela/repository"
 require "accela/api"
 require "accela/api/base"
 require "accela/api/v4/get_all_records"
@@ -7,5 +10,7 @@ require "accela/api/v4/get_records"
 require "accela/authorize"
 require "accela/configuration"
 require "accela/exceptions"
+require "accela/record"
+require "accela/record_repository"
 require "accela/token"
 require "accela/version"
