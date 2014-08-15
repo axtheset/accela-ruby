@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=ISLANDTON-APP&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140815205559461-ccfb7ada
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 15 Aug 2014 20:56:00 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"t7h9014v2t4RmRV8OFtoGHHK_1WV_a_LhnRYPQzo1RY2ancwQWQnk3xtlGE_Rq4rvzdQGS2ztQmBnw0Ymuz2Oq1V4ReeyUNNUWyXCmr1Q89MCBtbUrTvoiWnBsjlvySu0U5K_vJqqxMoN4qx_ujY6T3tt1n0ri9nr8Ebs2con4ImACNpnkrhAy_XZNpOl02Ted7o9GbjQDryhqzTMF0TAhv1IQnn1LweVrNILexPrskl-DVws_aiYn0nC4T6-ECZN2D-vKF5GEA2FJJWkp4DYxmM76uuhfpCEPrHx3pHM4_V9NtMeeN7gwcMg0QszKoRAKr9oIgRazV3nTqyVll003pqG6U1TItA55jiGza23mtKfmhuE0hurycEvKt9sDPLnh7UEqHDW9no2K_m3JF683p8V8N0GTvPTXO9Y2PTpqxvirIJuR7OFBF77inGadl-0","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAABZHIAkc22rFKWu1_uNELvB8ZuG7riTZubk-kAcVSQjs4QAAAAGnyuuqN1ATvXsmgyudfaCK75QNEm7mYCxrsFfD_FxrnAkf0oruXdX5MAyFdBctkuuTfnyq4q_9WzorzxFVqAOdMF6VJEbAzoUY0reEDywybHdDE0WHDRgFvuDRmLOtCwIqjB-tpPg2afypGlApN5VE6cjHWbsSjkyBgc1qTjbI9Dk-5Di5eXpHseQZuFUGjOrCkKlF-QB-t9ApVmnvc8Fv9P_U8Rb4BNMUTKDm1_LyaEbAfgqazKwDbzDh4cHODWQoLJp1ZDNlIW3cl6xi47-CrxTcmN0c_KQQAuUgbhdnLA","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Fri, 15 Aug 2014 20:56:00 GMT
+recorded_with: VCR 2.9.2
