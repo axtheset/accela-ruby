@@ -1,6 +1,10 @@
 module Accela
   class Translator
 
+    def self.json_to_ruby(hashes=[])
+      new.json_to_ruby(hashes)
+    end
+
     def json_to_ruby(hashes=[])
       hashes.map &json_to_ruby_lambda
     end
