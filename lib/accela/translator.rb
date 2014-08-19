@@ -22,17 +22,14 @@ module Accela
     def json_to_ruby_lambda
       ->(hash) {
         hash.inject({}) {|memo, (key, val)|
-          tuple = translation.select {|tuple|
-            ruby, json, type = tuple
-            json == key.to_sym
-          }.first
+          tuple = translation.select {|ruby, json, type| json == key.to_sym }.first
           if tuple
             ruby, json, type = tuple
             memo.merge({ ruby => hash[json.to_s] })
-          elsif memo.has_key?(:__other__)
-            memo.merge({ __other__: memo.fetch(:__other__).merge({ key.to_sym => val })})
+          elsif memo.has_key?(unknown_attribute_key)
+            memo.merge({ unknown_attribute_key => memo.fetch(unknown_attribute_key).merge({ key.to_sym => val })})
           else
-            memo.merge({ __other__: { key.to_sym => val }})
+            memo.merge({ unknown_attribute_key => { key.to_sym => val }})
           end
         }
       }
@@ -40,10 +37,14 @@ module Accela
 
     def ruby_to_json_lambda
       ->(hash) {
-        translation.inject({}) {|memo, tuple|
-          ruby, json, type = tuple
-          if hash.has_key?(ruby.to_sym)
+        hash.inject({}) {|memo, (key, val)|
+          tuple = translation.select {|ruby, json, type| ruby == key.to_sym }.first
+          if tuple
+            ruby, json, type = tuple
             memo.merge({ json.to_s => hash[ruby.to_sym] })
+          elsif key == unknown_attribute_key
+            stringified = val.inject({}) {|memo, (key, val)| memo.merge({key.to_s => val}) }
+            memo.merge(stringified)
           else
             memo
           end
@@ -73,6 +74,10 @@ module Accela
 
     def from_date
       ->(i) { i.strftime("%F") }
+    end
+
+    def unknown_attribute_key
+      :__other__
     end
 
   end
