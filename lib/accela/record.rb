@@ -15,5 +15,9 @@ module Accela
       raws.map {|raw| new(raw) }
     end
 
+    def save
+
+    end
+
   end
 end

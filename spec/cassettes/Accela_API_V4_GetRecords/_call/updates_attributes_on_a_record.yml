@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=ISLANDTON-APP&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140819192052467-c26dee4f
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 19 Aug 2014 19:20:54 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"_C8B5q3bSap7FM_NItI6mryLQvA5HqxjjLVjMdorUqJeI-m1xt-41XNJqHsFJtpyMvq0Uj9pNr9RxGYmcHgs9EV29QqbcHvYAViG95fLDxcvd2kg_ieJLU6ZN8eDB_mTnjqCUG_Hls1mDC7W_5OHjFzlf8xGTmrJY8-N-wtTDzFalH72d5cXc5h1r1DzCCzCCGJu1zMAqcGFXYuc5TyiEYXkAyHV4BJSfrY5R-8D7Vl2A9Dpbh_HG3kIkjX4mrU1uVibNpfLpFKpCIKvfTH6MNH2xwG5lwj_1KjCChbt_Jk_BpWfhK7grB7-53poiGcJ0EMvQ7qjdQ7jzq3pZLjTPFqHwa3LHSAZCbBbNE7ynjSzRnnBURoIOueDFGzHwa9BVK7ewuAnea9zDKP7rUObOzNVUbktgoHqKfvMwOKyZZmZSGnLF_7fm3JQcnrsUbUx0","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAA1X-q79zfrT-GRHrphFVtWXj7nMjNBhcabAMrH7DHAt4QAAAAGqfZwVk2JvHtCkv1I9l9EZMiRBzlWL2eWZyDO9dsD4DUoqhOKWBJnQsQBxGj3beHKBN39y5A9H0oZSIH3_G_wh8NDziLmkzIjFDzHoHx40JY5u-NUkPY57dtZj-fAFRD3-cR5M7zVPKviYGmSPTBFlYXsH69JYQdV_RYw43_6rcYEITSPBbDEeC-bKLNXZ_MjFKaXwvPDb5zVCUTUhJcCX46Tg9eCENPiVWaxF3oFDM2dsW2VuGYffi9d--532eGEmKY2RruWjTCax0BQohunKIiV4kk2CB-ojOwksjUTeiA","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Tue, 19 Aug 2014 19:20:54 GMT
+- request:
+    method: put
+    uri: https://apis.accela.com/v4/records/ISLANDTON-DUB14-00000-0000I
+    body:
+      encoding: UTF-8
+      string: '{"id":"ISLANDTON-DUB14-00000-0000I","serviceProviderCode":"testing123"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - _C8B5q3bSap7FM_NItI6mryLQvA5HqxjjLVjMdorUqJeI-m1xt-41XNJqHsFJtpyMvq0Uj9pNr9RxGYmcHgs9EV29QqbcHvYAViG95fLDxcvd2kg_ieJLU6ZN8eDB_mTnjqCUG_Hls1mDC7W_5OHjFzlf8xGTmrJY8-N-wtTDzFalH72d5cXc5h1r1DzCCzCCGJu1zMAqcGFXYuc5TyiEYXkAyHV4BJSfrY5R-8D7Vl2A9Dpbh_HG3kIkjX4mrU1uVibNpfLpFKpCIKvfTH6MNH2xwG5lwj_1KjCChbt_Jk_BpWfhK7grB7-53poiGcJ0EMvQ7qjdQ7jzq3pZLjTPFqHwa3LHSAZCbBbNE7ynjSzRnnBURoIOueDFGzHwa9BVK7ewuAnea9zDKP7rUObOzNVUbktgoHqKfvMwOKyZZmZSGnLF_7fm3JQcnrsUbUx0
+      X-Accela-Agency:
+      - ISLANDTON-APP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '941'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140819192054878-db31b2fa
+      Date:
+      - Tue, 19 Aug 2014 19:20:55 GMT
+    body:
+      encoding: UTF-8
+      string: '{"result":{"id":"ISLANDTON-DUB14-00000-0000I","type":{"module":"Building","value":"Building/Mobile/Mobile/Tony","type":"Mobile","id":"Building-Mobile-Mobile-Tony","category":"Tony","text":"Building/Mobile/Mobile/Tony","group":"Building","subType":"Mobile"},"module":"Building","status":{"value":"Ready
+        to Issue","text":"Ready to Issue"},"serviceProviderCode":"ISLANDTON","statusDate":"2014-08-07
+        01:09:14","totalJobCost":0.0,"createdBy":"DEVELOPER","initiatedProduct":"AV360","undistributedCost":0.0,"customId":"14CAP-00000005","recordClass":"COMPLETE","constructionType":{"value":"106","text":"Manufactured
+        Home (Mobile Homes)"},"openedDate":"2014-08-07 00:00:00","trackingId":219666584,"housingUnits":43,"numberOfBuildings":32,"value":"DUB14-00000-0000I","totalFee":0.0,"totalPay":0.0,"balance":0.0,"booking":false,"infraction":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"publicOwned":true},"status":200}'
+    http_version: 
+  recorded_at: Tue, 19 Aug 2014 19:20:55 GMT
+recorded_with: VCR 2.9.2

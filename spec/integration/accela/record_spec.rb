@@ -38,4 +38,15 @@ describe Accela::Record, :vcr do
     end
   end
 
+  describe "#save" do
+    xit "persists changes to the model" do
+      record = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      record.module = "This is a test"
+      record.save
+      expect(record.module).to eq "This is a test"
+      record_take_2 = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      expect(record_take_2.module).to eq "This is a test"
+    end
+  end
+
 end
