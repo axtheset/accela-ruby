@@ -25,7 +25,7 @@ module Accela
           tuple = translation.select {|ruby, json, type| json == key.to_sym }.first
           if tuple
             ruby, json, type = tuple
-            type_transform = type_map.fetch(type)
+            type_transform = type_map.fetch(type).first
             memo.merge({ ruby => type_transform.call(hash[json.to_s]) })
           elsif memo.has_key?(unknown_attribute_key)
             memo.merge({ unknown_attribute_key => memo.fetch(unknown_attribute_key).merge({ key.to_sym => val })})
@@ -42,7 +42,8 @@ module Accela
           tuple = translation.select {|ruby, json, type| ruby == key.to_sym }.first
           if tuple
             ruby, json, type = tuple
-            memo.merge({ json.to_s => hash[ruby.to_sym] })
+            type_transform = type_map.fetch(type).last
+            memo.merge({ json.to_s => type_transform.call(hash[ruby.to_sym]) })
           elsif key == unknown_attribute_key
             memo.merge(stringify_keys(val))
           else
@@ -60,13 +61,13 @@ module Accela
 
     def type_map
       {
-        integer: identity,
-        long: identity,
-        string: identity,
-        boolean: identity,
-        double: identity,
-        date: to_date,
-        dateTime: to_date_time
+        integer: [identity, identity],
+        long: [identity, identity],
+        string: [identity, identity],
+        boolean: [identity, identity],
+        double: [identity, identity],
+        date: [to_date, from_date],
+        dateTime: [to_date_time, from_date_time]
       }
     end
 
@@ -84,6 +85,10 @@ module Accela
 
     def from_date
       ->(i) { i.strftime("%F") }
+    end
+
+    def from_date_time
+      ->(i) { i.strftime("%F %T") }
     end
 
     def unknown_attribute_key
