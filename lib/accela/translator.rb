@@ -43,12 +43,17 @@ module Accela
             ruby, json, type = tuple
             memo.merge({ json.to_s => hash[ruby.to_sym] })
           elsif key == unknown_attribute_key
-            stringified = val.inject({}) {|memo, (key, val)| memo.merge({key.to_s => val}) }
-            memo.merge(stringified)
+            memo.merge(stringify_keys(val))
           else
             memo
           end
         }
+      }
+    end
+
+    def stringify_keys(hash)
+      hash.inject({}) {|memo, (key, val)|
+        memo.merge({key.to_s => val})
       }
     end
 
