@@ -28,6 +28,35 @@ describe Accela::RecordTranslator do
       expect(result).to eq expected
     end
 
+    context "payload contains keys not in translation table" do
+      let(:input) {
+        [
+          {
+            "balance" => 123.45,
+            "newProperty" => false,
+            "assignedUser" => "Dale Cooper",
+            "anotherNewProprty" => "Test",
+            "publicOwned" => false
+          }
+        ]
+      }
+
+      it "quarantines these key/vals under __other__ key" do
+        expected = [{
+          balance: 123.45,
+          assigned_user: "Dale Cooper",
+          public_owned: false,
+          __other__: {
+            newProperty: false,
+            anotherNewProprty: "Test"
+          }
+        }]
+
+        expect(result).to eq expected
+      end
+
+    end
+
   end
 
   describe "#ruby_to_json" do

@@ -21,12 +21,18 @@ module Accela
 
     def json_to_ruby_lambda
       ->(hash) {
-        translation.inject({}) {|memo, tuple|
-          ruby, json, type = tuple
-          if hash.has_key?(json.to_s)
+        hash.inject({}) {|memo, (key, val)|
+          tuple = translation.select {|tuple|
+            ruby, json, type = tuple
+            json == key.to_sym
+          }.first
+          if tuple
+            ruby, json, type = tuple
             memo.merge({ ruby => hash[json.to_s] })
+          elsif memo.has_key?(:__other__)
+            memo.merge({ __other__: memo.fetch(:__other__).merge({ key.to_sym => val })})
           else
-            memo
+            memo.merge({ __other__: { key.to_sym => val }})
           end
         }
       }
