@@ -9,6 +9,14 @@ module Accela
       hashes.map &json_to_ruby_lambda
     end
 
+    def self.ruby_to_json(hashes=[])
+      new.ruby_to_json(hashes)
+    end
+
+    def ruby_to_json(hashes=[])
+      hashes.map &ruby_to_json_lambda
+    end
+
     private
 
     def json_to_ruby_lambda
@@ -17,6 +25,19 @@ module Accela
           ruby, json, type = tuple
           if hash.has_key?(json.to_s)
             memo.merge({ ruby => hash[json.to_s] })
+          else
+            memo
+          end
+        }
+      }
+    end
+
+    def ruby_to_json_lambda
+      ->(hash) {
+        translation.inject({}) {|memo, tuple|
+          ruby, json, type = tuple
+          if hash.has_key?(ruby.to_sym)
+            memo.merge({ json.to_s => hash[ruby.to_sym] })
           else
             memo
           end
