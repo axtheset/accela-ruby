@@ -28,6 +28,24 @@ describe Accela::RecordTranslator do
       expect(result).to eq expected
     end
 
+    context "input contains date" do
+      let(:input) {
+        [
+          {
+            "appearanceDate" => "2014-08-18 12:00:00"
+          }
+        ]
+      }
+
+      it "translates to a ruby date object" do
+        expected = [{
+          appearance_date: DateTime.parse("2014-08-18 12:00:00")
+        }]
+
+        expect(result).to eq expected
+      end
+    end
+
     context "payload contains keys not in translation table" do
       let(:input) {
         [

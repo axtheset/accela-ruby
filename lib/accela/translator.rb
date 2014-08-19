@@ -25,7 +25,8 @@ module Accela
           tuple = translation.select {|ruby, json, type| json == key.to_sym }.first
           if tuple
             ruby, json, type = tuple
-            memo.merge({ ruby => hash[json.to_s] })
+            type_transform = type_map.fetch(type)
+            memo.merge({ ruby => type_transform.call(hash[json.to_s]) })
           elsif memo.has_key?(unknown_attribute_key)
             memo.merge({ unknown_attribute_key => memo.fetch(unknown_attribute_key).merge({ key.to_sym => val })})
           else
@@ -65,12 +66,16 @@ module Accela
         boolean: identity,
         double: identity,
         date: to_date,
-        dateTime: to_date
+        dateTime: to_date_time
       }
     end
 
     def identity
       ->(i) { i }
+    end
+
+    def to_date_time
+      ->(i) { DateTime.parse(i) }
     end
 
     def to_date
