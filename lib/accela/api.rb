@@ -22,6 +22,13 @@ module Accela
       HTTParty.put(uri, headers: headers, query: query, body: json_body)
     end
 
+    def post(path, auth_type, query={}, body={})
+      uri = config.base_uri + path
+      headers = headers(auth_type)
+      json_body = JSON.generate(body)
+      HTTParty.post(uri, headers: headers, query: query, body: json_body)
+    end
+
     private
 
     def headers(auth_type)
