@@ -9,7 +9,7 @@ describe Accela::Record, :vcr do
 
   describe "::find" do
     it "returns a single Record object" do
-      record = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
       expect(record.initiated_product).to eq "AV360"
       expect(record.public_owned).to eq false
     end
@@ -18,33 +18,33 @@ describe Accela::Record, :vcr do
   describe "::all" do
     it "returns a list of Record objects" do
       records = Accela::Record.all
-      expect(records.length).to eq 13
+      expect(records.length).to eq 25
     end
   end
 
   describe "updating a record's attributes" do
     it "allows its properties to be updated" do
-      record = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
       record.name = "This is a test"
       expect(record.name).to eq "This is a test"
     end
 
     it "does not persist changes" do
-      record = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
       record.module = "This is a test"
       expect(record.module).to eq "This is a test"
-      record_take_2 = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      record_take_2 = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
       expect(record_take_2.module).not_to eq "This is a test"
     end
   end
 
   describe "#save" do
     xit "persists changes to the model" do
-      record = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
       record.module = "This is a test"
       record.save
       expect(record.module).to eq "This is a test"
-      record_take_2 = Accela::Record.find("ISLANDTON-DUB14-00000-0000H")
+      record_take_2 = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
       expect(record_take_2.module).to eq "This is a test"
     end
   end

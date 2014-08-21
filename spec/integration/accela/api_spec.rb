@@ -12,7 +12,7 @@ describe Accela::API, :vcr do
     end
 
     it "works with access_token authentication" do
-      id = "ISLANDTON-DUB14-00000-0000H"
+      id = "ISLANDTON-14CAP-00000-000CR"
       api.login("developer", "accela", "records addresses")
       response = api.get "/v4/records/#{id}", :access_token
       expect(response.code).to eq 200
