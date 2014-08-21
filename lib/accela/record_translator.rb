@@ -59,7 +59,7 @@ module Accela
         [:total_pay, :totalPay, :double],
         [:tracking_id, :trackingId, :integer],
         [:undistributed_cost, :undistributedCost, :double],
-        [:value, :value, :string ]
+        [:value, :value, :string]
       ]
     end
 
