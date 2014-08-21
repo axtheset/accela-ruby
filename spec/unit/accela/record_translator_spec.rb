@@ -75,6 +75,34 @@ describe Accela::RecordTranslator do
 
     end
 
+    context "input contains date" do
+      let(:input) {
+        [
+          {
+            "balance" => 123.45,
+            "type" => {
+              "text" => "This is a text",
+              "value" => "Value discounts",
+              "subType" => "Nuclear"
+            }
+          }
+        ]
+      }
+
+      it "translates to a ruby date object" do
+        expected = [{
+          balance: 123.45,
+          type: {
+            text: "This is a text",
+            value: "Value discounts",
+            sub_type: "Nuclear"
+          }
+        }]
+
+        expect(result).to eq expected
+      end
+    end
+
   end
 
   describe "#ruby_to_json" do
@@ -144,6 +172,34 @@ describe Accela::RecordTranslator do
         expect(result).to eq expected
       end
 
+    end
+
+    context "input contains date" do
+      let(:input) {
+        [
+          {
+            balance: 123.45,
+            type: {
+              text: "This is a text",
+              value: "Value discounts",
+              sub_type: "Nuclear"
+            }
+          }
+        ]
+      }
+
+      it "translates to a ruby date object" do
+        expected = [{
+          "balance" => 123.45,
+          "type" => {
+            "text" => "This is a text",
+            "value" => "Value discounts",
+            "subType" => "Nuclear"
+          }
+        }]
+
+        expect(result).to eq expected
+      end
     end
 
   end

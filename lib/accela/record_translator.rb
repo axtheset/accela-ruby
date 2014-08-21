@@ -58,6 +58,7 @@ module Accela
         [:total_job_cost, :totalJobCost, :double],
         [:total_pay, :totalPay, :double],
         [:tracking_id, :trackingId, :integer],
+        [:type, :type, :Type],
         [:undistributed_cost, :undistributedCost, :double],
         [:value, :value, :string]
       ]

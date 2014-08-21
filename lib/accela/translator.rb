@@ -67,8 +67,21 @@ module Accela
         boolean: [identity, identity],
         double: [identity, identity],
         date: [to_date, from_date],
-        dateTime: [to_date_time, from_date_time]
+        dateTime: [to_date_time, from_date_time],
+        Type: translator(:type)
       }
+    end
+
+    def translator_map
+      {
+        type: TypeTranslator
+      }
+    end
+
+    def translator(type)
+      translator = translator_map[type]
+      [ ->(i) { translator.json_to_ruby([i]).first },
+        ->(i) { translator.ruby_to_json([i]).first } ]
     end
 
     def identity
