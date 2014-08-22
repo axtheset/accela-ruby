@@ -7,7 +7,11 @@ module Accela
       end
 
       def handle(response)
-        Handler.handle(response)
+        if response.code == 200
+          response.parsed_response
+        else
+          ErrorHandler.handle(response)
+        end
       end
 
       def get(uri, auth_type, query={})

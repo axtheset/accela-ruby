@@ -1,5 +1,5 @@
 module Accela
-  class Handler
+  class ErrorHandler
     attr_reader :response
 
     def self.handle(response)
@@ -11,9 +11,7 @@ module Accela
     end
 
     def handle
-      if response.code == 200
-        response.parsed_response
-      else
+      if response.code >= 400
         exception = error ? error.last : UnexpectedError
         raise exception, message
       end
