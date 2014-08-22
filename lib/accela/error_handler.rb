@@ -48,6 +48,7 @@ module Accela
         [401, :no_app_credential, AuthorizationError],
         [403, :forbidden, ForbiddenError],
         [404, :resource_not_found, NotFoundError],
+        [418, :teapot, TeapotError],
         [500, :internal_server_error, ServerError],
         [500, :connection_failure, ServerError]
       ]

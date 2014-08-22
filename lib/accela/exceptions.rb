@@ -12,6 +12,12 @@ module Accela
   class UnsupportedAuthTypeError < AccelaError; end
   class UnexpectedError < AccelaError; end
 
+  class TeapotError < AccelaError
+    def initialize
+      super "I'm a little teapot, short and stout! Here is my handle, here is my spout!"
+    end
+  end
+
   class ConfigurationError < AccelaError
     def initialize(setting, message)
       super "Accela::Configuration.#{setting} #{message}"
