@@ -1,8 +1,8 @@
 module Accela
-  class API
-    module Base
+  module V4
+    class Base
 
-      def handle(response)
+      def self.handle(response)
         Handler.handle(response)
       end
 

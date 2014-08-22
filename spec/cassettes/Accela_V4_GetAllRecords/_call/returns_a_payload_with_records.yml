@@ -1,48 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://apis.accela.com/oauth2/token
-    body:
-      encoding: UTF-8
-      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
-    headers:
-      Content-Type:
-      - application/x-www-form-urlencoded
-      X-Accela-Appid:
-      - '635395466279594650'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
-      Content-Length:
-      - '937'
-      Content-Type:
-      - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Server:
-      - Microsoft-IIS/7.5
-      X-Accela-Traceid:
-      - 140822192311216-13b8ceae
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Fri, 22 Aug 2014 19:23:11 GMT
-    body:
-      encoding: UTF-8
-      string: '{"access_token":"c4MI3NaIrWNS4-UC7GUXlOVrWp17M1-1xr9xvj68SHrk3S5OywR58GN2OYc0ZKWLEyUjtE5kTjUaY4KuLPs5DVKiqBp0YPi1qu5hKuFYL_dj0nz_HSyQHhEdp9kVfRCASZl3liyV5CpfRSzOzY3v22r61hwFqauqWvqjB52L1niWYEnjB_O84o4PbQuBC5E9GyFqrkv9KAtwcUZq-Tj_vyuZQXRjk0oMtZZxtU4W5CyzjUMtwNwdy4C7SuMbNP1_Ql5P2BJwFo9rKarESRS-_xuOrXSnlLsps1_tlsQtz-yEwFRU9XDHcsj6yVD6qU5dlXpfaBPjKNAQmbNgsobXuYHhZg04b-p1XqTAVIv46wBFPiNmeflePvXhtA5Y2QEXIL4vweQhqS_be7JpcTvAreBOMDsnqhZhIWkqJYGidL9yLXJtVxOgQYyw1nNk32v50","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAFuX4EsJExBsPTFGJAVLr16yMssFsa7BnDMmTTO0aDnw4QAAAAEl9DcX_jv3gV8SIt7IYwB_wJl6MgRQcVT7gTANAmHCaRqn6fh1DVL5VBqloUKCHC3UTkJc3tj0XP2kDPSv7hQsRsZLV-TjeVQ0BZud3e_ES4TYWzB9JXuOe1hgjrXM_N9ea7GQ6H1Ne808iTRutCm1btdKhbkev7VZpbUkLPOHQP66d8tWpvXEHLhi1NoTsGV6PvEgjOkr42W5TcIlEIfiqqdr43DA9zCa0cgPrdE8-MTY8Cb26yZrLNlPgTBW83Q-OS449w6i4exEwHICd0c184rJp78bqxNc8sU17UKURA","scope":"addresses
-        get_civicid_profile records"}'
-    http_version: 
-  recorded_at: Fri, 22 Aug 2014 19:23:11 GMT
-- request:
     method: get
     uri: https://apis.accela.com/v4/records
     body:
@@ -69,7 +27,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '13019'
+      - '13025'
       Content-Type:
       - application/json
       Expires:
@@ -86,9 +44,9 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140822192312626-f5e6b297
+      - 140822192323747-99094738
       Date:
-      - Fri, 22 Aug 2014 19:23:12 GMT
+      - Fri, 22 Aug 2014 19:23:24 GMT
       Connection:
       - close
     body:
@@ -99,7 +57,10 @@ http_interactions:
         00:00:00","trackingId":211461555,"value":"14CAP-00000-000D7"},{"id":"ISLANDTON-14CAP-00000-000D8","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
         Maintenance","category":"Preventative Maintenance","group":"AMS","text":"Boiler
         Maintenance","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"serviceProviderCode":"ISLANDTON","createdBy":"MDEVELOPER","module":"AMS","customId":"WO-2014-00072","openedDateFrom":"2014-08-22
-        00:00:00","trackingId":247000621,"value":"14CAP-00000-000D8"},{"name":"Test
+        00:00:00","trackingId":247000621,"value":"14CAP-00000-000D8"},{"id":"ISLANDTON-14CAP-00000-000D9","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","group":"AMS","text":"Boiler
+        Maintenance","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"serviceProviderCode":"ISLANDTON","createdBy":"MDEVELOPER","module":"AMS","customId":"WO-2014-00073","openedDateFrom":"2014-08-22
+        00:00:00","trackingId":233812065,"value":"14CAP-00000-000D9"},{"name":"Test
         of new residential","id":"ISLANDTON-14CAP-00000-000D3","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","group":"Building","text":"Residential
         New","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Submitted","text":"Submitted"},"serviceProviderCode":"ISLANDTON","createdBy":"PUBLICUSER94855","module":"Building","customId":"BLD14-00196","openedDateFrom":"2014-08-21
         00:00:00","trackingId":289155979,"value":"14CAP-00000-000D3"},{"id":"ISLANDTON-14CAP-00000-000CT","type":{"module":"ServiceRequest","type":"Graffiti","value":"ServiceRequest/Graffiti/Graffiti/NA","category":"NA","group":"ServiceRequest","text":"Graffiti
@@ -162,10 +123,7 @@ http_interactions:
         00:00:00","trackingId":223532560,"value":"14CAP-00000-000CN"},{"name":"D-I
         Builders Development Model Home","id":"ISLANDTON-14CAP-00000-000CM","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","group":"Building","text":"Residential
         New","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Submitted","text":"Submitted"},"serviceProviderCode":"ISLANDTON","createdBy":"DI","module":"Building","customId":"BLD14-00182","openedDateFrom":"2014-08-20
-        00:00:00","trackingId":220945889,"value":"14CAP-00000-000CM"},{"name":"D-I
-        Builders Development Model Home","id":"ISLANDTON-14CAP-00000-000CL","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","group":"Building","text":"Residential
-        New","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Submitted","text":"Submitted"},"serviceProviderCode":"ISLANDTON","createdBy":"DI","module":"Building","customId":"BLD14-00181","openedDateFrom":"2014-08-20
-        00:00:00","trackingId":291886915,"value":"14CAP-00000-000CL"}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
+        00:00:00","trackingId":220945889,"value":"14CAP-00000-000CM"}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
     http_version: 
-  recorded_at: Fri, 22 Aug 2014 19:23:12 GMT
+  recorded_at: Fri, 22 Aug 2014 19:23:23 GMT
 recorded_with: VCR 2.9.2
