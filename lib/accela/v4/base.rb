@@ -6,14 +6,6 @@ module Accela
         new.call(*args)
       end
 
-      def handle(response)
-        if response.code == 200
-          response.parsed_response
-        else
-          ErrorHandler.handle(response)
-        end
-      end
-
       def get(uri, auth_type, query={})
         handle(API.connection.get("/v4/#{uri}", auth_type, query))
       end
@@ -30,6 +22,20 @@ module Accela
                                   auth_type,
                                   query,
                                   payload))
+      end
+
+      private
+
+      def handle(response)
+        if is_success?(response)
+          response.parsed_response
+        else
+          ErrorHandler.handle(response)
+        end
+      end
+
+      def is_success?(response)
+        response.code >= 200 && response.code < 300
       end
 
     end
