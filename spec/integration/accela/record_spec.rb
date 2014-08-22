@@ -49,4 +49,23 @@ describe Accela::Record, :vcr do
     end
   end
 
+  describe "::has_one" do
+    let(:input) {
+      {
+        balance: 123.45,
+        type: {
+          text: "This is a text",
+          value: "Value discounts",
+          sub_type: "Nuclear"
+        }
+      }
+    }
+
+    let(:record) { Accela::Record.new(input) }
+
+    it "exposes sub-objects" do
+      expect(record.type.text).to eq "This is a text"
+    end
+  end
+
 end

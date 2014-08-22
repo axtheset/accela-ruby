@@ -1,5 +1,6 @@
 module Accela
   class Record < Model
+    has_one :type
 
     def self.find(id)
       payload = Accela::API::V4::GetRecords.call(id)
@@ -16,7 +17,6 @@ module Accela
     end
 
     def save
-
     end
 
   end
