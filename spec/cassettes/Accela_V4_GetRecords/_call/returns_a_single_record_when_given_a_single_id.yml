@@ -29,19 +29,19 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140822192324454-1f531713
+      - 140826203800260-089f70a0
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Fri, 22 Aug 2014 19:23:25 GMT
+      - Tue, 26 Aug 2014 20:38:09 GMT
     body:
       encoding: UTF-8
-      string: '{"access_token":"c4MI3NaIrWNS4-UC7GUXlFA9bu457MIxH6q85z88h7wTcyBjJGdhG5EAzgJlprPyMnpcWNKZxNU2q2GwAWOvgBRnhHOKUJIUSwgGh4IilistGhaZVrI03ayMnTSIOu73hEsiPh8xSrolEYqIrIoRpWsOBWy9Tq68hzD4xKPpDDKK6BX0qWsWjkRexV1PkupBIOOuaBAIvnk93NuFPCrgUh43rcu3tEUvPanEbTNWdbLmLpRv1fbPzeJjiYd-NA8VFTiL8FtmmL6V2qDB27ntK0kXjn2-sR3yOX9GMmUdPk8CkZ8hVlUQjK_8OYii1YENM9Crg0f2VN_CVHef3IdVxBr05P9xsR2gI6c-0qIQ1cWO-O61ewHE1SbL7KgTNY6OfDzOzwKf_vcRdVBlXv6Ha6Z4O5wDfcy5OcmSRHYv0iEXmvFCXJd6jZhMxE6BtBXu0","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAKGu3odIWEwD1CeoN8DMV3v3-z_-TnfXJcEwPl43EjKv4QAAAAH0XAtX6OIkckScZ58mEYtL5eaWRJ7-mVVhHfOOoX4lDfzoQkbDMuNapK7H7sNlOKdM3GQp72X8Vj7X7JDOEPXAOitnZshuy5WGnDe8BtoJQF6dx8FcnAhBzmi40Jl1Gxg2eOkYtUDMa68CbhBlooowSewcGsBZlZw3DscpzJY4F3M4p2t-_R7epH-bhzwlwReRM4pZB5Wte9nItHC_MEGdR6nevZ53c26js0OPlTbWZGIn3reeUmXKUAZp_V7TxvQk3gBDpAiQnGnzFYOBbbUGQ7XgRQy3Dg_gZRwiFLEYHQ","scope":"addresses
+      string: '{"access_token":"E_IlcauX8G5sEwlmFVuoXJe-fNKtct6FBtejzHNHy_Ri8yWhc8sKuMJmH2zB39rvlpD4E6pxuIKq_DTisJeHQVFl1fHX1K0rc5uxr1DJ9FujFa_FlXPqOv5omZR9t6Lta27i9UN0-qasb1AJtUz_nJ01qSuS5qogPajatoaL_eHZTwacZi4CjHIfAX6clGoEBNEpqm3ukhOtpFZ3NYPRED9CXjr_Gw_lrcsJEix5uDJ2UuZc_kiQGNtFWqRNq4XMRm6CzlptY87BNIoUl7oo29oVx4vq_0l018KaMeQ3FiLg6y1MPI0ylVwLxnSZvw2ffX6E8UjK-Q6nTAMzyWGQQKfvJiU_xdKLVvmAx5mpEha4HlNsbOzQPt-4kraUQ2-o4L3iZ77UGGPaj8kj7o57ZOHNLWbCqms9ERKV_IHQbcvDRBqeXzOyL0TIanlfvc_K0","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAHXcIVrqlgPiOE7zxmQGq9VXBfXMzBSOzfGy2qO7_Cte4QAAAAHV-77lVazoQZfD8KFIhOHaWjLog2fxc9ztsyKxFZRKqPj4srobVJ9OwHjdnNy_4EljUhywC521k40XTrMQjq1-Ua67zH6xcpuuaWUa8j_8nPv9-em2ugnf0H_4LeVdBEB6txLT_znRK5mVZjxUYYNkFagy4Dkmh30tWQFNyLzZFtVBiI3zXp7eg9CqgkDAFgCJl75vOd5PPdtPyehzi86AACMvsTuzj82TWCU_ywsFdpPbMAvgpui5XzMUHOD9-B64w-DRanRspY6SrtxFrO8fWJvXWcr_cxa1AaLN0ssiqg","scope":"addresses
         get_civicid_profile records"}'
     http_version: 
-  recorded_at: Fri, 22 Aug 2014 19:23:25 GMT
+  recorded_at: Tue, 26 Aug 2014 20:38:09 GMT
 - request:
     method: get
     uri: https://apis.accela.com/v4/records/ISLANDTON-14CAP-00000-000CI
@@ -56,7 +56,7 @@ http_interactions:
       X-Accela-Appid:
       - '635395466279594650'
       Authorization:
-      - c4MI3NaIrWNS4-UC7GUXlFA9bu457MIxH6q85z88h7wTcyBjJGdhG5EAzgJlprPyMnpcWNKZxNU2q2GwAWOvgBRnhHOKUJIUSwgGh4IilistGhaZVrI03ayMnTSIOu73hEsiPh8xSrolEYqIrIoRpWsOBWy9Tq68hzD4xKPpDDKK6BX0qWsWjkRexV1PkupBIOOuaBAIvnk93NuFPCrgUh43rcu3tEUvPanEbTNWdbLmLpRv1fbPzeJjiYd-NA8VFTiL8FtmmL6V2qDB27ntK0kXjn2-sR3yOX9GMmUdPk8CkZ8hVlUQjK_8OYii1YENM9Crg0f2VN_CVHef3IdVxBr05P9xsR2gI6c-0qIQ1cWO-O61ewHE1SbL7KgTNY6OfDzOzwKf_vcRdVBlXv6Ha6Z4O5wDfcy5OcmSRHYv0iEXmvFCXJd6jZhMxE6BtBXu0
+      - E_IlcauX8G5sEwlmFVuoXJe-fNKtct6FBtejzHNHy_Ri8yWhc8sKuMJmH2zB39rvlpD4E6pxuIKq_DTisJeHQVFl1fHX1K0rc5uxr1DJ9FujFa_FlXPqOv5omZR9t6Lta27i9UN0-qasb1AJtUz_nJ01qSuS5qogPajatoaL_eHZTwacZi4CjHIfAX6clGoEBNEpqm3ukhOtpFZ3NYPRED9CXjr_Gw_lrcsJEix5uDJ2UuZc_kiQGNtFWqRNq4XMRm6CzlptY87BNIoUl7oo29oVx4vq_0l018KaMeQ3FiLg6y1MPI0ylVwLxnSZvw2ffX6E8UjK-Q6nTAMzyWGQQKfvJiU_xdKLVvmAx5mpEha4HlNsbOzQPt-4kraUQ2-o4L3iZ77UGGPaj8kj7o57ZOHNLWbCqms9ERKV_IHQbcvDRBqeXzOyL0TIanlfvc_K0
       X-Accela-Agency:
       - islandton
   response:
@@ -86,9 +86,9 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140822192326278-9b3d4014
+      - 140826203809864-aa81222d
       Date:
-      - Fri, 22 Aug 2014 19:23:25 GMT
+      - Tue, 26 Aug 2014 20:38:09 GMT
       Connection:
       - close
     body:
@@ -100,5 +100,5 @@ http_interactions:
         Center"},"reportedDate":"2014-08-20 00:00:00","balance":20.0,"createdBy":"BRADP","module":"Building","initiatedProduct":"AV360","totalFee":20.0,"totalPay":0.0,"undistributedCost":0.0,"infraction":false,"jobValue":0.0,"customId":"BLD14-00178","booking":false,"publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"recordClass":"COMPLETE","openedDate":"2014-08-20
         00:00:00","assignedToDepartment":"ISLANDTON/BUILDING/NA/NA/NA/NA/NA","assignedUser":"BRADP","trackingId":253923535,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"value":"14CAP-00000-000CI"}],"status":200}'
     http_version: 
-  recorded_at: Fri, 22 Aug 2014 19:23:26 GMT
+  recorded_at: Tue, 26 Aug 2014 20:38:09 GMT
 recorded_with: VCR 2.9.2
