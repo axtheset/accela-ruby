@@ -29,8 +29,9 @@ module Accela
     private
 
     def model_for_type(type)
-      cap = type.to_s.capitalize.gsub(/(?:_)([a-z\d]*)/i) { $1.capitalize }
-      Object.const_get('Accela::' + cap)
+      klass = type.to_s.capitalize.gsub(/(?:_)([a-z\d]*)/i) { $1.capitalize }
+      fq_klass = 'Accela::' + klass
+      Object.const_get(fq_klass)
     end
 
     def translator_for_type(type)
