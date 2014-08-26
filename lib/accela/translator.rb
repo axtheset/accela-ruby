@@ -69,8 +69,8 @@ module Accela
     end
 
     def transform(type)
-      if type_map.has_key?(type)
-        type_map.fetch(type)
+      if primitive_type_map.has_key?(type)
+        primitive_type_map.fetch(type)
       else
         translator = translator_for_name(underscore(type))
         [ ->(i) { translator.json_to_ruby([i]).first },
@@ -78,7 +78,7 @@ module Accela
       end
     end
 
-    def type_map
+    def primitive_type_map
       {
         integer: [identity, identity],
         long: [identity, identity],
