@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '886'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140826151656912-835eadc6
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 26 Aug 2014 15:16:57 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"OL27lRNrXjBjAR0q9_DeOViJ1j9FJxgenD6z6oUvSNlyf1Ehn2t0Yftmm6kMedb3vcBjZN0CiLeKD2wsj-52P36yrd5f7k8PDrpD4Yvz6R5B3y-IyBv1YY2a94ms0a59LENw5zYhDx7reZF0RAndSli7uUlbVQTqiB2vH1RVBU_FAGjNiwz3CEaxnXJjC2GIhXjAFd4--E8ZqMf6WReCKtfG5iNK2OoSnYSczItG3KwnYJlenMZILnErrOPdblLD82pLA7sehld24Sy7ZQ6XMCF9bHayXenZlo0sSQWvwnfsZH6yJOoM9QPJT_HMBiuBT23XV9FwU9Y84KjMFQWt0ut0MSb4ghibOPgOeyPRyuTuL0BcRK-LMrpS4iLatYrMiK0fypSrnPFs2GRuNagc44zzh-mpTp9CKTbIeBV-QKo1","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAIshihu8UQZlGC8nivlMIyyFimQUaGJfjf2ba2pyjnqk0QAAAAGS8qQ1QvxeeOTHYkBwu_4BoAkDrbYnNnSjnKryzJxf9P1f1cavFwIGORba4K-l_MJmy44i6xqT4ReVrIwzYqC10ZjTH1ooOGx2-e1kpDx-ZHH_trJoeFew7hQHbcelZhMLHWlrXQQB52fKRdq2mulg2fPfWd_YO7cCu643tQFc-a2s1rZmzX4IAEILq4fVnnv17ZjgX474H9A5Fqwb9hoVtoGsF591jlzKDvXNtcDt3O9IRXNenRXd3mgPuxADVs33TXMo_xd8p2Vm-cCt0Krf","scope":"addresses
+        get_civicid_profile"}'
+    http_version: 
+  recorded_at: Tue, 26 Aug 2014 15:16:58 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/addresses/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      X-Accela-Environment:
+      - TEST
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '330'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140826151658835-261ac6ab
+      Date:
+      - Tue, 26 Aug 2014 15:16:59 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":{"auditStatus":"A","isPrimary":"Y","streetStart":1249,"streetName":"LINDBERG","id":2,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},"status":200}'
+    http_version: 
+  recorded_at: Tue, 26 Aug 2014 15:16:59 GMT
+recorded_with: VCR 2.9.2

@@ -68,13 +68,33 @@ module Accela
         double: [identity, identity],
         date: [to_date, from_date],
         dateTime: [to_date_time, from_date_time],
-        Type: translator(:type)
+        Type: translator(:type),
+        AddressTypeFlag: translator(:address_type_flag),
+        Country: translator(:country),
+        Direction: translator(:direction),
+        HouseFractionEnd: translator(:house_fraction_end),
+        HouseFractionStart: translator(:house_fraction_start),
+        State: translator(:state),
+        Status: translator(:status),
+        StreetSuffixDirection: translator(:street_suffix_direction),
+        StreetSuffix: translator(:street_suffix),
+        UnitType: translator(:unit_type)
       }
     end
 
     def translator_map
       {
-        type: TypeTranslator
+        type: TypeTranslator,
+        address_type_flag: AddressTypeFlagTranslator,
+        country: CountryTranslator,
+        direction: DirectionTranslator,
+        house_fraction_end: HouseFractionEndTranslator,
+        house_fraction_start: HouseFractionStartTranslator,
+        state: StateTranslator,
+        status: StatusTranslator,
+        street_suffix_direction: StreetSuffixDirectionTranslator,
+        street_suffix: StreetSuffixTranslator,
+        unit_type: UnitTypeTranslator
       }
     end
 

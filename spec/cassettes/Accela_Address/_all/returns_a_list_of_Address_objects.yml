@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '907'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140826151653474-e065dcc7
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 26 Aug 2014 15:16:54 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"OL27lRNrXjBjAR0q9_DeOVtCfMdMAml_aEvdmZoP9yVX7YZhiH8LJpZF10U1jj9wv5ZmaolEQH1xIGT5oGGaUmqaVI-NUf_-SMX9SAgnVM4IV-LwW3dNkdpuuet8Jk8Y0npDVj4Jh4aQtmV-kIXj8iPgwyqgqQ2arT0bQuTcE9miLF_6NR20EjyNUCyAF17Qcfy0dyWLrpNDktbANNj5mR4gAxemB_6kSsCKgCPrMJLQSSCR1mcgPaHj08wpngjcXdjt1wlAZ_jK9Yg357o4JEEYCKN9a5fdC4iUSbF-k8jIKpur14YQC8PUAQ4SZxy9_VCOm0oZzRV2SarY8XISFVmdjeMd2iAzUqGfYT_bpCNbhadPryX84dNE7AC3r3DP00U9oi5ZnBfiXLO4LvFl_wYiTlA4cwcOT8cmNeWtDmxGQrvIdi8SZVeABCVQh-6l0","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAPC11hFJ1BVGMXDzXEVwZJuTY7JAoZM3ZDEtDHZ5xmdv0QAAAAEC0EHvoFpdVWLUyg2wh3NUI1xeaVunwNZhoXrv4nqOcxqxjJURFYWziIqv5elXvqJp-Vx-cRCVbRsbNqNiQdfy9gCqVPHJKcXQagMIRR_Fs86u3tDeqGHNFY4hQ96JYM4hAZfrPNvxA0vN5bIA15jPfn5D5tYi5GL3h7MbO2uHT--FY0-9yY9PgeGD6krY2IYEHCVrz5rt_NNsb9GJw16FBaykvdelXjZ3n9-2dW3D_YlcWmJPLZdZI-de4JkFiAkQcxjtcXQfhkl5oOWj5xne","scope":"addresses
+        get_civicid_profile"}'
+    http_version: 
+  recorded_at: Tue, 26 Aug 2014 15:16:55 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/addresses?country=US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      X-Accela-Environment:
+      - TEST
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '7664'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140826151655757-248b8423
+      Date:
+      - Tue, 26 Aug 2014 15:16:55 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":[{"auditStatus":"A","isPrimary":"Y","streetStart":1249,"streetName":"LINDBERG","id":2,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":901,"streetName":"LINDBERG","id":3,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":891,"streetName":"LINDBERG","id":4,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":895,"streetName":"LINDBERG","id":5,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":980,"streetName":"LINDBERG","id":6,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":920,"streetName":"LINDBERG","id":7,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetName":"NONE","id":8,"sourceNumber":11,"postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":1000,"streetName":"CAULFIELD","id":9,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":871,"streetName":"LINDBERG","id":11,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":979,"streetName":"LINDBERG","id":12,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":879,"streetName":"LINDBERG","id":14,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":850,"streetName":"LINDBERG","id":15,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":649,"streetName":"LINDBERG","id":16,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":932,"streetName":"CAULFIELD","id":17,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":938,"streetName":"CAULFIELD","id":18,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":940,"streetName":"CAULFIELD","id":19,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":946,"streetName":"CAULFIELD","id":20,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"LN","text":"LN"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":1075,"streetName":"LAKEVILLE","id":21,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"HWY","text":"HWY"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":1077,"streetName":"LAKEVILLE","id":22,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"HWY","text":"HWY"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":901,"streetName":"LAKEVILLE","id":23,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"ST","text":"ST"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetName":"PAYRAN","id":24,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"ST","text":"ST"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":890,"streetName":"LAKEVILLE","id":25,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"HWY","text":"HWY"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":857,"streetName":"LAKEVILLE","id":26,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"HWY","text":"HWY"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":815,"streetName":"LAKEVILLE","id":27,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"HWY","text":"HWY"},"status":{"value":"A","text":"Active"}},{"auditStatus":"A","isPrimary":"Y","streetStart":888,"streetName":"LAKEVILLE","id":28,"sourceNumber":11,"city":"PETALUMA","postalCode":"94952","country":{"value":"US","text":"United
+        States"},"state":{"value":"CA","text":"CA"},"streetSuffix":{"value":"HWY","text":"HWY"},"status":{"value":"A","text":"Active"}}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
+    http_version: 
+  recorded_at: Tue, 26 Aug 2014 15:16:56 GMT
+recorded_with: VCR 2.9.2

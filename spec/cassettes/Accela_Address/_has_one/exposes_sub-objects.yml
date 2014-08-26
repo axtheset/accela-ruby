@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '886'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140826151700146-46df1221
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 26 Aug 2014 15:17:00 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"OL27lRNrXjBjAR0q9_DeOd33mqaWXV31E8OPQnBeYdV8sxSI2xuHpSikGeNY0oLT-sKTFcMliowepZXO-5K5H9-dXafS8f8KSzJ6kr0CIRoRJAjhMVAhtTILhU7xBHkjf3w-CkHqQhZvre2nXCT0STzdIjY3lE_NQKzbnR-swJs2CE3sspoOZycFvpXYxQn3oFROhq-6MlFC99bECJOURpkioXTqBBzrnKFEDRInoNeXd_ef1Mqn4U5nJ8x28PZZrh3Uu8aDyGboWq_cZ7mGazlAeSWg4gSPlUgBYZU-NADJ3-3BqDmkTkHXfyYqjXf6ToyWoMfpUyD8pZ0JzoNM8kMtJQEOw7Iw7LOSLGldLvYR6DedUPeOoKMpJ9zOBvAiSS_h80L19rivW2rjtr97ES4ZxzsQgUYDHP4GvdJdf9E1","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAPuzg45hEKc7xvC6UDD3NnTGUhLveCnclGS8FpGgWWbT0QAAAAF-bycnaRN7AhboDSL_xGiOm51j-LzeG-TtoDKZpIhLfZKJ_GFs_-wzqjS2G6PZ2dPJLN5hVmkDkMTbbmqryC3no-yEXq5FfrkfNwLoShXHP04SGHlthKSKTDXCkSxO2g0wBoRH8WrRSKWLMoUJVyKzUlxQ5s30smkU2at8_VNeTSdsePQRGLo6wSWLJbRF0-PXe-9autcYoGWfbh4luY4BYnAyvxo6-PgCFuqrXSu8yg8gmpgX6Ym0_XgCRRz7XO9Sz-fjmfJC8jXyVnQMRf-m","scope":"addresses
+        get_civicid_profile"}'
+    http_version: 
+  recorded_at: Tue, 26 Aug 2014 15:17:01 GMT
+recorded_with: VCR 2.9.2
