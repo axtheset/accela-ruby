@@ -1,12 +1,5 @@
 module Accela
   class StatusTranslator < Translator
-
-    def translation
-      [
-        [:text, :text, :string],
-        [:value, :value, :string]
-      ]
-    end
-
+    include SimpleTranslation
   end
 end

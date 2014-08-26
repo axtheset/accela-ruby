@@ -1,12 +1,5 @@
 module Accela
   class HouseFractionEndTranslator < Translator
-
-    def translation
-      [
-        [:text, :text, :string],
-        [:value, :value, :string]
-      ]
-    end
-
+    include SimpleTranslation
   end
 end
