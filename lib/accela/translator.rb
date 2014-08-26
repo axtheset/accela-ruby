@@ -26,7 +26,7 @@ module Accela
           tuple = translation.select {|ruby, json, type| json == key.to_sym }.first
           if tuple
             ruby, json, type = tuple
-            type_transform = type_map.fetch(type).first
+            type_transform = transform_to_ruby(type)
             memo.merge({ ruby => type_transform.call(hash[json.to_s]) })
           elsif memo.has_key?(unknown_attribute_key)
             memo.merge({ unknown_attribute_key => memo.fetch(unknown_attribute_key).merge({ key.to_sym => val })})
@@ -43,7 +43,7 @@ module Accela
           tuple = translation.select {|ruby, json, type| ruby == key.to_sym }.first
           if tuple
             ruby, json, type = tuple
-            type_transform = type_map.fetch(type).last
+            type_transform = transform_to_json(type)
             memo.merge({ json.to_s => type_transform.call(hash[ruby.to_sym]) })
           elsif key == unknown_attribute_key
             memo.merge(stringify_keys(val))
@@ -60,6 +60,24 @@ module Accela
       }
     end
 
+    def transform_to_json(type)
+      transform(type).last
+    end
+
+    def transform_to_ruby(type)
+      transform(type).first
+    end
+
+    def transform(type)
+      if type_map.has_key?(type)
+        type_map.fetch(type)
+      else
+        translator = translator_for_name(underscore(type))
+        [ ->(i) { translator.json_to_ruby([i]).first },
+          ->(i) { translator.ruby_to_json([i]).first } ]
+      end
+    end
+
     def type_map
       {
         integer: [identity, identity],
@@ -69,24 +87,7 @@ module Accela
         double: [identity, identity],
         date: [to_date, from_date],
         dateTime: [to_date_time, from_date_time],
-        Type: translator(:type),
-        AddressTypeFlag: translator(:address_type_flag),
-        Country: translator(:country),
-        Direction: translator(:direction),
-        HouseFractionEnd: translator(:house_fraction_end),
-        HouseFractionStart: translator(:house_fraction_start),
-        State: translator(:state),
-        Status: translator(:status),
-        StreetSuffixDirection: translator(:street_suffix_direction),
-        StreetSuffix: translator(:street_suffix),
-        UnitType: translator(:unit_type)
       }
-    end
-
-    def translator(type)
-      translator = translator_for_name(type)
-      [ ->(i) { translator.json_to_ruby([i]).first },
-        ->(i) { translator.ruby_to_json([i]).first } ]
     end
 
     def identity

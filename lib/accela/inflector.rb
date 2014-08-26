@@ -15,6 +15,12 @@ module Accela
       }
     end
 
+    def underscore(name)
+      name.to_s.gsub(/([a-z\d]+)([A-Z])/) {
+        $1 + "_" + $2
+      }.downcase
+    end
+
     def constantize(name, namespace='Accela::')
       Object.const_get(namespace + name)
     end
