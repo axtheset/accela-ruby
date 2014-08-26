@@ -1,5 +1,7 @@
 module Accela
   class Model
+    include Inflector
+
     attr_reader :raw
     @@sub_graphs = []
 
@@ -10,7 +12,7 @@ module Accela
     def method_missing(name, *args, &block)
       if is_property?(name)
         if has_one?(name)
-          model = model_for_type(name)
+          model = model_for_name(name)
           model.new(value_for_property(name))
         else
           value_for_property(name)
@@ -27,16 +29,6 @@ module Accela
     end
 
     private
-
-    def model_for_type(type)
-      klass = type.to_s.capitalize.gsub(/(?:_)([a-z\d]*)/i) { $1.capitalize }
-      fq_klass = 'Accela::' + klass
-      Object.const_get(fq_klass)
-    end
-
-    def translator_for_type(type)
-      Object.const_get(model_for_type(type).to_s + 'Translator')
-    end
 
     def has_one?(name)
       @@sub_graphs.select {|type, relation|

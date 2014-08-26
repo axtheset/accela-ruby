@@ -2,6 +2,7 @@ require "date"
 
 require "httparty"
 
+require "accela/inflector"
 require "accela/translator"
 require "accela/model"
 require "accela/configuration"

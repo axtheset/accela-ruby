@@ -1,5 +1,6 @@
 module Accela
   class Translator
+    include Inflector
 
     def self.json_to_ruby(hashes=[])
       new.json_to_ruby(hashes)
@@ -82,24 +83,8 @@ module Accela
       }
     end
 
-    def translator_map
-      {
-        type: TypeTranslator,
-        address_type_flag: AddressTypeFlagTranslator,
-        country: CountryTranslator,
-        direction: DirectionTranslator,
-        house_fraction_end: HouseFractionEndTranslator,
-        house_fraction_start: HouseFractionStartTranslator,
-        state: StateTranslator,
-        status: StatusTranslator,
-        street_suffix_direction: StreetSuffixDirectionTranslator,
-        street_suffix: StreetSuffixTranslator,
-        unit_type: UnitTypeTranslator
-      }
-    end
-
     def translator(type)
-      translator = translator_map[type]
+      translator = translator_for_name(type)
       [ ->(i) { translator.json_to_ruby([i]).first },
         ->(i) { translator.ruby_to_json([i]).first } ]
     end
