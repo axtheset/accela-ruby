@@ -7,24 +7,28 @@ module Accela
       end
 
       def get(uri, auth_type, query={})
-        handle(API.connection.get("/v4/#{uri}", auth_type, query))
+        handle(API.connection.get(expand_uri(uri), auth_type, query))
       end
 
       def post(uri, auth_type, query={}, payload={})
-        handle(API.connection.post("/v4/#{uri}",
+        handle(API.connection.post(expand_uri(uri),
                                    auth_type,
                                    query,
                                    payload))
       end
 
       def put(uri, auth_type, query={}, payload={})
-        handle(API.connection.put("/v4/#{uri}",
+        handle(API.connection.put(expand_uri(uri),
                                   auth_type,
                                   query,
                                   payload))
       end
 
       private
+
+      def expand_uri(uri)
+        "/v4/#{uri}"
+      end
 
       def handle(response)
         if is_success?(response)
