@@ -10,19 +10,23 @@ module Accela
     end
 
     def classify(name)
-      name.to_s.capitalize.gsub(/_([a-z\d]+)/i) {
-        $1.capitalize
-      }
+      name.to_s.classify
+    end
+
+    def pluralize(name)
+      name.to_s.pluralize
+    end
+
+    def singularize(name)
+      name.to_s.singularize
     end
 
     def underscore(name)
-      name.to_s.gsub(/([a-z\d]+)([A-Z])/) {
-        $1 + "_" + $2
-      }.downcase
+      name.to_s.underscore
     end
 
     def constantize(name, namespace='Accela::')
-      Object.const_get(namespace + name)
+      (namespace + name).constantize
     end
 
   end

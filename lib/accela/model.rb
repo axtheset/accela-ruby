@@ -15,7 +15,7 @@ module Accela
           model = model_for_name(name)
           model.new(value_for_property(name))
         elsif has_many?(name)
-          model = model_for_name(name.to_s.singularize)
+          model = model_for_name(singularize(name))
           items = value_for_property(name)
           items.map {|item| model.new(item) }
         else
