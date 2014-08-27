@@ -13,4 +13,5 @@ Gem::Specification.new do |s|
   s.homepage       = 'https://developer.accela.com/'
   s.license        = 'MIT'
   s.add_dependency   'httparty', '~> 0.13'
+  s.add_dependency   'activesupport', '~> 4.1.5'
 end

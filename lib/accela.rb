@@ -1,6 +1,7 @@
 require "date"
 
 require "httparty"
+require "active_support/core_ext/string/inflections"
 
 require "accela/inflector"
 require "accela/translator"
@@ -14,6 +15,7 @@ require "accela/api/error_handler"
 require "accela/api/v4/base"
 require "accela/api/v4/create_record"
 require "accela/api/v4/get_all_addresses"
+require "accela/api/v4/get_all_addresses_for_record"
 require "accela/api/v4/get_all_records"
 require "accela/api/v4/get_all_record_types"
 require "accela/api/v4/get_addresses"

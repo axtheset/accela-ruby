@@ -14,6 +14,10 @@ module Accela
         if has_one?(name)
           model = model_for_name(name)
           model.new(value_for_property(name))
+        elsif has_many?(name)
+          model = model_for_name(name.to_s.singularize)
+          items = value_for_property(name)
+          items.map {|item| model.new(item) }
         else
           value_for_property(name)
         end
@@ -28,11 +32,21 @@ module Accela
       @@sub_graphs << [:has_one, relation]
     end
 
+    def self.has_many(relation)
+      @@sub_graphs << [:has_many, relation]
+    end
+
     private
 
     def has_one?(name)
       @@sub_graphs.select {|type, relation|
         type == :has_one && relation == name
+      }.first
+    end
+
+    def has_many?(name)
+      @@sub_graphs.select {|type, relation|
+        type == :has_many && relation == name
       }.first
     end
 

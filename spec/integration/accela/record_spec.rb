@@ -68,4 +68,26 @@ describe Accela::Record, :vcr do
     end
   end
 
+  describe "::has_many" do
+    let(:input) {
+      {
+        balance: 123.45,
+        addresses: [{
+          city: "Cleveland",
+          county: "Cuyahoga"
+        }, {
+          city: "Bainbridge Township",
+          county: "Geauga"
+        }]
+      }
+    }
+
+    let(:record) { Accela::Record.new(input) }
+
+    it "exposes sub-objects in an array" do
+      address1, address2 = record.addresses
+      expect(address1.city).to eq "Cleveland"
+      expect(address2.city).to eq "Bainbridge Township"
+    end
+  end
 end
