@@ -66,6 +66,14 @@ describe Accela::Record, :vcr do
     it "exposes sub-objects" do
       expect(record.type.text).to eq "This is a text"
     end
+
+    it "embeds raw values when assigning has_manys" do
+      type = Accela::Type.new(input.fetch(:type))
+      rec = Accela::Record.new
+      rec.type = type
+      expect(rec.raw[:type][:text]).to eq "This is a text"
+      expect(rec.type.text).to eq "This is a text"
+    end
   end
 
   describe "::has_many" do
@@ -88,6 +96,9 @@ describe Accela::Record, :vcr do
       address1, address2 = record.addresses
       expect(address1.city).to eq "Cleveland"
       expect(address2.city).to eq "Bainbridge Township"
+    end
+
+    xit "embeds raw values when assigning has_manys" do
     end
   end
 

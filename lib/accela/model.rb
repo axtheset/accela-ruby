@@ -33,8 +33,13 @@ module Accela
         else
           value_for_property(name)
         end
-      elsif is_assignment?(name)
-        set_value_for_property(name.to_s.gsub("=", ""), args.first)
+       elsif is_assignment?(name)
+         property = name.to_s.gsub("=", "")
+         value = args.first
+         if has_one?(property) && !value.kind_of?(Hash) && value
+           value = value.raw
+         end
+         set_value_for_property(property, value)
       else
         super
       end
@@ -56,13 +61,13 @@ module Accela
 
     def has_one?(name)
       @@sub_graphs.select {|type, relation|
-        type == :has_one && relation == name
+        type == :has_one && relation == name.to_sym
       }.first
     end
 
     def has_many?(name)
       @@sub_graphs.select {|type, relation|
-        type == :has_many && relation == name
+        type == :has_many && relation == name.to_sym
       }.first
     end
 

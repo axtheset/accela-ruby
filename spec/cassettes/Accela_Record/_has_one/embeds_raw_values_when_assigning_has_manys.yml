@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140903131756621-a787b658
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 03 Sep 2014 13:17:57 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"obV_b_MAERKlUqITkWmi-ooO0spdc9iKzgwHgVMEQPdS27WGBk-TYChmc2lo2C-bLaCx6wz2jI8ju7EVpmHg5MP_Mr_X8FzboSCZzHM2np9omIN7jG8FOn2FIPtL3OykxZ8ONCZ2yfgkDg8_QtCT9eoVeSvYG9_3Re22suKFSvuuGVezGd5g_b4CdHpJvpdlDXoN2ukIh9fzky4nvgXmSyxZWnaVnn6xdG0ynxVus4gD-V667DADfaov04FPMYxf7uV6lGl8K8ieTvlCEQWZfMI9d_0kD9DBpbR0LXpqHWuS8v_stkCRtM0uGoZMnqbw9zqJfJMLM8rWQUjE9wB9kDdps-TSzF8MClXDEZUM15GLEJQYrce-jpoWQpA0bBEMJYa3X0SHcGt3-fBeugCuynYxrnb4XUIMd3BwT1qUHkAfcU1Alu-Cju7TG7u43T4W0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAANf8A34zWk97vOe-uHhC4HVNqQY8AFFXjt4iWJjkVTyj4QAAAAGqSkAfmcUoLUeYEPMQzZhrbWScKboMIXsDOfz839cYPFb7yiRprd_SAr4aEStEGVPJRwi266Y9d2l5EV3jwzvLCtVLMm18A1in6gh58-f0UHut0qsEpgDp5Z2trq5UCW33tnu13VVP0_7zH6SOsIxPZXO726_hdF6Hh2_avEIrLj2WPIb6QEr9DjKei8-C_74XR8Jqr1l0jAuVToax7lVeilzPOngkVwVkIplkqEjk6RrejfBATApySUfNI3v5PiA2BG-wOaUwvBqdurNITGPztIViKRpcrTDikAeqNw0d2Q","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Wed, 03 Sep 2014 13:17:57 GMT
+recorded_with: VCR 2.9.2
