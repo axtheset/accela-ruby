@@ -38,6 +38,8 @@ module Accela
          value = args.first
          if has_one?(property) && !value.kind_of?(Hash) && value
            value = value.raw
+         elsif has_many?(property) && !value.inject(true) {|m, v| m && v.kind_of?(Hash) } && value
+           value = value.map(&:raw)
          end
          set_value_for_property(property, value)
       else

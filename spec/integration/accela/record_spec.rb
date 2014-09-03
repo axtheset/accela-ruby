@@ -98,7 +98,13 @@ describe Accela::Record, :vcr do
       expect(address2.city).to eq "Bainbridge Township"
     end
 
-    xit "embeds raw values when assigning has_manys" do
+    it "embeds raw values when assigning has_manys" do
+      raw_addresses = input.fetch(:addresses)
+      addresses = raw_addresses.map {|hash| Accela::Address.new(hash) }
+      rec = Accela::Record.new
+      rec.addresses = addresses
+      expect(rec.raw[:addresses].first[:city]).to eq "Cleveland"
+      expect(rec.addresses.last.county).to eq "Geauga"
     end
   end
 
