@@ -28,10 +28,8 @@ module Accela
             ruby, json, type = tuple
             type_transform = transform_to_ruby(type)
             memo.merge({ ruby => type_transform.call(hash[json.to_s]) })
-          elsif memo.has_key?(unknown_attribute_key)
-            memo.merge({ unknown_attribute_key => memo.fetch(unknown_attribute_key).merge({ key.to_sym => val })})
           else
-            memo.merge({ unknown_attribute_key => { key.to_sym => val }})
+            memo
           end
         }
       }
@@ -45,8 +43,6 @@ module Accela
             ruby, json, type = tuple
             type_transform = transform_to_json(type)
             memo.merge({ json.to_s => type_transform.call(hash[ruby.to_sym]) })
-          elsif key == unknown_attribute_key
-            memo.merge(stringify_keys(val))
           else
             memo
           end
@@ -108,10 +104,6 @@ module Accela
 
     def from_date_time
       ->(i) { i.strftime("%F %T") }
-    end
-
-    def unknown_attribute_key
-      :__other__
     end
 
   end

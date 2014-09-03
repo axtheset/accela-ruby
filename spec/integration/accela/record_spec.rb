@@ -90,4 +90,12 @@ describe Accela::Record, :vcr do
       expect(address2.city).to eq "Bainbridge Township"
     end
   end
+
+  describe "::new" do
+    it "throws an error when given a key that doesn't belong to its schema" do
+      input = { oops: true }
+      error = Accela::UnknownAttributeError
+      expect { Accela::Record.new(input) }.to raise_error(error)
+    end
+  end
 end

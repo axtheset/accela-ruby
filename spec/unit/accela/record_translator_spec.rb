@@ -63,11 +63,7 @@ describe Accela::RecordTranslator do
         expected = [{
           balance: 123.45,
           assigned_user: "Dale Cooper",
-          public_owned: false,
-          __other__: {
-            newProperty: false,
-            anotherNewProprty: "Test"
-          }
+          public_owned: false
         }]
 
         expect(result).to eq expected
@@ -143,35 +139,6 @@ describe Accela::RecordTranslator do
 
         expect(result).to eq expected
       end
-    end
-
-    context "payload contains keys not in translation table" do
-      let(:input) {
-        [
-          {
-            balance: 123.45,
-            assigned_user: "Dale Cooper",
-            public_owned: false,
-            __other__: {
-              newProperty: false,
-              anotherNewProprty: "Test"
-            }
-          }
-        ]
-      }
-
-      it "unquarantines these key/vals from other key" do
-        expected = [{
-          "balance" => 123.45,
-          "newProperty" => false,
-          "assignedUser" => "Dale Cooper",
-          "anotherNewProprty" => "Test",
-          "publicOwned" => false
-        }]
-
-        expect(result).to eq expected
-      end
-
     end
 
     context "input contains date" do

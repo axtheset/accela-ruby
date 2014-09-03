@@ -3,6 +3,7 @@ module Accela
 
     def translation
       [
+        [:addresses, :addresses, [:Address]],
         [:actual_production_unit, :actualProductionUnit, :double],
         [:appearance_date, :appearanceDate, :dateTime],
         [:appearance_day_of_week, :appearanceDayOfWeek, :string],

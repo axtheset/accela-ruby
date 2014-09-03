@@ -12,6 +12,10 @@ module Accela
   class UnsupportedAuthTypeError < AccelaError; end
   class UnexpectedError < AccelaError; end
 
+  # Logic Erors
+  class UnknownAttributeError < AccelaError; end
+
+
   class TeapotError < AccelaError
     def initialize
       super "I'm a little teapot, short and stout! Here is my handle, here is my spout!"

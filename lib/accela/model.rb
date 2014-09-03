@@ -5,8 +5,20 @@ module Accela
     attr_reader :raw
     @@sub_graphs = []
 
-    def initialize(raw)
-      @raw = raw
+    def initialize(input={})
+      @raw = translator.translation.reduce({}) {|memo, (property, _, type)|
+        val = has_many?(property) ? [] : nil
+        memo[property] = val
+        memo
+      }
+      input.each {|property, value|
+        unless @raw.has_key?(property)
+          raise UnknownAttributeError, "unknown attribute: #{property}"
+        else
+          method = "#{property}="
+          public_send(method, value)
+        end
+      }
     end
 
     def method_missing(name, *args, &block)
@@ -37,6 +49,10 @@ module Accela
     end
 
     private
+
+    def translator
+      translator_for_name(demodulize(self.class)).new
+    end
 
     def has_one?(name)
       @@sub_graphs.select {|type, relation|

@@ -29,5 +29,9 @@ module Accela
       (namespace + name).constantize
     end
 
+    def demodulize(name)
+      name.to_s.demodulize
+    end
+
   end
 end
