@@ -63,7 +63,7 @@ module Accela
       }.map {|pair|
         pair.join(": ")
       }.join(", ")
-      "<#{self.class} #{properties}>"
+      "#<#{self.class} #{properties}>"
     end
 
     private
