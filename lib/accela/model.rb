@@ -59,14 +59,7 @@ module Accela
       properties = raw.reject {|prop, _|
         has_one?(prop) || has_many?(prop)
       }.map {|key, val|
-        if val.kind_of? String
-          output = %Q["#{val}"]
-        elsif val == nil
-          output = "nil"
-        else
-          output = val
-        end
-        [key, output]
+        [key, val.inspect]
       }.map {|pair|
         pair.join(": ")
       }.join(", ")
