@@ -35,9 +35,9 @@ module Accela
        elsif is_assignment?(name)
          property = name.to_s.gsub("=", "")
          value = args.first
-         if has_one?(property) && value
+         if value && has_one?(property)
            value = value.raw
-         elsif has_many?(property) && value
+         elsif value && has_many?(property)
            value = value.map(&:raw)
          end
          set_value_for_property(property, value)
