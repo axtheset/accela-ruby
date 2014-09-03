@@ -55,6 +55,24 @@ module Accela
       @@sub_graphs << [:has_many, relation]
     end
 
+    def inspect
+      properties = raw.reject {|prop, _|
+        has_one?(prop) || has_many?(prop)
+      }.map {|key, val|
+        if val.kind_of? String
+          output = %Q["#{val}"]
+        elsif val == nil
+          output = "nil"
+        else
+          output = val
+        end
+        [key, output]
+      }.map {|pair|
+        pair.join(": ")
+      }.join(", ")
+      "<#{self.class} #{properties}>"
+    end
+
     private
 
     def translator
