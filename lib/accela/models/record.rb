@@ -17,18 +17,5 @@ module Accela
       raws.map {|raw| new(raw) }
     end
 
-    # def addresses
-      # unless raw.has_key?(:addresses)
-        # payload = Accela::V4::GetAllAddressesForRecord.call(id)
-        # address_hashes = payload["result"]
-        # raws = AddressTranslator.json_to_ruby(address_hashes)
-        # raw[:addresses] = raws
-      # else
-        # raw[:addresses]
-      # end
-      # # TODO: Implement has_many relationships and return
-      # #       real address model objects and not hashes!
-    # end
-
   end
 end

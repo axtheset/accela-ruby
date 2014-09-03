@@ -65,6 +65,17 @@ module Accela
     end
 
     def transform(type)
+      if is_collection_type?(type)
+        inner_type = extract_type_from_collection_type(type)
+        t = scalar_transform(inner_type)
+        [ ->(is) { is.map(&t.first) },
+          ->(is) { is.map(&t.last) } ]
+      else
+        scalar_transform(type)
+      end
+    end
+
+    def scalar_transform(type)
       if primitive_type_map.has_key?(type)
         primitive_type_map.fetch(type)
       else
@@ -72,6 +83,14 @@ module Accela
         [ ->(i) { translator.json_to_ruby([i]).first },
           ->(i) { translator.ruby_to_json([i]).first } ]
       end
+    end
+
+    def is_collection_type?(type)
+      type.kind_of?(Array)
+    end
+
+    def extract_type_from_collection_type(type)
+      type.first
     end
 
     def primitive_type_map

@@ -169,5 +169,36 @@ describe Accela::RecordTranslator do
       end
     end
 
+    context "input includes a has_many relation" do
+      let(:input) {
+        [
+          {
+            balance: 123.45,
+            addresses: [{
+              city: "Cleveland",
+              county: "Cuyahoga"
+            }, {
+              city: "Bainbridge Township",
+              county: "Geauga"
+            }]
+          }
+        ]
+      }
+
+      it "translates the has_many" do
+        expected = [{
+          "balance" => 123.45,
+          "addresses" => [{
+            "city" => "Cleveland",
+            "county" => "Cuyahoga"
+          }, {
+            "city" => "Bainbridge Township",
+            "county" => "Geauga"
+          }]
+        }]
+
+        expect(result).to eq expected
+      end
+    end
   end
 end
