@@ -15,7 +15,7 @@ module Accela
         unless @raw.has_key?(property)
           raise UnknownAttributeError, "unknown attribute: #{property}"
         else
-          @raw[property.to_sym] = value
+          set_value_for_property(property, value)
         end
       }
     end
