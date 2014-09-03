@@ -12,7 +12,7 @@ module Accela
         memo
       }
       input.each {|property, value|
-        unless @raw.has_key?(property)
+        unless is_property?(property)
           raise UnknownAttributeError, "unknown attribute: #{property}"
         else
           set_value_for_property(property, value)
