@@ -31,21 +31,31 @@ describe Accela::Record, :vcr do
 
     it "does not persist changes" do
       record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      record.module = "This is a test"
-      expect(record.module).to eq "This is a test"
+      record.housing_units = 647
+      expect(record.housing_units).to eq 647
       record_take_2 = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      expect(record_take_2.module).not_to eq "This is a test"
+      expect(record_take_2.housing_units).not_to eq 647
     end
   end
 
-  describe "#save" do
-    xit "persists changes to the model" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      record.module = "This is a test"
-      record.save
-      expect(record.module).to eq "This is a test"
-      record_take_2 = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      expect(record_take_2.module).to eq "This is a test"
+  describe "#create" do
+    it "persists changes to the model" do
+      record = Accela::Record.new
+      record.housing_units = 829
+      type = Accela::Type.new
+      type.id = "Building-Commercial-Addition-NA"
+      record.type = type
+      record.create
+      expect(record.housing_units).to eq 829
+    end
+
+    it "creates and sets an id" do
+      record = Accela::Record.new
+      type = Accela::Type.new
+      type.id = "Building-Commercial-Addition-NA"
+      record.type = type
+      record.create
+      expect(record.id).not_to eq nil
     end
   end
 

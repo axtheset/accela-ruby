@@ -42,7 +42,12 @@ module Accela
           if tuple
             ruby, json, type = tuple
             type_transform = transform_to_json(type)
-            memo.merge({ json.to_s => type_transform.call(hash[ruby.to_sym]) })
+            value = type_transform.call(hash[ruby.to_sym])
+            if value != nil
+              memo.merge({ json.to_s => value })
+            else
+              memo
+            end
           else
             memo
           end
@@ -80,8 +85,8 @@ module Accela
         primitive_type_map.fetch(type)
       else
         translator = translator_for_name(underscore(type))
-        [ ->(i) { translator.json_to_ruby([i]).first },
-          ->(i) { translator.ruby_to_json([i]).first } ]
+        [ ->(i) { translator.json_to_ruby([i].compact).first },
+          ->(i) { translator.ruby_to_json([i].compact).first } ]
       end
     end
 
@@ -118,11 +123,11 @@ module Accela
     end
 
     def from_date
-      ->(i) { i.strftime("%F") }
+      ->(i) { i && i.strftime("%F") }
     end
 
     def from_date_time
-      ->(i) { i.strftime("%F %T") }
+      ->(i) { i && i.strftime("%F %T") }
     end
 
   end

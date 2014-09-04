@@ -12,6 +12,10 @@ module Accela
         memo
       }
       @types = Hash[translator.translation.map {|property, _, type| [property, type] }]
+      update(input)
+    end
+
+    def update(input)
       input.each {|property, value|
         unless is_property?(property)
           raise UnknownAttributeError, "unknown attribute: #{property}"

@@ -17,5 +17,13 @@ module Accela
       raws.map {|raw| new(raw) }
     end
 
+    def create
+      payload = RecordTranslator.ruby_to_json([raw])
+      create_payload = Accela::V4::CreateRecord.call(payload.first)
+      record_hash = create_payload["result"]
+      raw = RecordTranslator.json_to_ruby([record_hash]).first
+      update(raw)
+    end
+
   end
 end

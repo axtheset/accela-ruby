@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140904203814999-8a94b145
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 04 Sep 2014 20:38:16 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"z1LsSlc1WjXU_MxUYGyWI2-pkAOkA9s_hDSG_ssqzY65dwdCMfFN6l8MdbS2gzOrHyYhG7IVgQ8KxCGHWchSElR_lmcRdG2kvA--50u2CbnY7VJmgzckvVB9uvvB_-JjJxJFs0GoG53OeBtwjX6ZWx3vIgPqPPTfsr7Xyp6jyO9PGPYx_KEicUzgcF_PR2_-38XPspsizuLJzzighOejZ387nn0_fYgMC6UQltMe2nezhpJayICWwA_uBIoz_-9CGxAtLyZAlPZ4Ur11XwnI231VJKLgkW_HfUkb9wti83RkCDrEFCtEcvawOYOUrFQd7RXWsFc252WdjIgCXzsrRohz6ZRA6e49qSh78PwD9B9BsR8qI6m_5-8i8Xuhp0nGbc0Hdt2D2HLxnHWdGceiJBgjwc_Se0_0r8utQ520gaPHEijzCs53g-J9QaRtGCYg0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAAVE4AuLM76NLOETiJAckULXcH0LElIrIi_hxaJqAyTY4QAAAAF06AM0uO7-0ffxXQJ9r0nQYpwDTHb-7yKsTTaEqeCoedH2SUR21cjnXUQamejigY9mroYUYXEELOg5qWzxc-lomgEVJGpN4FZPMhzUMZ_McDLn9gXA6tthVEdRHRRZGjTs2VcoZEETchoL-HXLpdhnQfns4UtBabtvSfSl4Ac-n_z4VkVjUxl-sZ2XT-LmuaCcgHjr_0u5Rb4QfEOC--ZGuBnQ7LaG2DF36Md7orYR3TOTCFjyWX8zET9TxOSWpPvjnf-eC_7sBPx3cNSFGIcfvLuyhVS-eAH4mmzvlmb1ew","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 20:38:16 GMT
+- request:
+    method: post
+    uri: https://apis.accela.com/v4/records
+    body:
+      encoding: UTF-8
+      string: '{"addresses":[],"housingUnits":829,"type":{"id":"Building-Commercial-Addition-NA"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - z1LsSlc1WjXU_MxUYGyWI2-pkAOkA9s_hDSG_ssqzY65dwdCMfFN6l8MdbS2gzOrHyYhG7IVgQ8KxCGHWchSElR_lmcRdG2kvA--50u2CbnY7VJmgzckvVB9uvvB_-JjJxJFs0GoG53OeBtwjX6ZWx3vIgPqPPTfsr7Xyp6jyO9PGPYx_KEicUzgcF_PR2_-38XPspsizuLJzzighOejZ387nn0_fYgMC6UQltMe2nezhpJayICWwA_uBIoz_-9CGxAtLyZAlPZ4Ur11XwnI231VJKLgkW_HfUkb9wti83RkCDrEFCtEcvawOYOUrFQd7RXWsFc252WdjIgCXzsrRohz6ZRA6e49qSh78PwD9B9BsR8qI6m_5-8i8Xuhp0nGbc0Hdt2D2HLxnHWdGceiJBgjwc_Se0_0r8utQ520gaPHEijzCs53g-J9QaRtGCYg0
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '756'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140904203816552-5aab3c5a
+      Date:
+      - Thu, 04 Sep 2014 20:38:16 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":{"id":"ISLANDTON-14CAP-00000-000DM","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
+        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"initiatedProduct":"AV360","createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","statusDate":"2014-09-04
+        13:46:14","module":"Building","customId":"BLD14-00203","recordClass":"COMPLETE","trackingId":292615946,"housingUnits":829,"value":"14CAP-00000-000DM","totalFee":0.0,"totalPay":0.0,"balance":0.0,"booking":false,"infraction":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"publicOwned":false},"status":200}'
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 20:38:18 GMT
+recorded_with: VCR 2.9.2
