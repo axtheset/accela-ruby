@@ -14,6 +14,7 @@ module Accela
 
   # Logic Erors
   class UnknownAttributeError < AccelaError; end
+  class TypeMismatch < AccelaError; end
 
 
   class TeapotError < AccelaError

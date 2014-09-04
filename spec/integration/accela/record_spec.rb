@@ -115,4 +115,18 @@ describe Accela::Record, :vcr do
       expect { Accela::Record.new(input) }.to raise_error(error)
     end
   end
+
+  describe "type mismatches" do
+    let(:error) { Accela::TypeMismatch }
+    let(:record) { Accela::Record.new }
+
+    it "throws an error when assigning the wrong types" do
+      expect { record.type = "String instead of a Accela::Type" }.to raise_error(error)
+    end
+
+    it "throws an error when assigning wrong non-primative types" do
+      address = Accela::Address.new
+      expect { record.type = address }.to raise_error(error)
+    end
+  end
 end

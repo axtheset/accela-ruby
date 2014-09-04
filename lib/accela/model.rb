@@ -2,7 +2,7 @@ module Accela
   class Model
     include Inflector
 
-    attr_reader :raw
+    attr_reader :raw, :types
     @@sub_graphs = []
 
     def initialize(input={})
@@ -11,6 +11,7 @@ module Accela
         memo[property] = val
         memo
       }
+      @types = Hash[translator.translation.map {|property, _, type| [property, type] }]
       input.each {|property, value|
         unless is_property?(property)
           raise UnknownAttributeError, "unknown attribute: #{property}"
@@ -35,13 +36,18 @@ module Accela
       elsif is_assignment?(name)
         property = name.to_s.gsub("=", "")
         value = args.first
-        if has_one?(property)
-          value &&= value.raw
-        elsif has_many?(property)
-          value &&= value.map(&:raw)
-          value = Array(value)
+
+        if validate_type(property, value)
+          if has_one?(property)
+            result = value && value.raw
+          elsif has_many?(property)
+            result = Array(value && value.map(&:raw))
+          else
+            result = value
+          end
+
+          set_value_for_property(property, result)
         end
-        set_value_for_property(property, value)
       else
         super
       end
@@ -67,6 +73,26 @@ module Accela
     end
 
     private
+
+    def validate_type(property, value)
+      number = ->(i) { i.is_a? Fixnum }
+
+      primatives = [:integer, :long, :string, :boolean, :double, :date, :dateTime]
+
+      type = types[property.to_sym]
+
+      primative = primatives.include?(type)
+      has_many = type.is_a?(Array) && value.is_a?(Array) && value.inject(true) {|m, v|
+        m && v.is_a?(model_for_name(type.first))
+      }
+      has_one = !primative && !has_many && value.is_a?(model_for_name(type))
+
+      if primative || has_many || has_one
+        true
+      else
+        raise TypeMismatch, "Incorrect type: #{value.inspect} is not of type #{type}"
+      end
+    end
 
     def translator
       translator_for_name(demodulize(self.class)).new
