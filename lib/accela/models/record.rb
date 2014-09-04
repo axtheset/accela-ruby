@@ -23,6 +23,7 @@ module Accela
       record_hash = create_payload["result"]
       raw = RecordTranslator.json_to_ruby([record_hash]).first
       update(raw)
+      self
     end
 
   end
