@@ -1,0 +1,216 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140905141251149-f9a830ad
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 05 Sep 2014 14:12:51 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"3HiRd02fWNP8qz2JwfI_kAJvJ3WwSHyd0Dv9VwzRBgflW12Y8I8PNnzSrDPfia01qTBb-XI67HGqoopJr4kXCDJdswqw_FuhiJb_uzun5MyFRyOQrhRwd6pOzCd3r9WPBWv06lh6iFGqLXATAmiTjDe1PgyqJnwwWiqPwPF4wj6AFLyyVBqWh4_eLfRZKGjAewcA6m1s8wJeRmSQvSPeocwGcVaAyyJ6c43m5JlbiRA0IKlCG7Z_iqRpz1JMRc2IyDr8p0JWwrpittsTvUtqhJCL8XhIEogSmMjn3NZBm9cHHPkTArMqRcroqKf1yMiF3vl0kiBktPTfwJVtcMoakfsmLSsQ-mNExdMO13kMckU2DScGLecRBpbzLYG8PiDQBok79wrTtKAk1QGGSSrUSGfSjaqGk6wcAegckYKS14Ok2Dr5TV_25vKvVG7axjPH0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAKxZqsNWqe8ClgFKFGhsUddH_COS2iLzf83eUumdV4z24QAAAAGBwMkjseGCma537gPnA4PAjS7Yu15JAz8Q1AaSoqkVsbyU40d5dQvVgWez-T_VQEf8dsZTE6KVWl-36KXYcIxxKIu_cJQUt6LyxZpDFhOei_10TSDBBc0ssgF19INrIM5vE_eBQ5K0kesvoQd6vh-BXUT_QM5sx_uSocGkWAt3eJSTuImMe-h47fbWh19tsc47FBFhzat2wtaZwdf0xQ7atp3J-tTF2Ib5kSapD84ODAKpe_boe7jW5egcn2eRqATPT-40uYR3LG2uFz5D1SjEnuVRvxjLgWWFdo7gebHydw","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Fri, 05 Sep 2014 14:12:52 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/records
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      X-Accela-Environment:
+      - TEST
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '12818'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140905141252649-f622144d
+      Date:
+      - Fri, 05 Sep 2014 14:12:52 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":[{"id":"ISLANDTON-14CAP-00000-000DR","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
+        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00207","openedDateFrom":"2014-09-05
+        00:00:00","trackingId":222006149,"value":"14CAP-00000-000DR"},{"id":"ISLANDTON-14CAP-00000-000DM","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
+        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00203","openedDateFrom":"2014-09-04
+        00:00:00","trackingId":292615946,"value":"14CAP-00000-000DM"},{"id":"ISLANDTON-14CAP-00000-000DQ","type":{"module":"ServiceRequest","type":"Vehicles","value":"ServiceRequest/Vehicles/Abandoned
+        Vehicle/NA","category":"NA","text":"Abandoned Vehicle","group":"ServiceRequest","subType":"Abandoned
+        Vehicle","id":"ServiceRequest-Vehicles-Abandoned.cVehicle-NA"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00170","openedDateFrom":"2014-09-04
+        00:00:00","trackingId":236336442,"value":"14CAP-00000-000DQ"},{"id":"ISLANDTON-14CAP-00000-000DP","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
+        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00206","openedDateFrom":"2014-09-04
+        00:00:00","trackingId":262130230,"value":"14CAP-00000-000DP"},{"id":"ISLANDTON-14CAP-00000-000DO","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
+        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00205","openedDateFrom":"2014-09-04
+        00:00:00","trackingId":275146120,"value":"14CAP-00000-000DO"},{"id":"ISLANDTON-14CAP-00000-000DN","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
+        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00204","openedDateFrom":"2014-09-04
+        00:00:00","trackingId":290833249,"value":"14CAP-00000-000DN"},{"id":"ISLANDTON-14CAP-00000-000DL","type":{"module":"ServiceRequest","type":"Vehicles","value":"ServiceRequest/Vehicles/Abandoned
+        Vehicle/NA","category":"NA","text":"Abandoned Vehicle","group":"ServiceRequest","subType":"Abandoned
+        Vehicle","id":"ServiceRequest-Vehicles-Abandoned.cVehicle-NA"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00169","openedDateFrom":"2014-09-03
+        00:00:00","trackingId":215146553,"value":"14CAP-00000-000DL"},{"id":"ISLANDTON-14CAP-00000-000DK","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Alteration/NA","category":"NA","text":"Commercial
+        Alteration","group":"Building","subType":"Alteration","id":"Building-Commercial-Alteration-NA"},"status":{"value":"Plan
+        Review","text":"Plan Review"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00202","openedDateFrom":"2014-09-01
+        00:00:00","trackingId":294651030,"value":"14CAP-00000-000DK"},{"name":"Test
+        of new residential","id":"ISLANDTON-14CAP-00000-000DJ","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","text":"Residential
+        New","group":"Building","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"PUBLICUSER94855","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00201","openedDateFrom":"2014-08-28
+        00:00:00","trackingId":240492160,"value":"14CAP-00000-000DJ"},{"id":"ISLANDTON-14CAP-00000-000DI","type":{"module":"Enforcement","type":"Incident","value":"Enforcement/Incident/Zoning/Fence
+        Dispute","category":"Fence Dispute","text":"Fence Violation","group":"Enforcement","subType":"Zoning","id":"Enforcement-Incident-Zoning-Fence.cDispute"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"Enforcement","customId":"ENF-2014-00002","openedDateFrom":"2014-08-28
+        00:00:00","trackingId":237747211,"value":"14CAP-00000-000DI"},{"id":"ISLANDTON-14CAP-00000-000DF","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00077","openedDateFrom":"2014-08-26
+        00:00:00","trackingId":262337734,"value":"14CAP-00000-000DF"},{"id":"ISLANDTON-14CAP-00000-000DG","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00078","openedDateFrom":"2014-08-26
+        00:00:00","trackingId":274835004,"value":"14CAP-00000-000DG"},{"id":"ISLANDTON-14CAP-00000-000DE","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00076","openedDateFrom":"2014-08-26
+        00:00:00","trackingId":224866507,"value":"14CAP-00000-000DE"},{"id":"ISLANDTON-14CAP-00000-000DH","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00079","openedDateFrom":"2014-08-26
+        00:00:00","trackingId":227657678,"value":"14CAP-00000-000DH"},{"id":"ISLANDTON-14CAP-00000-000DD","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00075","openedDateFrom":"2014-08-26
+        00:00:00","trackingId":213118252,"value":"14CAP-00000-000DD"},{"name":"Test
+        of new residential","id":"ISLANDTON-14CAP-00000-000DB","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","text":"Residential
+        New","group":"Building","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Issued","text":"Issued"},"createdBy":"PUBLICUSER94855","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00199","openedDateFrom":"2014-08-25
+        00:00:00","trackingId":276455245,"value":"14CAP-00000-000DB"},{"id":"ISLANDTON-14CAP-00000-000DC","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","text":"Residential
+        New","group":"Building","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Plan
+        Review","text":"Plan Review"},"createdBy":"PUBLICUSER0","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00200","openedDateFrom":"2014-08-25
+        00:00:00","trackingId":200015054,"value":"14CAP-00000-000DC"},{"id":"ISLANDTON-14CAP-00000-000D7","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00071","openedDateFrom":"2014-08-22
+        00:00:00","trackingId":211461555,"value":"14CAP-00000-000D7"},{"id":"ISLANDTON-14CAP-00000-000D8","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00072","openedDateFrom":"2014-08-22
+        00:00:00","trackingId":247000621,"value":"14CAP-00000-000D8"},{"id":"ISLANDTON-14CAP-00000-000DA","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00074","openedDateFrom":"2014-08-22
+        00:00:00","trackingId":248010337,"value":"14CAP-00000-000DA"},{"id":"ISLANDTON-14CAP-00000-000D9","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00073","openedDateFrom":"2014-08-22
+        00:00:00","trackingId":233812065,"value":"14CAP-00000-000D9"},{"name":"Test
+        of new residential","id":"ISLANDTON-14CAP-00000-000D3","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","text":"Residential
+        New","group":"Building","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"PUBLICUSER94855","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00196","openedDateFrom":"2014-08-21
+        00:00:00","trackingId":289155979,"value":"14CAP-00000-000D3"},{"id":"ISLANDTON-14CAP-00000-000CT","type":{"module":"ServiceRequest","type":"Graffiti","value":"ServiceRequest/Graffiti/Graffiti/NA","category":"NA","text":"Graffiti
+        ","group":"ServiceRequest","subType":"Graffiti","id":"ServiceRequest-Graffiti-Graffiti-NA"},"status":{"value":"Received","text":"Received"},"createdBy":"PUBLICUSER0","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00166","openedDateFrom":"2014-08-21
+        00:00:00","trackingId":279104923,"value":"14CAP-00000-000CT"},{"name":"Test
+        of new residential","id":"ISLANDTON-14CAP-00000-000D2","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","text":"Residential
+        New","group":"Building","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"PUBLICUSER94855","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00195","openedDateFrom":"2014-08-21
+        00:00:00","trackingId":229372947,"value":"14CAP-00000-000D2"},{"name":"Test
+        of new residential","id":"ISLANDTON-14CAP-00000-000D1","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","text":"Residential
+        New","group":"Building","subType":"New","id":"Building-Residential-New-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"PUBLICUSER94855","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00194","openedDateFrom":"2014-08-21
+        00:00:00","trackingId":267643789,"value":"14CAP-00000-000D1"}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
+    http_version: 
+  recorded_at: Fri, 05 Sep 2014 14:12:54 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/records/ISLANDTON-14CAP-00000-000CR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - 3HiRd02fWNP8qz2JwfI_kAJvJ3WwSHyd0Dv9VwzRBgflW12Y8I8PNnzSrDPfia01qTBb-XI67HGqoopJr4kXCDJdswqw_FuhiJb_uzun5MyFRyOQrhRwd6pOzCd3r9WPBWv06lh6iFGqLXATAmiTjDe1PgyqJnwwWiqPwPF4wj6AFLyyVBqWh4_eLfRZKGjAewcA6m1s8wJeRmSQvSPeocwGcVaAyyJ6c43m5JlbiRA0IKlCG7Z_iqRpz1JMRc2IyDr8p0JWwrpittsTvUtqhJCL8XhIEogSmMjn3NZBm9cHHPkTArMqRcroqKf1yMiF3vl0kiBktPTfwJVtcMoakfsmLSsQ-mNExdMO13kMckU2DScGLecRBpbzLYG8PiDQBok79wrTtKAk1QGGSSrUSGfSjaqGk6wcAegckYKS14Ok2Dr5TV_25vKvVG7axjPH0
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1026'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140905141254279-52bcf406
+      Date:
+      - Fri, 05 Sep 2014 14:12:54 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":[{"name":"D-I Builders Development Model Home","id":"ISLANDTON-14CAP-00000-000CR","type":{"module":"Building","type":"Residential","value":"Building/Residential/New/NA","category":"NA","text":"Residential
+        New","group":"Building","subType":"New","id":"Building-Residential-New-NA"},"description":"","status":{"value":"Submitted","text":"Submitted"},"infraction":false,"initiatedProduct":"AV360","createdBy":"DI","balance":0.0,"serviceProviderCode":"ISLANDTON","statusDate":"2014-08-20
+        11:02:00","totalJobCost":0.0,"reportedChannel":{"value":"Call Center","text":"Call
+        Center"},"reportedDate":"2014-08-20 11:02:00","totalFee":0.0,"totalPay":0.0,"module":"Building","customId":"BLD14-00187","jobValue":0.0,"publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"openedDate":"2014-08-20
+        00:00:00","trackingId":262040261,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"createdByCloning":"Y","undistributedCost":0.0,"booking":false,"value":"14CAP-00000-000CR"}],"status":200}'
+    http_version: 
+  recorded_at: Fri, 05 Sep 2014 14:12:55 GMT
+recorded_with: VCR 2.9.2

@@ -77,6 +77,11 @@ describe Accela::Record, :vcr do
       record.create
       expect(record.id).not_to eq nil
     end
+
+    it "raises an error when attempting to create an already created record" do
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
+      expect { record.create }.to raise_error Accela::ModelPersistenceError
+    end
   end
 
   describe "::has_one" do
@@ -157,6 +162,29 @@ describe Accela::Record, :vcr do
     it "throws an error when assigning wrong non-primative types" do
       address = Accela::Address.new
       expect { record.type = address }.to raise_error(error)
+    end
+  end
+
+  describe "#created?" do
+    it "defaults to false for manually created records" do
+      record = Accela::Record.new
+      expect(record.created?).to be false
+    end
+
+    it "returns true for fetched records" do
+      record = Accela::Record.all.first
+      expect(record.created?).to be true
+      record_2 = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
+      expect(record_2.created?).to be true
+    end
+
+    it "returns true for records that have called created" do
+      record = Accela::Record.new
+      type = Accela::Type.new
+      type.id = "Building-Commercial-Addition-NA"
+      record.type = type
+      record.create
+      expect(record.created?).to be true
     end
   end
 end

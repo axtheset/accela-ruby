@@ -11,8 +11,15 @@ module Accela
         memo[property] = val
         memo
       }
+      @is_created = false
       @types = Hash[translator.translation.map {|property, _, type| [property, type] }]
       update(input)
+    end
+
+    def self.create(input={})
+      model = new(input)
+      model.create_lock!
+      model
     end
 
     def update(input)
@@ -23,6 +30,10 @@ module Accela
           set_value_for_property(property, value)
         end
       }
+    end
+
+    def created?
+      @is_created
     end
 
     def method_missing(name, *args, &block)
@@ -74,6 +85,10 @@ module Accela
         pair.join(": ")
       }.join(", ")
       "#<#{self.class} #{properties}>"
+    end
+
+    def create_lock!
+      @is_created = true
     end
 
     private
