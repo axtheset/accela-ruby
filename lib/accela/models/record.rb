@@ -29,5 +29,16 @@ module Accela
       end
     end
 
+    def addresses
+      if created?
+        payload = Accela::V4::GetAllAddressesForRecord.call(self.id)
+        address_hashes = payload["result"]
+        raws = AddressTranslator.json_to_ruby(address_hashes)
+        self.addresses = raws.map {|raw| Address.create(raw) }
+      else
+        super
+      end
+    end
+
   end
 end
