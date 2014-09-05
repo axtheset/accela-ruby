@@ -152,7 +152,7 @@ describe Accela::Record, :vcr do
   end
 
   describe "type mismatches" do
-    let(:error) { Accela::TypeMismatch }
+    let(:error) { Accela::TypeMismatchError }
     let(:record) { Accela::Record.new }
 
     it "throws an error when assigning the wrong types" do

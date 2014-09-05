@@ -109,7 +109,7 @@ module Accela
       if primative || has_many || has_one
         true
       else
-        raise TypeMismatch, "Incorrect type: #{value.inspect} is not of type #{type}"
+        raise TypeMismatchError, "Incorrect type: #{value.inspect} is not of type #{type}"
       end
     end
 
