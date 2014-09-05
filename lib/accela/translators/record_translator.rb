@@ -19,6 +19,7 @@ module Accela
         [:completed_by_department, :completedByDepartment, :string],
         [:completed_by_user, :completedByUser, :string],
         [:completed_date, :completedDate, :dateTime],
+        [:contacts, :contacts, [:Contact]],
         [:cost_per_unit, :costPerUnit, :double],
         [:created_by, :createdBy, :string],
         [:custom_id, :customId, :string],

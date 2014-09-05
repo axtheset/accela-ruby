@@ -189,13 +189,19 @@ describe Accela::Record, :vcr do
   end
 
   describe "#addresses" do
-
     it "if it has an id fetches a record's set of addresses" do
       record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
       address = record.addresses.first
       expect(address.street_name).to eq "ALLEGHENY"
       expect(address.raw).to eq record.raw[:addresses].first
     end
+  end
 
+  describe "#contacts" do
+    it "fetch a record's contacts" do
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
+      contact = record.contacts.first
+      expect(contact.email).to eq "josh@d-i.co"
+    end
   end
 end

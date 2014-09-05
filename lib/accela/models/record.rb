@@ -2,6 +2,7 @@ module Accela
   class Record < Model
     has_one :type
     has_many :addresses
+    has_many :contacts
 
     def self.find(id)
       payload = Accela::V4::GetRecords.call(id)
@@ -35,6 +36,17 @@ module Accela
         address_hashes = payload["result"]
         raws = AddressTranslator.json_to_ruby(address_hashes)
         self.addresses = raws.map {|raw| Address.create(raw) }
+      else
+        super
+      end
+    end
+
+    def contacts
+      if created?
+        payload = Accela::V4::GetAllContactsForRecord.call(self.id)
+        contact_hashes = payload["result"]
+        raws = ContactTranslator.json_to_ruby(contact_hashes)
+        self.contacts = raws.map {|raw| Contact.create(raw) }
       else
         super
       end

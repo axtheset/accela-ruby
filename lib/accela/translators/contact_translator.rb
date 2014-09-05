@@ -1,0 +1,55 @@
+module Accela
+  class ContactTranslator < Translator
+
+    def translation
+      [
+        [:address, :address, :Address],
+        [:birth_city, :birthCity, :BirthCity],
+        [:birth_date, :birthDate, :dateTime],
+        [:birth_region, :birthRegion, :BirthRegion],
+        [:birth_state, :birthState, :BirthState],
+        [:business_name, :businessName, :string],
+        [:comment, :comment, :string],
+        [:deceased_date, :deceasedDate, :dateTime],
+        [:driver_license_state, :driverLicenseNumber, :string],
+        [:driver_license_state, :driverLicenseState, :DriverLicenseState],
+        [:email, :email, :string],
+        [:end_date, :endDate, :dateTime],
+        [:fax, :fax, :string],
+        [:fax_country_code, :faxCountryCode, :string],
+        [:federal_employer_id, :federalEmployerId, :string],
+        [:first_name, :firstName, :string],
+        [:full_name, :fullName, :string],
+        [:gender, :gender, :Gender],
+        [:id, :id, :string],
+        [:individual_or_organization, :individualOrOrganization, :string],
+        [:is_primary, :isPrimary, :string],
+        [:last_name, :lastName, :string],
+        [:middle_name, :middleName, :string],
+        [:organization_name, :organizationName, :string],
+        [:passport_number, :passportNumber, :string],
+        [:phone1, :phone1, :string],
+        [:phone1_country_code, :phone1CountryCode, :string],
+        [:phone2, :phone2, :string],
+        [:phone2_country_code, :phone2CountryCode, :string],
+        [:phone3, :phone3, :string],
+        [:phone3_country_code, :phone3CountryCode, :string],
+        [:post_office_box, :postOfficeBox, :string],
+        [:preferred_channel, :preferredChannel, :PreferredChannel],
+        [:race, :race, :Race],
+        [:record_id, :recordId, :RecordId],
+        [:reference_contact_id, :referenceContactId, :string],
+        [:relation, :relation, :Relation],
+        [:salutation, :salutation, :Salutation],
+        [:social_security_number, :socialSecurityNumber, :string],
+        [:start_date, :startDate, :dateTime],
+        [:state_id_number, :stateIdNumber, :string],
+        [:status, :status, :Status],
+        [:suffix, :suffix, :string],
+        [:title, :title, :string],
+        [:trade_name, :tradeName, :string],
+        [:type, :type, :Type]
+      ]
+    end
+  end
+end
