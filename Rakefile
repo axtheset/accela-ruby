@@ -2,7 +2,10 @@ require 'rubygems'
 require 'bundler/setup'
 require 'rspec/core/rake_task'
 
-task default: %w[spec:unit spec:integration]
+task default: :spec
+
+task test: :spec
+task spec: %w[spec:unit spec:integration]
 
 RSpec::Core::RakeTask.new("spec:unit") do |t|
   t.pattern = "spec/unit/**/*_spec.rb"
