@@ -31,6 +31,7 @@ module Accela
     end
 
     def addresses
+      # TODO: implement caching mechanism?
       if created?
         payload = Accela::V4::GetAllAddressesForRecord.call(self.id)
         address_hashes = payload["result"]
@@ -42,6 +43,7 @@ module Accela
     end
 
     def contacts
+      # TODO: implement caching mechanism?
       if created?
         payload = Accela::V4::GetAllContactsForRecord.call(self.id)
         contact_hashes = payload["result"]
