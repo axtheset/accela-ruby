@@ -24,7 +24,7 @@ module Accela
         record_hash = create_payload["result"]
         raw = RecordTranslator.json_to_ruby([record_hash]).first
         update(raw)
-        create_lock!
+        send(:create_lock!)
         self
       else
         raise ModelPersistenceError, "you may not create a record that has already been created"

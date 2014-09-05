@@ -18,7 +18,7 @@ module Accela
 
     def self.create(input={})
       model = new(input)
-      model.create_lock!
+      model.send(:create_lock!)
       model
     end
 
@@ -87,11 +87,11 @@ module Accela
       "#<#{self.class} #{properties}>"
     end
 
+    private
+
     def create_lock!
       @is_created = true
     end
-
-    private
 
     def validate_type(property, value)
       number = ->(i) { i.is_a? Fixnum }
