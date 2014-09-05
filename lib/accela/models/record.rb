@@ -1,8 +1,7 @@
 module Accela
   class Record < Model
     has_one :type
-    has_many :addresses
-    has_many :contacts
+    has_many :addresses, :contacts
 
     def self.find(id)
       payload = Accela::V4::GetRecords.call(id)

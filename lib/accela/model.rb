@@ -68,12 +68,16 @@ module Accela
       end
     end
 
-    def self.has_one(relation)
-      @@sub_graphs << [:has_one, relation]
+    def self.has_one(*relations)
+      Array(relations).each do |relation|
+        @@sub_graphs << [:has_one, relation]
+      end
     end
 
-    def self.has_many(relation)
-      @@sub_graphs << [:has_many, relation]
+    def self.has_many(*relations)
+      Array(relations).each do |relation|
+        @@sub_graphs << [:has_many, relation]
+      end
     end
 
     def inspect
