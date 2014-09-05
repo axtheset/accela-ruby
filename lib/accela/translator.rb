@@ -36,6 +36,9 @@ module Accela
     end
 
     def ruby_to_json_lambda
+      # Right now there is a bit of asymmetry between json_to_ruby and ruby_to_json:
+      # the former will not include keys with nil or empty values, while the former
+      # includes everything.
       ->(hash) {
         hash.inject({}) {|memo, (key, val)|
           tuple = translation.select {|ruby, json, type| ruby == key.to_sym }.first
