@@ -18,7 +18,7 @@ module Accela
     end
 
     def create
-      unless created?
+      ensure_not_created do
         payload = RecordTranslator.ruby_to_json([raw])
         create_payload = Accela::V4::CreateRecord.call(payload.first)
         record_hash = create_payload["result"]
@@ -26,8 +26,6 @@ module Accela
         update(raw)
         send(:create_lock!)
         self
-      else
-        raise ModelPersistenceError, "you may not create a record that has already been created"
       end
     end
 

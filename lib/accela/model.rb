@@ -89,6 +89,14 @@ module Accela
 
     private
 
+    def ensure_not_created(&block)
+      unless created?
+        yield
+      else
+        raise ModelPersistenceError, "you may not create an instance that has already been created"
+      end
+    end
+
     def create_lock!
       @is_created = true
     end
