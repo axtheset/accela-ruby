@@ -38,6 +38,26 @@ describe Accela::Record, :vcr do
     end
   end
 
+  describe "#update" do
+    let(:record) {
+      Accela::Record.new(housing_units: 12,
+                         cost_per_unit: 199.99,
+                         estimated_total_job_cost: 122.09)
+    }
+
+    it "merges new properties with existing properties" do
+      record.update(cost_per_unit: 55.55, job_value: 98.23)
+      expect(record.cost_per_unit).to eq 55.55
+      expect(record.job_value).to eq 98.23
+      expect(record.housing_units).to eq 12
+    end
+
+    it "raises an error when given an unknown property" do
+      error = Accela::UnknownAttributeError
+      expect { record.update(oops: true) }.to raise_error(error)
+    end
+  end
+
   describe "#create" do
     it "persists changes to the model" do
       record = Accela::Record.new
