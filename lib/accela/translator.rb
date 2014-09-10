@@ -7,7 +7,7 @@ module Accela
     end
 
     def json_to_ruby(hashes=[])
-      hashes.map &json_to_ruby_lambda
+      hashes.to_a.map &json_to_ruby_lambda
     end
 
     def self.ruby_to_json(hashes=[])
@@ -15,7 +15,7 @@ module Accela
     end
 
     def ruby_to_json(hashes=[])
-      hashes.map &ruby_to_json_lambda
+      hashes.to_a.map &ruby_to_json_lambda
     end
 
     private
