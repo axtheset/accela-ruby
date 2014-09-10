@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=owners
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '883'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140910201749006-ea35df1f
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 10 Sep 2014 20:17:49 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"L0ovV1Km7Dr5bAIdlbd5NyTSWyFeemnGeMWs0qPDZE_-H22M7vsWFjgeH6NbpdBxdhLmPh-h1kTT8aSsABinG8R27b_4AW9JcQrl6FBJPzw5RVLeLzm91VKtkOX4fmkuO_hJl5AiogJnq4cumaWmUJIZBS2qHGxjLfxZcYEDVg4ptEghgfDH5-ZlVMyN4F_rdwX0gAQb2ZGa_EGzGuEE9X1OSlXai72OYwiI2YAnQOsFgurl5qRfwKCNTNonKD_L9MwcAWvZOlrobQd83QS-S2bw81p6NY82H8l-RfbrJ5me9xhhk-ofE13E10chyEo38hB1EEY_5FovA1ENt7Afn8wEBnlZpyK6YVjMTkvXtCboUuEjRiVL6_QHjmjM86FSvRrhega2OzQdFrIzvsHrEKKvnNyzqP4Df439C5SvrmY1","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAGntRZdhdausoXzejFC2qGrdOBXBjhWLqyyiXlC5D0G10QAAAAEfb5LLBubgmQ8Q3HP_bEUYIRZccxSQ27rnoc2-X8Daj0ydM8wihX8H1x1QGJq3KEr-edbiWeMT0yXYP2wWXAbd0KXCHmbJSHbiEogoehgi4XVpbqDT4Cu8XeTq0fmpt2GKFPE40z1xLL1no0AsIAIKm2PQtNrQXxPv_xMEdRJjKZvJHsADylWdWBdz1zrUf2ETkmXG2l3S5eU1hWECAcx6qkeR5N4KW2QDU3vTkzl7cafNNBXyFc9PMSLMGLM-vTC_3pTo5xujbABIMm5Fl03d","scope":"get_civicid_profile
+        owners"}'
+    http_version: 
+  recorded_at: Wed, 10 Sep 2014 20:17:48 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/owners/4823151
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - L0ovV1Km7Dr5bAIdlbd5NyTSWyFeemnGeMWs0qPDZE_-H22M7vsWFjgeH6NbpdBxdhLmPh-h1kTT8aSsABinG8R27b_4AW9JcQrl6FBJPzw5RVLeLzm91VKtkOX4fmkuO_hJl5AiogJnq4cumaWmUJIZBS2qHGxjLfxZcYEDVg4ptEghgfDH5-ZlVMyN4F_rdwX0gAQb2ZGa_EGzGuEE9X1OSlXai72OYwiI2YAnQOsFgurl5qRfwKCNTNonKD_L9MwcAWvZOlrobQd83QS-S2bw81p6NY82H8l-RfbrJ5me9xhhk-ofE13E10chyEo38hB1EEY_5FovA1ENt7Afn8wEBnlZpyK6YVjMTkvXtCboUuEjRiVL6_QHjmjM86FSvRrhega2OzQdFrIzvsHrEKKvnNyzqP4Df439C5SvrmY1
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140910201750880-9059d66c
+      Date:
+      - Wed, 10 Sep 2014 20:17:57 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":{"id":4823151,"fullName":"TAYLOR CYNTHIA","isPrimary":"Y","mailAddress":{"city":"SHAKER
+        HEIGHTS ","postalCode":"44120","addressLine2":"16090 PARKLAND DR","state":{"value":"OH","text":"OH"}},"address":{"city":"SHAKER
+        HEIGHTS ","state":{"value":"OH","text":"OH"}},"status":{"value":"A","text":"Active"}},"status":200}'
+    http_version: 
+  recorded_at: Wed, 10 Sep 2014 20:17:56 GMT
+recorded_with: VCR 2.9.2
