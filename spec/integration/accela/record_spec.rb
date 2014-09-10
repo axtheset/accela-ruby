@@ -204,4 +204,12 @@ describe Accela::Record, :vcr do
       expect(contact.email).to eq "josh@d-i.co"
     end
   end
+
+  describe "#parcels" do
+    it "fetch a record's parcels" do
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
+      parcel = record.parcels.first
+      expect(parcel.parcel_number).to eq "137200001"
+    end
+  end
 end
