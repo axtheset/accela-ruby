@@ -212,4 +212,12 @@ describe Accela::Record, :vcr do
       expect(parcel.parcel_number).to eq "137200001"
     end
   end
+
+  describe "#owners" do
+    it "fetch a record's parcels" do
+      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
+      owner = record.owners.first
+      expect(owner.full_name).to eq "UTROSKE ROBERT EARL & DIANA LEE"
+    end
+  end
 end

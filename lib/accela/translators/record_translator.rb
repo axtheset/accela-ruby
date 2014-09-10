@@ -5,6 +5,7 @@ module Accela
       [
         [:addresses, :addresses, [:Address]],
         [:parcels, :parcels, [:Parcel]],
+        [:owners, :owners, [:Owner]],
         [:actual_production_unit, :actualProductionUnit, :double],
         [:appearance_date, :appearanceDate, :dateTime],
         [:appearance_day_of_week, :appearanceDayOfWeek, :string],
