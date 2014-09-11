@@ -2,10 +2,9 @@ module Accela
   class Type < Model
 
     def self.all
-      payload = Accela::V4::GetAllRecordTypes.call
-      record_hashes = payload["result"]
-      raws = TypeTranslator.json_to_ruby(record_hashes)
-      raws.map {|raw| new(raw) }
+      record_hashes = Accela::V4::GetAllRecordTypes.result
+      input_hashes = TypeTranslator.json_to_ruby(record_hashes)
+      input_hashes.map {|input_hash| new(input_hash) }
     end
   end
 end

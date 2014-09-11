@@ -2,6 +2,11 @@ module Accela
   module V4
     class Base
 
+      def self.result(*args)
+        payload = call(*args)
+        payload["result"]
+      end
+
       def self.call(*args)
         new.call(*args)
       end

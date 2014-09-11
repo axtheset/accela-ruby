@@ -1,22 +1,17 @@
 module Accela
   class Owner < Model
-    has_one :owner
-    has_one :mail_owner
-    has_one :record_id
-    has_one :status
+    has_one :owner, :mail_owner, :record_id, :status
 
     def self.find(id)
-      payload = Accela::V4::GetOwners.call(id)
-      owner_hashes = payload["result"]
-      raw = OwnerTranslator.json_to_ruby([owner_hashes]).first
-      new(raw)
+      owner_hashes = Accela::V4::GetOwners.result(id)
+      input_hash = OwnerTranslator.json_to_ruby([owner_hashes]).first
+      new(input_hash)
     end
 
     def self.all
-      payload = Accela::V4::GetAllOwners.call(state: "OH")
-      owner_hashes = payload["result"]
-      raws = OwnerTranslator.json_to_ruby(owner_hashes)
-      raws.map {|raw| new(raw) }
+      owner_hashes = Accela::V4::GetAllOwners.result(state: "OH")
+      input_hashes = OwnerTranslator.json_to_ruby(owner_hashes)
+      input_hashes.map {|input_hash| new(input_hash) }
     end
 
   end

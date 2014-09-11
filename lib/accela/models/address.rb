@@ -1,28 +1,19 @@
 module Accela
   class Address < Model
-    has_one :address_type_flag
-    has_one :country
-    has_one :direction
-    has_one :house_fraction_end
-    has_one :house_fraction_start
-    has_one :state
-    has_one :status
-    has_one :street_suffix_direction
-    has_one :street_suffix
-    has_one :unit_type
+    has_one :address_type_flag, :country, :direction, :house_fraction_end,
+            :house_fraction_start, :state, :status, :street_suffix_direction,
+            :street_suffix, :unit_type
 
     def self.find(id)
-      payload = Accela::V4::GetAddresses.call(id)
-      address_hashes = payload["result"]
-      raw = AddressTranslator.json_to_ruby([address_hashes]).first
-      new(raw)
+      address_hashes = Accela::V4::GetAddresses.result(id)
+      input_hash = AddressTranslator.json_to_ruby([address_hashes]).first
+      new(input_hash)
     end
 
     def self.all
-      payload = Accela::V4::GetAllAddresses.call(country: "US")
-      address_hashes = payload["result"]
-      raws = AddressTranslator.json_to_ruby(address_hashes)
-      raws.map {|raw| new(raw) }
+      address_hashes  = Accela::V4::GetAllAddresses.result(country: "US")
+      input_hashes = AddressTranslator.json_to_ruby(address_hashes)
+      input_hashes.map {|input_hash| new(input_hash) }
     end
 
   end

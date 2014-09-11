@@ -1,21 +1,17 @@
 module Accela
   class Parcel < Model
-    has_one :record_id
-    has_one :status
-    has_one :subdivision
+    has_one :record_id, :status, :subdivision
 
     def self.find(id)
-      payload = Accela::V4::GetParcels.call(id)
-      parcel_hashes = payload["result"]
-      raw = ParcelTranslator.json_to_ruby([parcel_hashes]).first
-      new(raw)
+      parcel_hashes = Accela::V4::GetParcels.result(id)
+      input_hash = ParcelTranslator.json_to_ruby([parcel_hashes]).first
+      new(input_hash)
     end
 
     def self.all
-      payload = Accela::V4::GetAllParcels.call(isPrimary: "N")
-      parcel_hashes = payload["result"]
-      raws = ParcelTranslator.json_to_ruby(parcel_hashes)
-      raws.map {|raw| new(raw) }
+      parcel_hashes = Accela::V4::GetAllParcels.result(isPrimary: "N")
+      input_hashes = ParcelTranslator.json_to_ruby(parcel_hashes)
+      input_hashes.map {|input_hash| new(input_hash) }
     end
 
   end

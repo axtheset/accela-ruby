@@ -4,26 +4,23 @@ module Accela
     has_many :addresses, :contacts, :parcels, :owners
 
     def self.find(id)
-      payload = Accela::V4::GetRecords.call(id)
-      record_hashes = payload["result"]
-      raw = RecordTranslator.json_to_ruby(record_hashes).first
-      create(raw)
+      record_hashes  = Accela::V4::GetRecords.result(id)
+      input_hash = RecordTranslator.json_to_ruby(record_hashes).first
+      create(input_hash)
     end
 
     def self.all
-      payload = Accela::V4::GetAllRecords.call
-      record_hashes = payload["result"]
-      raws = RecordTranslator.json_to_ruby(record_hashes)
-      raws.map {|raw| create(raw) }
+      record_hashes  = Accela::V4::GetAllRecords.result
+      input_hashes = RecordTranslator.json_to_ruby(record_hashes)
+      input_hashes.map {|input_hash| create(input_hash) }
     end
 
     def create
       ensure_not_created do
         payload = RecordTranslator.ruby_to_json([raw])
-        create_payload = Accela::V4::CreateRecord.call(payload.first)
-        record_hash = create_payload["result"]
-        raw = RecordTranslator.json_to_ruby([record_hash]).first
-        update(raw)
+        record_hash  = Accela::V4::CreateRecord.result(payload.first)
+        input_hash = RecordTranslator.json_to_ruby([record_hash]).first
+        update(input_hash)
         send(:create_lock!)
         self
       end
@@ -32,10 +29,9 @@ module Accela
     def addresses
       # TODO: implement caching mechanism?
       if created?
-        payload = Accela::V4::GetAllAddressesForRecord.call(self.id)
-        address_hashes = payload["result"]
-        raws = AddressTranslator.json_to_ruby(address_hashes)
-        self.addresses = raws.map {|raw| Address.create(raw) }
+        address_hashes  = Accela::V4::GetAllAddressesForRecord.result(self.id)
+        input_hashes = AddressTranslator.json_to_ruby(address_hashes)
+        self.addresses = input_hashes.map {|input_hash| Address.create(input_hash) }
       else
         super
       end
@@ -44,21 +40,9 @@ module Accela
     def contacts
       # TODO: implement caching mechanism?
       if created?
-        payload = Accela::V4::GetAllContactsForRecord.call(self.id)
-        contact_hashes = payload["result"]
-        raws = ContactTranslator.json_to_ruby(contact_hashes)
-        self.contacts = raws.map {|raw| Contact.create(raw) }
-      else
-        super
-      end
-    end
-
-    def parcels
-      if created?
-        payload = Accela::V4::GetAllParcelsForRecord.call(self.id)
-        parcel_hashes = payload["result"]
-        raws = ParcelTranslator.json_to_ruby(parcel_hashes)
-        self.parcels = raws.map {|raw| Parcel.create(raw) }
+        contact_hashes  = Accela::V4::GetAllContactsForRecord.result(self.id)
+        input_hashes = ContactTranslator.json_to_ruby(contact_hashes)
+        self.contacts = input_hashes.map {|input_hash| Contact.create(input_hash) }
       else
         super
       end
@@ -67,10 +51,9 @@ module Accela
     def owners
       # TODO: implement caching mechanism?
       if created?
-        payload = Accela::V4::GetAllOwnersForRecord.call(self.id)
-        owner_hashes = payload["result"]
-        raws = OwnerTranslator.json_to_ruby(owner_hashes)
-        self.owners = raws.map {|raw| Owner.create(raw) }
+        owner_hashes = Accela::V4::GetAllOwnersForRecord.result(self.id)
+        input_hashes = OwnerTranslator.json_to_ruby(owner_hashes)
+        self.owners = input_hashes.map {|input_hash| Owner.create(input_hash) }
       else
         super
       end
@@ -78,10 +61,9 @@ module Accela
 
     def parcels
       if created?
-        payload = Accela::V4::GetAllParcelsForRecord.call(self.id)
-        parcel_hashes = payload["result"]
-        raws = ParcelTranslator.json_to_ruby(parcel_hashes)
-        self.parcels = raws.map {|raw| Parcel.create(raw) }
+        parcel_hashes  = Accela::V4::GetAllParcelsForRecord.result(self.id)
+        input_hashes = ParcelTranslator.json_to_ruby(parcel_hashes)
+        self.parcels = input_hashes.map {|input_hash| Parcel.create(input_hash) }
       else
         super
       end
