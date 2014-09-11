@@ -27,7 +27,6 @@ module Accela
     end
 
     def addresses
-      # TODO: implement caching mechanism?
       if created?
         self.addresses = fetch_has_many(Accela::V4::GetAllAddressesForRecord,
                                         AddressTranslator,
@@ -38,7 +37,6 @@ module Accela
     end
 
     def contacts
-      # TODO: implement caching mechanism?
       if created?
         self.contacts = fetch_has_many(Accela::V4::GetAllContactsForRecord,
                                        ContactTranslator,
@@ -49,7 +47,6 @@ module Accela
     end
 
     def owners
-      # TODO: implement caching mechanism?
       if created?
         self.owners = fetch_has_many(Accela::V4::GetAllOwnersForRecord,
                                      OwnerTranslator,
@@ -60,7 +57,6 @@ module Accela
     end
 
     def parcels
-      # TODO: implement caching mechanism?
       if created?
         self.parcels = fetch_has_many(Accela::V4::GetAllParcelsForRecord,
                                       ParcelTranslator,
