@@ -60,6 +60,7 @@ module Accela
     end
 
     def parcels
+      # TODO: implement caching mechanism?
       if created?
         parcel_hashes  = Accela::V4::GetAllParcelsForRecord.result(self.id)
         input_hashes = ParcelTranslator.json_to_ruby(parcel_hashes)
