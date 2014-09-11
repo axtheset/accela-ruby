@@ -29,9 +29,9 @@ module Accela
     def addresses
       # TODO: implement caching mechanism?
       if created?
-        address_hashes  = Accela::V4::GetAllAddressesForRecord.result(self.id)
-        input_hashes = AddressTranslator.json_to_ruby(address_hashes)
-        self.addresses = input_hashes.map {|input_hash| Address.create(input_hash) }
+        self.addresses = fetch_has_many(Accela::V4::GetAllAddressesForRecord,
+                                        AddressTranslator,
+                                        Address)
       else
         super
       end
@@ -40,9 +40,9 @@ module Accela
     def contacts
       # TODO: implement caching mechanism?
       if created?
-        contact_hashes  = Accela::V4::GetAllContactsForRecord.result(self.id)
-        input_hashes = ContactTranslator.json_to_ruby(contact_hashes)
-        self.contacts = input_hashes.map {|input_hash| Contact.create(input_hash) }
+        self.contacts = fetch_has_many(Accela::V4::GetAllContactsForRecord,
+                                       ContactTranslator,
+                                       Contact)
       else
         super
       end
@@ -51,9 +51,9 @@ module Accela
     def owners
       # TODO: implement caching mechanism?
       if created?
-        owner_hashes = Accela::V4::GetAllOwnersForRecord.result(self.id)
-        input_hashes = OwnerTranslator.json_to_ruby(owner_hashes)
-        self.owners = input_hashes.map {|input_hash| Owner.create(input_hash) }
+        self.owners = fetch_has_many(Accela::V4::GetAllOwnersForRecord,
+                                     OwnerTranslator,
+                                     Owner)
       else
         super
       end
@@ -62,9 +62,9 @@ module Accela
     def parcels
       # TODO: implement caching mechanism?
       if created?
-        parcel_hashes  = Accela::V4::GetAllParcelsForRecord.result(self.id)
-        input_hashes = ParcelTranslator.json_to_ruby(parcel_hashes)
-        self.parcels = input_hashes.map {|input_hash| Parcel.create(input_hash) }
+        self.parcels = fetch_has_many(Accela::V4::GetAllParcelsForRecord,
+                                      ParcelTranslator,
+                                      Parcel)
       else
         super
       end

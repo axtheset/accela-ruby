@@ -91,6 +91,12 @@ module Accela
       "#<#{self.class} #{properties}>"
     end
 
+    def fetch_has_many(api, translator, model)
+      payload_hashes  = api.result(self.id)
+      input_hashes = translator.json_to_ruby(payload_hashes)
+      input_hashes.map {|input_hash| model.create(input_hash) }
+    end
+
     private
 
     def ensure_not_created(&block)
