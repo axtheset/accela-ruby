@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=parcels
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '884'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140916192302550-71b2f62d
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 16 Sep 2014 19:23:02 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"tgMx9IgkpNEGbyH8NczpGHCcXdbN5p_C9WVeWCWb-vZQ4LYnjb9jAGfxIklub1DTXlDPvGxDHF4SqDLdKI3vCxrsUhAbDZkdqNn1AFlB2VehogCET2fymG6a7EEt_PIclWy5h3lv8XSVcYIdMic_hoS0YnSd9DQG8NWr5SAdN-LdLbZMN166TWF0Goow_cyuTIbgTr6qxGwvDP0NJRXurppv0Y9dbyKvv28IzDx5l4hDTKiXaS_UiuZtHutQenIao6cocWpQ9M9BAUZY5ALF8rjYqYT3cu8L8RkWp26tqi_yp9DB2nk-Ye52YKJZ8FLOqUO8Qg7Ae5pMIcstr7ottXJSiQW1li6M0Fi6kUBbRs87-Y5cTEyphFucUmmkaj7Q0ed1ZePTn4kT7UxI7YynG6y16qNDnSd93YdwroSwA0M1","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAN-Az7BrafOV90b02HzYjnNjye7LSW8vXK6Z3QbWvQqV0QAAAAFLawynbFKGZdiAFuMFjvnqHPkF-gdVOWrA0COj9k2CYwDEwfFUiog-vk6yS8MnGdqIs1lEYIAkVkysdNQ1JmkDQ9kVYfNyeb1DiwFDO6MZF984Mv9v-OaCqoLGEjiOLpJYnkMOtygc9goStUHTPCONeO5Dn_e9lGLm7Mo3ujDyXuMw-3Yc0boBgAJBWx0I814QufRFfVsm9aUuBP9OtC5PLU-gxZNpGh7GMiwyYFVrDS0BTew7JXKnQMxg6DaEPCh8VbrAXXacT2sOWt-drHhd","scope":"get_civicid_profile
+        parcels"}'
+    http_version: 
+  recorded_at: Tue, 16 Sep 2014 19:23:04 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/parcels/137200001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      X-Accela-Environment:
+      - TEST
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '146'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140916192304888-90213e10
+      Date:
+      - Tue, 16 Sep 2014 19:23:05 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":{"parcelNumber":"137200001","isPrimary":"N","id":"137200001","parcelArea":550800.0,"status":{"value":"A","text":"Active"}},"status":200}'
+    http_version: 
+  recorded_at: Tue, 16 Sep 2014 19:23:05 GMT
+recorded_with: VCR 2.9.2

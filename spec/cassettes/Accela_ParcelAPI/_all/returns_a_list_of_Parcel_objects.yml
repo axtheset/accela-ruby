@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=parcels
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '884'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140916192256097-3eb422bf
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 16 Sep 2014 19:22:57 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"tgMx9IgkpNEGbyH8NczpGIs19zjOAhFDJNlTEycXlr2T89mjy7M7wlNIrm39pebY6Z7AiyUGjHIcbijUNhX5D_fRhUnmfv1IT63l0QU7WGFJhPmUoIhHawG3cLEjmJkOOAPixAK9arvhPzEII5pUSvtRqz1mMzz3QgtBppFpKVd6hgvnm3ZT6tpXX3JnbWYvQVPKN5onwYK--LynzRz-6QrsyaK_OV8y4RLuNjRHw227VM4W0J-X6vHhkGniGwlosbpCFGrycMvJYLLiKnITH24hL6f6BbouHUmNQBzZGCL1LfYAmTT_0b4YaFSPBuOzz3HAQCPaIUWvaMfRt3cM5ZQWVn7ln2OmhP7Swg6tVwynlDxAO8o4xwhlBH0LTgj8Qsl2F1qoCyH06e5Vy2RV4sodDivXMbhFghyobj2bz0A1","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAM_pPitMNr12tNJyD_EjQsuII0egRYD87LlPDmEdJezG0QAAAAHRxg-aBl_ZcA0BzTASCEhwfpOCbJvwJWc-ZXRzn6zGoJy7V_U8FETGM2t65YOTSmTjZJwDslnkih2ECkRRI9yh8-AMrLuPf0u1eelUdjW0g3d3YuZkuj6MmarJ9RPe7DapYxV1nG3Hl0mVxNbHrFo1kpkf_w7--byLBm71AqwrfihYFt881Mj6s_x_gNglJ-8U_xWDq9HYnn7cgYlbOPT4z2tAPpsin55iE2Szp_fRruM4YJzCKnfffa2DCAFYeftm8Vo7HH0aFzeQww2f7z8H","scope":"get_civicid_profile
+        parcels"}'
+    http_version: 
+  recorded_at: Tue, 16 Sep 2014 19:22:57 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/parcels?isPrimary=N
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      X-Accela-Environment:
+      - TEST
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '3130'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140916192258591-c2aa8b46
+      Date:
+      - Tue, 16 Sep 2014 19:23:01 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":[{"parcelNumber":"-","isPrimary":"N","id":"-","status":{"value":"A","text":"Active"}},{"parcelNumber":"005010004","isPrimary":"N","id":"005010004","parcelArea":7927920.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010005","isPrimary":"N","id":"005010005","parcelArea":1.3068E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010008","isPrimary":"N","id":"005010008","parcelArea":1062000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010010","isPrimary":"N","id":"005010010","parcelArea":5052960.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010011","isPrimary":"N","id":"005010011","parcelArea":4791600.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010016","isPrimary":"N","id":"005010016","parcelArea":9300.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010022","isPrimary":"N","id":"005010022","parcelArea":5445000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010023","isPrimary":"N","id":"005010023","parcelArea":1.646568E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010024","isPrimary":"N","id":"005010024","parcelArea":1001880.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010026","isPrimary":"N","id":"005010026","parcelArea":8102160.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010027","isPrimary":"N","id":"005010027","parcelArea":5401440.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010028","isPrimary":"N","id":"005010028","parcelArea":8189280.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010029","isPrimary":"N","id":"005010029","parcelArea":1.071576E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010030","isPrimary":"N","id":"005010030","parcelArea":4356000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010031","isPrimary":"N","id":"005010031","parcelArea":4486680.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010032","isPrimary":"N","id":"005010032","parcelArea":6229080.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010033","isPrimary":"N","id":"005010033","parcelArea":7927920.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010034","isPrimary":"N","id":"005010034","parcelArea":1.250172E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010036","isPrimary":"N","id":"005010036","parcelArea":8058600.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020003","isPrimary":"N","id":"005020003","parcelArea":8145720.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020016","isPrimary":"N","id":"005020016","parcelArea":2720000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020017","isPrimary":"N","id":"005020017","parcelArea":1500000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020018","isPrimary":"N","id":"005020018","parcelArea":648000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020019","isPrimary":"N","id":"005020019","parcelArea":1568160.0,"status":{"value":"A","text":"Active"}}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
+    http_version: 
+  recorded_at: Tue, 16 Sep 2014 19:23:01 GMT
+recorded_with: VCR 2.9.2
