@@ -9,7 +9,7 @@ describe Accela::ParcelAPI, :vcr do
 
   describe "::get_all_parcels" do
     it "returns a list of Parcel objects" do
-      parcels = Accela::ParcelAPI.get_all_parcels
+      parcels = Accela::ParcelAPI.get_all_parcels isPrimary: "N"
       expect(parcels.length).to eq 25
     end
   end

@@ -5,8 +5,8 @@ module Accela
       new(nil).get_parcels(id)
     end
 
-    def self.get_all_parcels
-      new(nil).get_all_parcels(isPrimary: "N")
+    def self.get_all_parcels(*args)
+      new(nil).get_all_parcels(*args)
     end
 
     def get_parcels(*args)
