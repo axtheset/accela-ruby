@@ -1,6 +1,48 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=records%20addresses
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '937'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140916141724753-1c3d69b7
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 16 Sep 2014 14:17:25 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"Ff1ln1vYNo2a1OLxgRnjE5Ckg9TcaDi3TZkAtFkOPSyqDSeqVod1xxFJbMs_6hO3tqNPi_gG198xZR-tEnRgTFP8PPdGBNoZ0ioZISI10DoUZmqBSh4hgCaoXfXzrY1bGnNun3eH2ETeAN5sC_lvRgHbjDKM35OBvBXSEsz91TkAUljpRyKkO6aTEdC0n-4OFVZD0rkCqzf43S_8R0y2hE4lHF5lxBsM7pnnTXsDyhXup1_BAH597xr38iEe4BwxtPG5BFTv6bx3wHWasCQ-fz_xPcE9BNqZ_C2TlIEdfWN1fbKLGWSCEzJNk0sLVGDEmjIhl5rJKKvHIrdfhp4CdVjiuh4qzqtOMIaDejfEEG0uHRud5rEq-J8mOkEGF1UejInrU2XinLmC0zRa2afA-GMdXU8gWn50SNUVlKPEfGsJ020UH8tC1TTO02UOiRXg0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAOthPQV4KdAth8kJvoOFlpf8bvOf6NVGbV_OmDDGSHA-4QAAAAF18TZIUrPEM1ukg36MeYSV3Ds8Ao_04xauSaHRMHDbmUpkXcLOu7F_4Kgp0Cbr_ewazltmHrmOVhW08kUEv6jax9_W1GdvL3GS2xyAGzZUUWrBVPfRnaK2-YpwxVm6sA53bsrsZ0lH_hkQMkpJ81C79d8-xsb0-zHUG9o8rMgPHmgignB4KrNgzEckDxmu_z4kA63ZpAvlKYvrdcUWpmWsBwKlDo02HmwlwLeomZ8uzAVHgAphFfVfkCD-1a8s4FUz4mAPGlx9BqDcDpikrO1z_5S7b124a21l0vTZGKMd4A","scope":"addresses
+        get_civicid_profile records"}'
+    http_version: 
+  recorded_at: Tue, 16 Sep 2014 14:17:26 GMT
+- request:
     method: get
     uri: https://apis.accela.com/v4/records
     body:
@@ -27,7 +69,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '12685'
+      - '12666'
       Content-Type:
       - application/json
       Expires:
@@ -44,9 +86,9 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140916141802850-82a558a1
+      - 140916141726257-088ad965
       Date:
-      - Tue, 16 Sep 2014 14:18:03 GMT
+      - Tue, 16 Sep 2014 14:17:26 GMT
       Connection:
       - close
     body:
@@ -55,13 +97,7 @@ http_interactions:
         Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00216","openedDateFrom":"2014-09-16
         00:00:00","trackingId":257483888,"value":"14CAP-00000-000FK"},{"id":"ISLANDTON-14CAP-00000-000FJ","type":{"module":"ServiceRequest","type":"Graffiti","value":"ServiceRequest/Graffiti/Graffiti/NA","category":"NA","text":"Graffiti
         ","group":"ServiceRequest","subType":"Graffiti","id":"ServiceRequest-Graffiti-Graffiti-NA"},"status":{"value":"Received","text":"Received"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00226","openedDateFrom":"2014-09-16
-        00:00:00","trackingId":222393112,"value":"14CAP-00000-000FJ"},{"id":"ISLANDTON-14CAP-00000-000FO","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
-        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"AMS","customId":"WO-2014-00080","openedDateFrom":"2014-09-16
-        00:00:00","trackingId":269166921,"value":"14CAP-00000-000FO"},{"id":"ISLANDTON-14CAP-00000-000FN","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
-        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00219","openedDateFrom":"2014-09-16
-        00:00:00","trackingId":267140810,"value":"14CAP-00000-000FN"},{"id":"ISLANDTON-14CAP-00000-000FM","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
-        Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00218","openedDateFrom":"2014-09-16
-        00:00:00","trackingId":273034438,"value":"14CAP-00000-000FM"},{"id":"ISLANDTON-14CAP-00000-000FL","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
+        00:00:00","trackingId":222393112,"value":"14CAP-00000-000FJ"},{"id":"ISLANDTON-14CAP-00000-000FL","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
         Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"Submitted","text":"Submitted"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"Building","customId":"BLD14-00217","openedDateFrom":"2014-09-16
         00:00:00","trackingId":243409509,"value":"14CAP-00000-000FL"},{"id":"ISLANDTON-14CAP-00000-000FI","type":{"module":"Building","type":"Commercial","value":"Building/Commercial/Addition/NA","category":"NA","text":"Commercial
         Addition","group":"Building","subType":"Addition","id":"Building-Commercial-Addition-NA"},"status":{"value":"CofO
@@ -105,7 +141,16 @@ http_interactions:
         ","group":"ServiceRequest","subType":"Graffiti","id":"ServiceRequest-Graffiti-Graffiti-NA"},"status":{"value":"Received","text":"Received"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00203","openedDateFrom":"2014-09-09
         00:00:00","trackingId":263415876,"value":"14CAP-00000-000EP"},{"id":"ISLANDTON-14CAP-00000-000EN","type":{"module":"ServiceRequest","type":"Graffiti","value":"ServiceRequest/Graffiti/Graffiti/NA","category":"NA","text":"Graffiti
         ","group":"ServiceRequest","subType":"Graffiti","id":"ServiceRequest-Graffiti-Graffiti-NA"},"status":{"value":"Received","text":"Received"},"createdBy":"DEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00201","openedDateFrom":"2014-09-09
-        00:00:00","trackingId":233394096,"value":"14CAP-00000-000EN"}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
+        00:00:00","trackingId":233394096,"value":"14CAP-00000-000EN"},{"id":"ISLANDTON-14CAP-00000-000F3","type":{"module":"ServiceRequest","type":"Vehicles","value":"ServiceRequest/Vehicles/Abandoned
+        Vehicle/NA","category":"NA","text":"Abandoned Vehicle","group":"ServiceRequest","subType":"Abandoned
+        Vehicle","id":"ServiceRequest-Vehicles-Abandoned.cVehicle-NA"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00217","openedDateFrom":"2014-09-09
+        00:00:00","trackingId":240513732,"value":"14CAP-00000-000F3"},{"id":"ISLANDTON-14CAP-00000-000F0","type":{"module":"ServiceRequest","type":"Vehicles","value":"ServiceRequest/Vehicles/Abandoned
+        Vehicle/NA","category":"NA","text":"Abandoned Vehicle","group":"ServiceRequest","subType":"Abandoned
+        Vehicle","id":"ServiceRequest-Vehicles-Abandoned.cVehicle-NA"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00214","openedDateFrom":"2014-09-09
+        00:00:00","trackingId":242435218,"value":"14CAP-00000-000F0"},{"id":"ISLANDTON-14CAP-00000-000EW","type":{"module":"ServiceRequest","type":"Vehicles","value":"ServiceRequest/Vehicles/Abandoned
+        Vehicle/NA","category":"NA","text":"Abandoned Vehicle","group":"ServiceRequest","subType":"Abandoned
+        Vehicle","id":"ServiceRequest-Vehicles-Abandoned.cVehicle-NA"},"createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","module":"ServiceRequest","customId":"SR-2014-00210","openedDateFrom":"2014-09-09
+        00:00:00","trackingId":292024852,"value":"14CAP-00000-000EW"}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 14:18:03 GMT
+  recorded_at: Tue, 16 Sep 2014 14:17:27 GMT
 recorded_with: VCR 2.9.2

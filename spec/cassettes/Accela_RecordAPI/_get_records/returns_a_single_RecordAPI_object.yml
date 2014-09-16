@@ -29,19 +29,19 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140916141647196-567ef81f
+      - 140916141722534-74a66365
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 16 Sep 2014 14:16:48 GMT
+      - Tue, 16 Sep 2014 14:17:23 GMT
     body:
       encoding: UTF-8
-      string: '{"access_token":"Ff1ln1vYNo2a1OLxgRnjE5kffSZ3z8Cy4iQN00chKKCZZQ8OlR8iYCLinYCCnfUjVY8lKB2wFYFEohRQ6OaFt7udGHhyMP2E44V7tnU7PAnr4AlFG33FyHJrEiRT3BSMFmmbYMa_vmkeWJ2Q0deOFQRlwfkT1R9jyzf9WALX4s-0eLCNcUguRW4621rfHMUzqJ97ZTFtC6yIhy_Vzlm3V5iifsIRtke0YQ64iVq0OjlIJ-Z3CQ6287nxR6uISXQXAu3pepQ1aDWW6SFua7b_NiTglHTpNHhvh6VJUhTySNHoxTMqGXCBbqc2QTAEgS7FKir-KDI4ZdMYw-X-r2ZcYIp_8apDuckYTX9NMjp3st5QJxe1akpun6fvmy-2ZNYez76Fnb05X-AsSMhX9EV_Xhf_Z_TwvrQ8WJDOvaIDVo9ruWg3cvf_VIvwLygr8a8d0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAG59m9olKSOqYWaZyV_kmiDX3MuOTr5Ifkqnnanw2NRY4QAAAAFNI7sh4_rTUlfT88lnwMgxRnHDXOQmpqDu21oJh97pv4hcue-5-hmsgljqrDZagMuf1ndkgtLRSFXk145pk-aIJmyb4ZIqZxvdN8Bli7Q3SFMTOOXC3ivP1hGiN4q9tD2DqfL6HAeN9D25p-WVS7ExOdpd30TKe2-uiZRj38Ri7O_n9cBn0d6BPzc9slsiMjYtfkIu9TDw5-QwODHjagOpMqQNUX560edfn931BC7OFk2CrzBwA3VPEMJuE9cuOLEXjbcrJh7Pi04hnZ025LnWxtvcKZGeyjjDJVGhzBHQOQ","scope":"addresses
+      string: '{"access_token":"Ff1ln1vYNo2a1OLxgRnjE-asJdTDL8k8tA0e38wPmH04xNc9tXn7k3onfS2EMwqZFWDHij-WLNJdr-snio_4iA18CpyB8_zcM13-jOPx4S6MaiL-_gA2_AlqxW7mBN67gRgN0XF0MGno0u3ZBGoKQUVlf3zI7KevP_wCPmHkqSpbye2j0sIMkYOqW84CB8bKBJIMIcn6MWElx_PA2l2C7vSOLQxj7C8XsUECh-UaOD5HETcT7CQiC7sLNxZd-G1Jf33z2QpLXv-IYew_IPq5D9-slOj5dWLjPRQty5N_vxsaKdZLJUtx5MzfNIcKLawnE3U22li_BJaLrvMUZiqZ_266dmiBF-yBDfTH320cNAkoeV_hpqkvPnLpYEt7JRbcKw4amQL6tI2Us_Bq0-1uvZ375XOQtuGK_EDO6CYoTaRziAMCLv3Y23f3YdPvBM_g0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAKK64BIfwYGYLc3fEpn7ZUXP1icydcEbyFjngTmoM9kE4QAAAAEtwNG-nGOWmau1X6bEeKBz4ycGIFWjoG38GQ4ieHnd1HAiFk7ZY_ly6ld6G5GkTkJynv-NeNpdfJUHYNvzgubkuoAgarqXCrqc-1Oaudr0ajC4fxrvTkuKSsbj1XJCdkRwKUMH-mwqdCAcWUWMT4ReYNDWRoXyAIYfEPL5EkZuErnO8yxoAVgkoP78GJDOfVfEojo73L_BBD6YxpRJBg-BbDj82IwreoRM-cydUGbalntO2e98bsyAhZqnAZ6ITaJjw6qDQvttNlzB8dIy0Anqtjw-nyoQ4t0XdHcUmBG5kQ","scope":"addresses
         get_civicid_profile records"}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 14:16:48 GMT
+  recorded_at: Tue, 16 Sep 2014 14:17:23 GMT
 - request:
     method: get
     uri: https://apis.accela.com/v4/records/ISLANDTON-14CAP-00000-000CR
@@ -56,7 +56,7 @@ http_interactions:
       X-Accela-Appid:
       - '635395466279594650'
       Authorization:
-      - Ff1ln1vYNo2a1OLxgRnjE5kffSZ3z8Cy4iQN00chKKCZZQ8OlR8iYCLinYCCnfUjVY8lKB2wFYFEohRQ6OaFt7udGHhyMP2E44V7tnU7PAnr4AlFG33FyHJrEiRT3BSMFmmbYMa_vmkeWJ2Q0deOFQRlwfkT1R9jyzf9WALX4s-0eLCNcUguRW4621rfHMUzqJ97ZTFtC6yIhy_Vzlm3V5iifsIRtke0YQ64iVq0OjlIJ-Z3CQ6287nxR6uISXQXAu3pepQ1aDWW6SFua7b_NiTglHTpNHhvh6VJUhTySNHoxTMqGXCBbqc2QTAEgS7FKir-KDI4ZdMYw-X-r2ZcYIp_8apDuckYTX9NMjp3st5QJxe1akpun6fvmy-2ZNYez76Fnb05X-AsSMhX9EV_Xhf_Z_TwvrQ8WJDOvaIDVo9ruWg3cvf_VIvwLygr8a8d0
+      - Ff1ln1vYNo2a1OLxgRnjE-asJdTDL8k8tA0e38wPmH04xNc9tXn7k3onfS2EMwqZFWDHij-WLNJdr-snio_4iA18CpyB8_zcM13-jOPx4S6MaiL-_gA2_AlqxW7mBN67gRgN0XF0MGno0u3ZBGoKQUVlf3zI7KevP_wCPmHkqSpbye2j0sIMkYOqW84CB8bKBJIMIcn6MWElx_PA2l2C7vSOLQxj7C8XsUECh-UaOD5HETcT7CQiC7sLNxZd-G1Jf33z2QpLXv-IYew_IPq5D9-slOj5dWLjPRQty5N_vxsaKdZLJUtx5MzfNIcKLawnE3U22li_BJaLrvMUZiqZ_266dmiBF-yBDfTH320cNAkoeV_hpqkvPnLpYEt7JRbcKw4amQL6tI2Us_Bq0-1uvZ375XOQtuGK_EDO6CYoTaRziAMCLv3Y23f3YdPvBM_g0
       X-Accela-Agency:
       - islandton
   response:
@@ -86,9 +86,9 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140916141648722-94a869e9
+      - 140916141723929-8c42c3cb
       Date:
-      - Tue, 16 Sep 2014 14:16:48 GMT
+      - Tue, 16 Sep 2014 14:17:24 GMT
       Connection:
       - close
     body:
@@ -99,5 +99,5 @@ http_interactions:
         Center"},"reportedDate":"2014-08-20 11:02:00","totalFee":0.0,"totalPay":0.0,"module":"Building","customId":"BLD14-00187","jobValue":0.0,"publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"openedDate":"2014-08-20
         00:00:00","trackingId":262040261,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"createdByCloning":"Y","undistributedCost":0.0,"booking":false,"value":"14CAP-00000-000CR"}],"status":200}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 14:16:49 GMT
+  recorded_at: Tue, 16 Sep 2014 14:17:24 GMT
 recorded_with: VCR 2.9.2

@@ -11,37 +11,18 @@ Accela::Record.new
 Accela::Record.new housing_units: 98
 ```
 
-Updating an instances properties:
-
-```ruby
-record = Accela::Record.new
-record.update housing_units: 98
-```
-
-or:
-
-```ruby
-record = Accela::Record.new
-record.housing_units = 98
-```
-
 ### Network based methods
 
 The following methods communicate directly with the Accela REST API.
 
 #### Creating a model
 
-The semantics behind creating a new model differ somewhat from ActiveRecord. Creating a model through the `create` method is the principle way of persisting an object in Accela.
-
 Here is an example workflow:
 
 ```ruby
-record = Accela::Record.new
-record.housing_units = 829
-type = Accela::Type.new
-type.id = "Building-Commercial-Addition-NA"
-record.type = type
-record.create
+input_record = Accela::Record.new housing_units: 829,
+                                  type: { type.id = "Building-Commercial-Addition-NA" }
+record = Accela::RecordAPI.create_record(input_record)
 record.id # => "ISLANDTON-14CAP-00000-000CR"
 ```
 
@@ -50,10 +31,10 @@ record.id # => "ISLANDTON-14CAP-00000-000CR"
 Most models support the `all` and `find` methods. These work similar to ActiveRecord. `all` returns all records for a given type (with a few caveats). Find accepts an `id` paramater and returns a single instance with the given `id`.
 
 ```ruby
-records = Accela::Record.all
+records = Accela::RecordAPI.get_all_records
 records.length # => 25
 
-record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
+record = Accela::RecordAPI.get_records("ISLANDTON-14CAP-00000-000CR")
 record.name # => "D-I Builders Development Model Home"
 ```
 

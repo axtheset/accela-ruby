@@ -11,14 +11,12 @@ module Accela
         memo[property] = val
         memo
       }
-      @is_created = false
       @types = Hash[translator.translation.map {|property, _, type| [property, type] }]
       update(input)
     end
 
     def self.create(input={})
       model = new(input)
-      model.send(:create_lock!)
       model
     end
 
@@ -32,10 +30,6 @@ module Accela
       }
     end
 
-    def created?
-      @is_created
-    end
-
     def method_missing(name, *args, &block)
       if is_property?(name)
         if has_one?(name)
@@ -47,21 +41,6 @@ module Accela
           items.map {|item| model.new(item) }
         else
           value_for_property(name)
-        end
-      elsif is_assignment?(name)
-        property = name.to_s.gsub("=", "")
-        value = args.first
-
-        if validate_type(property, value)
-          if has_one?(property)
-            result = value && value.raw
-          elsif has_many?(property)
-            result = Array(value && value.map(&:raw))
-          else
-            result = value
-          end
-
-          set_value_for_property(property, result)
         end
       else
         super
@@ -91,25 +70,7 @@ module Accela
       "#<#{self.class} #{properties}>"
     end
 
-    def fetch_has_many(api, translator, model)
-      payload_hashes  = api.result(self.id)
-      input_hashes = translator.json_to_ruby(payload_hashes)
-      input_hashes.map {|input_hash| model.create(input_hash) }
-    end
-
     private
-
-    def ensure_not_created(&block)
-      unless created?
-        yield
-      else
-        raise ModelPersistenceError, "you may not create an instance that has already been created"
-      end
-    end
-
-    def create_lock!
-      @is_created = true
-    end
 
     def validate_type(property, value)
       number = ->(i) { i.is_a? Fixnum }

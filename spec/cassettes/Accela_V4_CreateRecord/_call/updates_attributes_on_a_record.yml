@@ -29,19 +29,19 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140826203754792-995f5e70
+      - 140916141757866-009118c5
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 26 Aug 2014 20:37:56 GMT
+      - Tue, 16 Sep 2014 14:17:58 GMT
     body:
       encoding: UTF-8
-      string: '{"access_token":"E_IlcauX8G5sEwlmFVuoXCAz_TbS5DYuFXJCXfV9aujUVx1Xf4GDLa23ENJQa4e5zlxmcVY2ZGzeUXkrmUfRSJqsdWqc1Q2N0zUFc1pGjSzU9mnqjZm-0sy-oUf5oDHsCAIT-lTbbBiiXvvclYnEjOqe5Hac30e6lMPK70lG6OEGZEqI5Z3U7DLqjc9zHKPQOyyWe_pTZd_qJ5PwWqQFx--6ocCALLbrtVzML3Lfx-0kb-Z7pRG5utCIxog8x4FHOGrWIQOPL-e4NpDNeSK-temfH4gvJkC5cLGlJgn1HHSUES8K3Bf9b5Fc95Jn_RODqT9SASvQfemNPzvzDQTge4KT0orWVXwnwzUbjjzaPPhXJbE1AIL4v2GstGhjz8Wi2JDPiAjKAA5kGxzJ4iL9LKr1Y0ryFOhvMdfXCZ4ud34mLSpTjhqu5ncuN1Rs6vke0","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAOSBqTSVTYOwSV_Acd_PewdZX15tNMZMxOzQAsn4cczh0QAAAAHE2gyo_ONxr-dDJwycNdb2kS0MzN9oi0OjTHcmYue7qVfV1a9xAsr783e4l5XWbgjDRhDr2IFiJTke_6PXaTrBFQ9tUoI2qGP6H74dhSd5Ltegps8XPynXydB7TDPDlVf2fz8lNFVdsVkQ72ck7Z8Wu-NjzMAVLMvY2uErE-XWvvjqT2_mHsmO28jx65hs2h0t5xadJAoA4pxwmhqnFrKnUkEqWEBopVcuAiCgO61a5DEKci3BG17WezKYWwQPcJaER7FwMMCu-AXaEwJZS3fB","scope":"create_record
+      string: '{"access_token":"Ff1ln1vYNo2a1OLxgRnjE1nwH_uwL6T5UZpOg8cSeCe0YCYv62xo0qzB-xWQ1FMeDxLnObWUyH2YtRHE38t03SfvTftNbEbx5zjIvLiYq04Lw4VLKHFKv_zHrXCVp08q_NhOzG6c2JrqIgfWpFo1UDwBUlUWNLk1B5DtmdqcXly2PRCXbfrHYOL-eM6Kyu67n6aEvHQdKS1c-PV-YRk4FTzZL2v9eAt8IoBYfhs3J-OdqPXjGGbPP-x5Yhe0hGIdnVIpj1q7pd3Mh--XdUrOL93ijrbjqWZg75vH1lCceMyRyfspg5SO7kvWPbluqWxyGl7z2UuuEBMUKlB34nwWPfq7Z3GMxD0Vtzo96rKtomjddgyzCCORN1_AZShZSRdlNeTss80nLvq--15PoTNWBC3zjOcJkDWAKAcFSbmLlnM0szesWFUEKBrRJ4Ih9ZHF0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAANAqfYBv6mP3zfgMk4HD4puB1ibziOCErymRwSN-fSOY0QAAAAEafW6UJ6WPk0yTQRK4evpAnoWODYVZ8d1BqlxiSBPe8zyhPajFlF9vukVtjl15lJmkqmaL4lLzPH1UOFPXYp3ITkfIuHCSBklnxsqmQPLefIDfa5poHBjya__8ts-dIxb5AGysmn5GFWcL-cAvZljiqp5hPs2qcGOFcj6h2qWPF0Tqn5_TiK2Os49kJtGLcU5NGRtebeXqhjlQ8qMfW0MAm-XjQh4ND-L5pr6EftC4OjekIUSvvFX8quKTtp5J-gIDYPThlfpbHHaL4lpKfFsv","scope":"create_record
         get_civicid_profile"}'
     http_version: 
-  recorded_at: Tue, 26 Aug 2014 20:37:57 GMT
+  recorded_at: Tue, 16 Sep 2014 14:17:59 GMT
 - request:
     method: post
     uri: https://apis.accela.com/v4/records
@@ -56,7 +56,7 @@ http_interactions:
       X-Accela-Appid:
       - '635395466279594650'
       Authorization:
-      - E_IlcauX8G5sEwlmFVuoXCAz_TbS5DYuFXJCXfV9aujUVx1Xf4GDLa23ENJQa4e5zlxmcVY2ZGzeUXkrmUfRSJqsdWqc1Q2N0zUFc1pGjSzU9mnqjZm-0sy-oUf5oDHsCAIT-lTbbBiiXvvclYnEjOqe5Hac30e6lMPK70lG6OEGZEqI5Z3U7DLqjc9zHKPQOyyWe_pTZd_qJ5PwWqQFx--6ocCALLbrtVzML3Lfx-0kb-Z7pRG5utCIxog8x4FHOGrWIQOPL-e4NpDNeSK-temfH4gvJkC5cLGlJgn1HHSUES8K3Bf9b5Fc95Jn_RODqT9SASvQfemNPzvzDQTge4KT0orWVXwnwzUbjjzaPPhXJbE1AIL4v2GstGhjz8Wi2JDPiAjKAA5kGxzJ4iL9LKr1Y0ryFOhvMdfXCZ4ud34mLSpTjhqu5ncuN1Rs6vke0
+      - Ff1ln1vYNo2a1OLxgRnjE1nwH_uwL6T5UZpOg8cSeCe0YCYv62xo0qzB-xWQ1FMeDxLnObWUyH2YtRHE38t03SfvTftNbEbx5zjIvLiYq04Lw4VLKHFKv_zHrXCVp08q_NhOzG6c2JrqIgfWpFo1UDwBUlUWNLk1B5DtmdqcXly2PRCXbfrHYOL-eM6Kyu67n6aEvHQdKS1c-PV-YRk4FTzZL2v9eAt8IoBYfhs3J-OdqPXjGGbPP-x5Yhe0hGIdnVIpj1q7pd3Mh--XdUrOL93ijrbjqWZg75vH1lCceMyRyfspg5SO7kvWPbluqWxyGl7z2UuuEBMUKlB34nwWPfq7Z3GMxD0Vtzo96rKtomjddgyzCCORN1_AZShZSRdlNeTss80nLvq--15PoTNWBC3zjOcJkDWAKAcFSbmLlnM0szesWFUEKBrRJ4Ih9ZHF0
       X-Accela-Agency:
       - islandton
   response:
@@ -69,7 +69,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '795'
+      - '850'
       Content-Type:
       - application/json
       Expires:
@@ -86,17 +86,16 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140826203757942-2cf961df
+      - 140916141759503-58ee0acb
       Date:
-      - Tue, 26 Aug 2014 20:37:58 GMT
+      - Tue, 16 Sep 2014 14:18:02 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"result":{"id":"ISLANDTON-14CAP-00000-000DG","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
-        Maintenance","category":"Preventative Maintenance","group":"AMS","text":"Boiler
-        Maintenance","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"serviceProviderCode":"ISLANDTON","statusDate":"2014-08-26
-        13:44:57","createdBy":"MDEVELOPER","module":"AMS","initiatedProduct":"AV360","customId":"WO-2014-00078","recordClass":"COMPLETE","trackingId":274835004,"actualProductionUnit":123.43,"value":"14CAP-00000-000DG","totalFee":0.0,"totalPay":0.0,"balance":0.0,"booking":false,"infraction":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"publicOwned":false},"status":200}'
+      string: '{"message":"EMSE operation failed.","result":{"id":"ISLANDTON-14CAP-00000-000FO","type":{"module":"AMS","type":"Facility","value":"AMS/Facility/Boiler/Preventative
+        Maintenance","category":"Preventative Maintenance","text":"Boiler Maintenance","group":"AMS","subType":"Boiler","id":"AMS-Facility-Boiler-Preventative.cMaintenance"},"status":{"value":"Pending","text":"Pending"},"initiatedProduct":"AV360","createdBy":"MDEVELOPER","serviceProviderCode":"ISLANDTON","statusDate":"2014-09-16
+        07:25:51","module":"AMS","customId":"WO-2014-00080","recordClass":"COMPLETE","trackingId":269166921,"actualProductionUnit":123.43,"value":"14CAP-00000-000FO","totalFee":0.0,"totalPay":0.0,"balance":0.0,"booking":false,"infraction":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"publicOwned":false},"status":200,"code":"emse_error"}'
     http_version: 
-  recorded_at: Tue, 26 Aug 2014 20:37:58 GMT
+  recorded_at: Tue, 16 Sep 2014 14:18:02 GMT
 recorded_with: VCR 2.9.2

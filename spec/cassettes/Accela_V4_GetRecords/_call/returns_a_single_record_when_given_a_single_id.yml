@@ -29,19 +29,19 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140826203800260-089f70a0
+      - 140916141803799-dfaaee7c
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 26 Aug 2014 20:38:09 GMT
+      - Tue, 16 Sep 2014 14:18:04 GMT
     body:
       encoding: UTF-8
-      string: '{"access_token":"E_IlcauX8G5sEwlmFVuoXJe-fNKtct6FBtejzHNHy_Ri8yWhc8sKuMJmH2zB39rvlpD4E6pxuIKq_DTisJeHQVFl1fHX1K0rc5uxr1DJ9FujFa_FlXPqOv5omZR9t6Lta27i9UN0-qasb1AJtUz_nJ01qSuS5qogPajatoaL_eHZTwacZi4CjHIfAX6clGoEBNEpqm3ukhOtpFZ3NYPRED9CXjr_Gw_lrcsJEix5uDJ2UuZc_kiQGNtFWqRNq4XMRm6CzlptY87BNIoUl7oo29oVx4vq_0l018KaMeQ3FiLg6y1MPI0ylVwLxnSZvw2ffX6E8UjK-Q6nTAMzyWGQQKfvJiU_xdKLVvmAx5mpEha4HlNsbOzQPt-4kraUQ2-o4L3iZ77UGGPaj8kj7o57ZOHNLWbCqms9ERKV_IHQbcvDRBqeXzOyL0TIanlfvc_K0","token_type":"bearer","expires_in":"86400","refresh_token":"NS-k!IAAAAHXcIVrqlgPiOE7zxmQGq9VXBfXMzBSOzfGy2qO7_Cte4QAAAAHV-77lVazoQZfD8KFIhOHaWjLog2fxc9ztsyKxFZRKqPj4srobVJ9OwHjdnNy_4EljUhywC521k40XTrMQjq1-Ua67zH6xcpuuaWUa8j_8nPv9-em2ugnf0H_4LeVdBEB6txLT_znRK5mVZjxUYYNkFagy4Dkmh30tWQFNyLzZFtVBiI3zXp7eg9CqgkDAFgCJl75vOd5PPdtPyehzi86AACMvsTuzj82TWCU_ywsFdpPbMAvgpui5XzMUHOD9-B64w-DRanRspY6SrtxFrO8fWJvXWcr_cxa1AaLN0ssiqg","scope":"addresses
+      string: '{"access_token":"Ff1ln1vYNo2a1OLxgRnjE30osV3m-npaY6o59sJi1rGKswhbHYAes13aIXlvAcHm0MYxGktCFJh3eAiX6rT4VK1bksKxgdn7ffDrOY_k7ar8-b8GuADQaUg5R2U470rDmpl8hLsyRVS0FbeM04iJ7OktN_b9-aS5w-_316VNyy_BUkgCwE29I4xM9WUcOchrnA4KQ57_PCbfVsvsgiNcAzu0hIaccGR1UaWANr8oO0939cSNCfMsRkrcdc_YpV9Arh9iwaXIT8My4h7D1xw8faJjmv6p5qxG4tA4b04N3E9ei6jNlcIKdWpbWCcbMDYFZMryg1mG3D2xuhJk3a-ljEexpTkUzlD7IQQtE7UJ7M2QwO2CgXyQkQ-rLd4aqTBxZAFm-wGi9DLsN11_CpfjPLHSKTT7qga-3gbrstEh07v0tHtQALrkU5dfU-OSQ_Jd0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAACgOqSJUoKPOiwXP5FP21oza_lVnaKwxiUAWfG5-WDU-4QAAAAEjbbbSEsBb42KGDAkgxcx3IhmVWYiGGssjwus9abUn9WktQWV9hD2BOzebT9TmmGgIQG-_L-0ngQNzNnCaZy6t8mFiqPeHrOpljtraJmdh8mUGSkf1yLxsgKLxJd4BmDtiEP71razj1BNNvzeWHNDU3eArcg8nXjXceW7dID98nidqFACAnY8YzC6xQjT4QURcTdUObbXyGiT_60_pJMJlubZAJeVf0NxxLa0K431gZSc5cSt8kLlgA6-J03_QpsSyoJK4Fpah1aD_cwb29NDEW7L4K64JSkpSGVD2D4qTKg","scope":"addresses
         get_civicid_profile records"}'
     http_version: 
-  recorded_at: Tue, 26 Aug 2014 20:38:09 GMT
+  recorded_at: Tue, 16 Sep 2014 14:18:05 GMT
 - request:
     method: get
     uri: https://apis.accela.com/v4/records/ISLANDTON-14CAP-00000-000CI
@@ -56,7 +56,7 @@ http_interactions:
       X-Accela-Appid:
       - '635395466279594650'
       Authorization:
-      - E_IlcauX8G5sEwlmFVuoXJe-fNKtct6FBtejzHNHy_Ri8yWhc8sKuMJmH2zB39rvlpD4E6pxuIKq_DTisJeHQVFl1fHX1K0rc5uxr1DJ9FujFa_FlXPqOv5omZR9t6Lta27i9UN0-qasb1AJtUz_nJ01qSuS5qogPajatoaL_eHZTwacZi4CjHIfAX6clGoEBNEpqm3ukhOtpFZ3NYPRED9CXjr_Gw_lrcsJEix5uDJ2UuZc_kiQGNtFWqRNq4XMRm6CzlptY87BNIoUl7oo29oVx4vq_0l018KaMeQ3FiLg6y1MPI0ylVwLxnSZvw2ffX6E8UjK-Q6nTAMzyWGQQKfvJiU_xdKLVvmAx5mpEha4HlNsbOzQPt-4kraUQ2-o4L3iZ77UGGPaj8kj7o57ZOHNLWbCqms9ERKV_IHQbcvDRBqeXzOyL0TIanlfvc_K0
+      - Ff1ln1vYNo2a1OLxgRnjE30osV3m-npaY6o59sJi1rGKswhbHYAes13aIXlvAcHm0MYxGktCFJh3eAiX6rT4VK1bksKxgdn7ffDrOY_k7ar8-b8GuADQaUg5R2U470rDmpl8hLsyRVS0FbeM04iJ7OktN_b9-aS5w-_316VNyy_BUkgCwE29I4xM9WUcOchrnA4KQ57_PCbfVsvsgiNcAzu0hIaccGR1UaWANr8oO0939cSNCfMsRkrcdc_YpV9Arh9iwaXIT8My4h7D1xw8faJjmv6p5qxG4tA4b04N3E9ei6jNlcIKdWpbWCcbMDYFZMryg1mG3D2xuhJk3a-ljEexpTkUzlD7IQQtE7UJ7M2QwO2CgXyQkQ-rLd4aqTBxZAFm-wGi9DLsN11_CpfjPLHSKTT7qga-3gbrstEh07v0tHtQALrkU5dfU-OSQ_Jd0
       X-Accela-Agency:
       - islandton
   response:
@@ -86,19 +86,19 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140826203809864-aa81222d
+      - 140916141805506-c5ca5620
       Date:
-      - Tue, 26 Aug 2014 20:38:09 GMT
+      - Tue, 16 Sep 2014 14:18:06 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"result":[{"name":"MASHKOV-VuSpex Residential #2","id":"ISLANDTON-14CAP-00000-000CI","type":{"module":"Building","type":"Residential","value":"Building/Residential/Addition/NA","category":"NA","group":"Building","text":"Residential
-        Addition","subType":"Addition","id":"Building-Residential-Addition-NA"},"description":"Test
-        permit assigned to Mashkov the Contractor for VuSpex testing and demo use.","status":{"value":"Submitted","text":"Submitted"},"serviceProviderCode":"ISLANDTON","statusDate":"2014-08-20
+      string: '{"result":[{"name":"MASHKOV-VuSpex Residential #2","id":"ISLANDTON-14CAP-00000-000CI","type":{"module":"Building","type":"Residential","value":"Building/Residential/Addition/NA","category":"NA","text":"Residential
+        Addition","group":"Building","subType":"Addition","id":"Building-Residential-Addition-NA"},"description":"Test
+        permit assigned to Mashkov the Contractor for VuSpex testing and demo use.","status":{"value":"Submitted","text":"Submitted"},"infraction":false,"initiatedProduct":"AV360","createdBy":"BRADP","balance":20.0,"serviceProviderCode":"ISLANDTON","statusDate":"2014-08-20
         07:29:00","totalJobCost":0.0,"reportedChannel":{"value":"Call Center","text":"Call
-        Center"},"reportedDate":"2014-08-20 00:00:00","balance":20.0,"createdBy":"BRADP","module":"Building","initiatedProduct":"AV360","totalFee":20.0,"totalPay":0.0,"undistributedCost":0.0,"infraction":false,"jobValue":0.0,"customId":"BLD14-00178","booking":false,"publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"recordClass":"COMPLETE","openedDate":"2014-08-20
-        00:00:00","assignedToDepartment":"ISLANDTON/BUILDING/NA/NA/NA/NA/NA","assignedUser":"BRADP","trackingId":253923535,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"value":"14CAP-00000-000CI"}],"status":200}'
+        Center"},"reportedDate":"2014-08-20 00:00:00","totalFee":20.0,"totalPay":0.0,"module":"Building","customId":"BLD14-00178","jobValue":0.0,"publicOwned":false,"misdemeanor":false,"offenseWitnessed":false,"defendantSignature":false,"recordClass":"COMPLETE","openedDate":"2014-08-20
+        00:00:00","assignedToDepartment":"ISLANDTON/BUILDING/NA/NA/NA/NA/NA","assignedUser":"BRADP","trackingId":253923535,"estimatedProductionUnit":0.0,"actualProductionUnit":0.0,"undistributedCost":0.0,"booking":false,"value":"14CAP-00000-000CI"}],"status":200}'
     http_version: 
-  recorded_at: Tue, 26 Aug 2014 20:38:09 GMT
+  recorded_at: Tue, 16 Sep 2014 14:18:06 GMT
 recorded_with: VCR 2.9.2

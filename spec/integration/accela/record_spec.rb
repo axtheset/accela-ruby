@@ -7,37 +7,6 @@ describe Accela::Record, :vcr do
     api.login("developer", "accela", "records addresses")
   end
 
-  describe "::find" do
-    it "returns a single Record object" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      expect(record.initiated_product).to eq "AV360"
-      expect(record.public_owned).to eq false
-    end
-  end
-
-  describe "::all" do
-    it "returns a list of Record objects" do
-      records = Accela::Record.all
-      expect(records.length).to eq 25
-    end
-  end
-
-  describe "updating a record's attributes" do
-    it "allows its properties to be updated" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      record.name = "This is a test"
-      expect(record.name).to eq "This is a test"
-    end
-
-    it "does not persist changes" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      record.housing_units = 647
-      expect(record.housing_units).to eq 647
-      record_take_2 = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      expect(record_take_2.housing_units).not_to eq 647
-    end
-  end
-
   describe "#update" do
     let(:record) {
       Accela::Record.new(housing_units: 12,
@@ -58,32 +27,6 @@ describe Accela::Record, :vcr do
     end
   end
 
-  describe "#create" do
-    it "persists changes to the model" do
-      record = Accela::Record.new
-      record.housing_units = 829
-      type = Accela::Type.new
-      type.id = "Building-Commercial-Addition-NA"
-      record.type = type
-      record.create
-      expect(record.housing_units).to eq 829
-    end
-
-    it "creates and sets an id" do
-      record = Accela::Record.new
-      type = Accela::Type.new
-      type.id = "Building-Commercial-Addition-NA"
-      record.type = type
-      record.create
-      expect(record.id).not_to eq nil
-    end
-
-    it "raises an error when attempting to create an already created record" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      expect { record.create }.to raise_error Accela::ModelPersistenceError
-    end
-  end
-
   describe "::has_one" do
     let(:input) {
       {
@@ -100,14 +43,6 @@ describe Accela::Record, :vcr do
 
     it "exposes sub-objects" do
       expect(record.type.text).to eq "This is a text"
-    end
-
-    it "embeds raw values when assigning has_manys" do
-      type = Accela::Type.new(input.fetch(:type))
-      rec = Accela::Record.new
-      rec.type = type
-      expect(rec.raw[:type][:text]).to eq "This is a text"
-      expect(rec.type.text).to eq "This is a text"
     end
   end
 
@@ -132,15 +67,6 @@ describe Accela::Record, :vcr do
       expect(address1.city).to eq "Cleveland"
       expect(address2.city).to eq "Bainbridge Township"
     end
-
-    it "embeds raw values when assigning has_manys" do
-      raw_addresses = input.fetch(:addresses)
-      addresses = raw_addresses.map {|hash| Accela::Address.new(hash) }
-      rec = Accela::Record.new
-      rec.addresses = addresses
-      expect(rec.raw[:addresses].first[:city]).to eq "Cleveland"
-      expect(rec.addresses.last.county).to eq "Geauga"
-    end
   end
 
   describe "::new" do
@@ -151,73 +77,4 @@ describe Accela::Record, :vcr do
     end
   end
 
-  describe "type mismatches" do
-    let(:error) { Accela::TypeMismatchError }
-    let(:record) { Accela::Record.new }
-
-    it "throws an error when assigning the wrong types" do
-      expect { record.type = "String instead of a Accela::Type" }.to raise_error(error)
-    end
-
-    it "throws an error when assigning wrong non-primative types" do
-      address = Accela::Address.new
-      expect { record.type = address }.to raise_error(error)
-    end
-  end
-
-  describe "#created?" do
-    it "defaults to false for manually created records" do
-      record = Accela::Record.new
-      expect(record.created?).to be false
-    end
-
-    it "returns true for fetched records" do
-      record = Accela::Record.all.first
-      expect(record.created?).to be true
-      record_2 = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      expect(record_2.created?).to be true
-    end
-
-    it "returns true for records that have called created" do
-      record = Accela::Record.new
-      type = Accela::Type.new
-      type.id = "Building-Commercial-Addition-NA"
-      record.type = type
-      record.create
-      expect(record.created?).to be true
-    end
-  end
-
-  describe "#addresses" do
-    it "if it has an id fetches a record's set of addresses" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      address = record.addresses.first
-      expect(address.street_name).to eq "ALLEGHENY"
-      expect(address.raw).to eq record.raw[:addresses].first
-    end
-  end
-
-  describe "#contacts" do
-    it "fetch a record's contacts" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      contact = record.contacts.first
-      expect(contact.email).to eq "josh@d-i.co"
-    end
-  end
-
-  describe "#parcels" do
-    it "fetch a record's parcels" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      parcel = record.parcels.first
-      expect(parcel.parcel_number).to eq "137200001"
-    end
-  end
-
-  describe "#owners" do
-    it "fetch a record's parcels" do
-      record = Accela::Record.find("ISLANDTON-14CAP-00000-000CR")
-      owner = record.owners.first
-      expect(owner.full_name).to eq "UTROSKE ROBERT EARL & DIANA LEE"
-    end
-  end
 end
