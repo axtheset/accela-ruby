@@ -18,5 +18,11 @@ module Accela
       input_hashes.map {|input_hash| model_class.create(input_hash) }
     end
 
+    def fetch_one(api_class, translator_class, model_class, *args)
+      payload_hash = api_class.result(*args)
+      input_hashes = translator_class.json_to_ruby([payload_hash])
+      input_hashes.map {|input_hash| model_class.create(input_hash) }.first
+    end
+
   end
 end
