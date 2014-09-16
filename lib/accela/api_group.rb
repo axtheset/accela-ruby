@@ -2,6 +2,15 @@ module Accela
   class APIGroup
     attr_reader :model
 
+    def self.as_class_method(*args)
+      eclass = (class << self; self; end)
+      args.map(&:to_sym).each do |method|
+        eclass.send(:define_method, method) do |*args|
+          new(nil).public_send(method, *args)
+        end
+      end
+    end
+
     def initialize(model)
       @model = model
     end

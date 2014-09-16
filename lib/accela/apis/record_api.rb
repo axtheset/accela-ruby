@@ -1,15 +1,8 @@
 module Accela
   class RecordAPI < APIGroup
+    as_class_method :get_records, :get_all_records, :create_record
 
-    def self.get_records(id)
-      new(nil).get_records(id)
-    end
-
-    def self.get_all_records
-      new(nil).get_all_records
-    end
-
-    def self.create_record(input)
+    def create_record(input)
       raw = input.is_a?(Hash) ? input : input.raw
       payload = RecordTranslator.ruby_to_json([raw])
       record_hash  = Accela::V4::CreateRecord.result(payload.first)

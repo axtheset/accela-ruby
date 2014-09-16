@@ -1,16 +1,6 @@
 module Accela
   class OwnerAPI < APIGroup
-
-    def self.get_owners(id)
-      new(nil).get_owners(id)
-    end
-
-    def self.get_all_owners(*args)
-      new(nil).get_all_owners(*args)
-    end
-
-    def self.find(id)
-    end
+    as_class_method :get_owners, :get_all_owners
 
     def get_owners(*args)
       fetch_one(Accela::V4::GetOwners,

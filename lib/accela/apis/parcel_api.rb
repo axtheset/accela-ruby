@@ -1,13 +1,6 @@
 module Accela
   class ParcelAPI < APIGroup
-
-    def self.get_parcels(id)
-      new(nil).get_parcels(id)
-    end
-
-    def self.get_all_parcels(*args)
-      new(nil).get_all_parcels(*args)
-    end
+    as_class_method :get_parcels, :get_all_parcels
 
     def get_parcels(*args)
       fetch_one(Accela::V4::GetParcels,

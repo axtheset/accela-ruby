@@ -1,9 +1,6 @@
 module Accela
   class ContactAPI < APIGroup
-
-    def self.get_all_contacts(*args)
-      new(nil).get_all_contacts(*args)
-    end
+    as_class_method :get_all_contacts
 
     def get_all_contacts(*args)
       fetch_many(Accela::V4::GetAllContacts,
