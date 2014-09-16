@@ -10,7 +10,7 @@ module Accela
     end
 
     def self.create_record(input)
-      raw = input.raw
+      raw = input.is_a?(Hash) ? input : input.raw
       payload = RecordTranslator.ruby_to_json([raw])
       record_hash  = Accela::V4::CreateRecord.result(payload.first)
       input_hash = RecordTranslator.json_to_ruby([record_hash]).first

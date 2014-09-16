@@ -32,6 +32,14 @@ describe Accela::RecordAPI, :vcr do
       expect(record.housing_units).to eq 829
     end
 
+    it "also accepts a hash" do
+      record = Accela::RecordAPI.create_record housing_units: 829,
+                                               type: {
+                                                 id: "Building-Commercial-Addition-NA"
+                                               }
+      expect(record.housing_units).to eq 829
+    end
+
     it "creates and sets an id" do
       input_record = Accela::Record.new type: {id: "Building-Commercial-Addition-NA" }
       record = Accela::RecordAPI.create_record(input_record)
