@@ -5,8 +5,8 @@ module Accela
       new(nil).get_addresses(id)
     end
 
-    def self.get_all_addresses
-      new(nil).get_all_addresses(country: "US")
+    def self.get_all_addresses(*args)
+      new(nil).get_all_addresses(*args)
     end
 
     def get_addresses(*args)
@@ -22,7 +22,6 @@ module Accela
                  Address,
                  *args)
     end
-
 
   end
 end

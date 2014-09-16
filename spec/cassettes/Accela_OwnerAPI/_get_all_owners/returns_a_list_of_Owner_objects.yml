@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=accela&scope=owners
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '904'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      X-Accela-Traceid:
+      - 140916194339549-4f0126ab
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 16 Sep 2014 19:43:40 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"tgMx9IgkpNEGbyH8NczpGL2Uktz_AxG3Z48X12bTSCq4029kNCwVqQgrzdrBmyq8jlwAYt4lI4oebZUuQ-4CrXo5FBe4_nlE0z8wWFjdRw0kjwbs6gyWUJeVrHula0BQxfT6UR7tg5ImjUJPrLjRIC6dIatsL70BsvV-YrpQ6r3qEXBaQYIRDxa85azKDdd247CKWyNjS3VmcLNOgv1SMAhUphUQwsJ1CtYGUt6Vb1FinbhM5VPfV-ENH8lEanqFdCXjfEHvu6ht14CPEFhnuaSYAuV3yG5JOTF-GKx2mnYQ82jqF7wM0UP36xH_A0Sfc6NsRGZ9PWLvjE_hf4DLYmW8wrhxoyhChvt5ZHIhbFgXEVKIRMHzAUGXSqo_RyCrmCD2_tjJAutur9UnDmtIGCcs_3Lo5UMZhD8LWkz47I7HjkLJJMxkh9PtSjnUl3Di0","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAABRh6As5KbBw0iIfqdihcoCpcv7uhn7DILvXd6Ah9PHk0QAAAAEwCvv_KtttO91SCzUBrsHhmjYj7e-BgJDrpgfx4K_hr39NlkZVNJxXAQwwHWDUX8iENdiPyxEo3sJDfZHKJiRbmnR_PDZ9hDlW2zkZizG1s8_PhkqkXD7OHNmJ5wXKfpQ469Trt5P0U4qJpTyKUf5xRHBP6ysb6r3fIyaM9MxgZk_kgWTWuuwoGFTBEm39eYIyzpuFVKlElSIxcpwuUu7E4OOoSpn1l2B-inGm0AhkxGyqbBkYdcUXywduCFxl4nb2X9o40ZDy8VucoMyOsL2e","scope":"get_civicid_profile
+        owners"}'
+    http_version: 
+  recorded_at: Tue, 16 Sep 2014 19:43:41 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/owners?state=OH
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - tgMx9IgkpNEGbyH8NczpGL2Uktz_AxG3Z48X12bTSCq4029kNCwVqQgrzdrBmyq8jlwAYt4lI4oebZUuQ-4CrXo5FBe4_nlE0z8wWFjdRw0kjwbs6gyWUJeVrHula0BQxfT6UR7tg5ImjUJPrLjRIC6dIatsL70BsvV-YrpQ6r3qEXBaQYIRDxa85azKDdd247CKWyNjS3VmcLNOgv1SMAhUphUQwsJ1CtYGUt6Vb1FinbhM5VPfV-ENH8lEanqFdCXjfEHvu6ht14CPEFhnuaSYAuV3yG5JOTF-GKx2mnYQ82jqF7wM0UP36xH_A0Sfc6NsRGZ9PWLvjE_hf4DLYmW8wrhxoyhChvt5ZHIhbFgXEVKIRMHzAUGXSqo_RyCrmCD2_tjJAutur9UnDmtIGCcs_3Lo5UMZhD8LWkz47I7HjkLJJMxkh9PtSjnUl3Di0
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1041'
+      Content-Type:
+      - application/json
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/7.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140916194341077-ba7dfca3
+      Date:
+      - Tue, 16 Sep 2014 19:43:41 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"result":[{"parcelId":"008391077","id":4818534,"fullName":"BRICKER
+        MICHAEL D","isPrimary":"Y","mailAddress":{"city":"BATAVIA ","postalCode":"45103","addressLine2":"4231
+        PEACE HAVEN LN","state":{"value":"OH","text":"OH"}},"address":{"city":"BATAVIA
+        ","state":{"value":"OH","text":"OH"}},"status":{"value":"A","text":"Active"}},{"parcelId":"047181028","id":1876184,"fullName":"MOSHELL
+        ADELINE H","isPrimary":"Y","mailAddress":{"city":"FREDERICKTOWN ","postalCode":"43019","addressLine2":"38
+        WEST SANDUSKY ST","state":{"value":"OH","text":"OH"}},"address":{"city":"FREDERICKTOWN
+        ","state":{"value":"OH","text":"OH"}},"status":{"value":"A","text":"Active"}},{"parcelId":"137230010","id":4823151,"fullName":"TAYLOR
+        CYNTHIA","isPrimary":"Y","mailAddress":{"city":"SHAKER HEIGHTS ","postalCode":"44120","addressLine2":"16090
+        PARKLAND DR","state":{"value":"OH","text":"OH"}},"address":{"city":"SHAKER
+        HEIGHTS ","state":{"value":"OH","text":"OH"}},"status":{"value":"A","text":"Active"}}],"status":200,"page":{"offset":0,"limit":25,"hasmore":false}}'
+    http_version: 
+  recorded_at: Tue, 16 Sep 2014 19:43:41 GMT
+recorded_with: VCR 2.9.2

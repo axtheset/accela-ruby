@@ -9,7 +9,7 @@ describe Accela::Address, :vcr do
 
   describe "::get_all_addresses" do
     it "returns a list of Address objects" do
-      addresses = Accela::AddressAPI.get_all_addresses
+      addresses = Accela::AddressAPI.get_all_addresses(country: "US")
       expect(addresses.length).to eq 25
     end
   end
