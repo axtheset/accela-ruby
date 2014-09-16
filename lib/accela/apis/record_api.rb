@@ -54,5 +54,11 @@ module Accela
                      Parcel)
     end
 
+    def get_all_record_types
+      fetch_many(Accela::V4::GetAllRecordTypes,
+                 TypeTranslator,
+                 Type)
+    end
+
   end
 end
