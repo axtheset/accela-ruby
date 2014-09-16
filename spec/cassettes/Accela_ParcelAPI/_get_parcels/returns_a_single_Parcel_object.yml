@@ -29,19 +29,19 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140916192348356-0c91d415
+      - 140916194901591-bb18442c
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 16 Sep 2014 19:23:48 GMT
+      - Tue, 16 Sep 2014 19:49:01 GMT
     body:
       encoding: UTF-8
-      string: '{"access_token":"tgMx9IgkpNEGbyH8NczpGJlYx_mTDMKQP-_2jI5NKot5O72IahxsloZ3n6Drio_RZrrnfQ6r-agkrYguTW6ng_dHnRK-odvToF34V6r4iC2fHH4JAdrjJssbk9XSEZFrSRgywI8dtL8LXKwAqs6gBknYtHOXnnQqEdx6ViZ9nRaczZxapRs0TKSDha2Yk-tb0KfL5QkPA50YAWXhfL_wy2qrney9opihYdVUmFaf0CX1AhegsZX7BIKERB6URhvUnUB7DKvJuCVsj5y5ZejLxdMVwBfeCITPS_gpomxrS7LCS0PuuMyPlpB0XgN3yTBGN7iSCnNfNsIYz5NKzOCWoMY8sz77skEadAv60fbKUBffTu3Yaa1nWLFMeL-QdWlBNGextcu87RFqMJW_RDzi9LbrT65i_ZxL7KIR8OALuPA1","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAPn-s67pkf_gF4VS9iZj4x-JDX4d2_wpsnvc7rgF_Tbj0QAAAAHa5k4-KfqSw2dmrz219LQ0-3hMwRvVAXJkniLwm-3eFhtYyFyvEw8KQZiL9mfSIY8CbLAjBXNX4id7iFVRGVzwrSLEKwKOs-TSp3kdKmAnocgs_piVh2wBVD--Lt2MF00qTiaAbDPyYfjv8ADL1dtNIv_2YwnzFWcNAv25tfzGqP-KoXIOMfGZZrlHf3yi9oMRsMZPWSQy1rJEh1iolQXDgGfwWZPDo7EHjamjF6B4nxjfvwMR2lNhkU-d29nWvp7wyAoUaJqUn4V_OFtg0ACx","scope":"get_civicid_profile
+      string: '{"access_token":"tgMx9IgkpNEGbyH8NczpGF-BOJK5G4goWsaWR44zcMQSfxhThoQbW5uYAd9T1CHO0J619t1pWDRYlvTz4CtIbtqzlw8X1RXfciDQ47CUOgjJKeW9mBFmlcMpVIMlJQ5ne8OhyEVQJ8Dy_t6GRZX5CNBpvaKsUX61PJcU6HqhJF1UxyMcLznc39JHd7IZrp4aOTVNk7a4ZIaGoNHZtlJHKNzlPnoZEHIAGfyahYPKAxULM5d5y8uCrqsIsDI-pnnbUMvpSaMDZ3mPYRpRoOIKSeu9yyGSe2p_4uHGNzEY41tVsY8dgKtFrNHhAspytJ19W9IykI3hum6DSARl7hSJqQ4BzTBemyk1WDNfszTK4HvQ8sWZfUI55k5rShNBlIlrXoSybWgbYOaQRuGJAbUthg8JCZcaoSkTrNu6nuOHFkg1","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAADWhWylF0lsGiYzeA-6e2oNvBHqeKusrVrMZSBQObXX10QAAAAF26rjuO0ulxvWtD_4uf9vunEB29jCZw9lLObmD7DmO6nrPDjvEhibaKkUIPVSl5Q0aeBxQnznUzbP2Fl4w8_Fa9-WmIB8xu52MUi3H46BUz8UJPg6P060uEshIS-IVEpkwfjxNdJuKSdpTnhdR6Qif6kwLZNpgyq3c18tsOzh2zRZ8e_jdOxyvYyuMei1IibVdL-5d6sZ9ZYU62uDmKRcMyIzE6XhdDFI2Bsrx53NP89Npeatz0F2RavMqg9EX2uNAqGRTvh0ut41lhjEk5DEL","scope":"get_civicid_profile
         parcels"}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 19:23:49 GMT
+  recorded_at: Tue, 16 Sep 2014 19:49:03 GMT
 - request:
     method: get
     uri: https://apis.accela.com/v4/parcels/137200001
@@ -86,14 +86,14 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140916192349924-39a42a28
+      - 140916194903042-2ab61d02
       Date:
-      - Tue, 16 Sep 2014 19:23:49 GMT
+      - Tue, 16 Sep 2014 19:49:03 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"result":{"parcelNumber":"137200001","isPrimary":"N","id":"137200001","parcelArea":550800.0,"status":{"value":"A","text":"Active"}},"status":200}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 19:23:50 GMT
+  recorded_at: Tue, 16 Sep 2014 19:49:03 GMT
 recorded_with: VCR 2.9.2

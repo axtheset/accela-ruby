@@ -29,19 +29,19 @@ http_interactions:
       Server:
       - Microsoft-IIS/7.5
       X-Accela-Traceid:
-      - 140916192346059-b34a41c3
+      - 140916194859419-dfff2e6b
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 16 Sep 2014 19:23:46 GMT
+      - Tue, 16 Sep 2014 19:49:00 GMT
     body:
       encoding: UTF-8
-      string: '{"access_token":"tgMx9IgkpNEGbyH8NczpGJHAb_8QGHJnNwptUclMfisiYK5TrryR28i3hM2seQk38gU7oaURttYP5zLHRjCINsSQfaBhyjxKXVhXnN5CTgtk1pjQHzni2csRif3l5UOYYqogam6j4b33bNsU5iwAqjA5_VeDakxpXfr_SQkMcHb3mhjfGIyOg_7nrQkcSLqEVrdQwvB4o7qgTd7Q2aKB0gjjSHRjCwFLR2wMeyPg_UrJyz1fgrXhFeUohV1yRyfm1kP2_KUYnxArJjQ-g-o_M7JDoI-uzkmguf2tydzCvAO0GROi5vZlanVcHB218RgXVsmeOdCXUgNOr60b_Bb-EZEqP93BbV7MsKbZTA21qjwtNamI5wnLGhJP2St492lM6ij2W1Kld_4UuxsHWlkT3TonvnC9lCgEIJ5nb_WBGvs1","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAHAwL1oFHZK37usM9DI6Nl53x4dJwJnWmzI6QcdslM8W0QAAAAFG5lgr8g7sZNfgZf9_TF7sew49vipoI8DWTt6FP4IOkoJ6VYM0CjVvX0osxOAVaXjmbJR32xwfkgIcYIrMZaSuqr8YuB6qk7LrZGyw72KvcWzwgRnkq-C6KURnhQXh0h6ERvddhUF-8_gNol2lOt_k6JgRtZy2bjAPORHcxvEo-OyP8bRqYjJobMOE9nIBdm4SjsZr2e6EZQy0Nk6y0KAkwirqqV2-lB3-RKDJCAIQ-RRp4XZBbLeVJBUZ6ElXkMivU3wEpjba29r5GOtbAFsY","scope":"get_civicid_profile
+      string: '{"access_token":"tgMx9IgkpNEGbyH8NczpGK48aDi5Z41xplcssS1jmG8GuhB23dU-xu9H58RV8CniUdMuJtrXUj7C2adxSW94gEdVU8wK98_TgstIBO3Xe2IB1xjgcOZNVg-CRW3UX88CFYldppLKA1sMHgj9EDTrb_7AflLeJ7DW6f3QsACBAA0vmn1u3KTv0mr-ekCU56NW5GmH2KcouFJ-MU_EkoG_-qnhTe8ORWEaOm5hyWjfx2dGtp-2p7gZXh9mkOofOCEM3mtccU25s7recpeHYFKoXlceAd5xjshlAAPhm7jXGWEDc88_LlBFTy4yNzx3YIw9eM4XkAa2fbN2lOtFeodgxuQHiYlzv1sejpvG5jqV97cBroo7cVJI0Ty5tJ4mtXGVpqjgO8-5BDruJHgBqCJI7NHCtr0Ur_i568PaUKShJdQ1","token_type":"bearer","expires_in":"86400","refresh_token":"rALM!IAAAAIyTs_dvCM-A_xj6bI2lfMrje4OqMOP94qMUa9fegoj30QAAAAEYRiqpTRWjAwkv_UbQHUugDjpb5vpast_Q1Bke1WZ6CVvALMHmmHa8Fo9FaeggWvvg_774kr1_UVPSRtaGf1fHqryZLdn-tLLRaE2uALsK1ww7cb7nZICk568IoDmj45LCk0tie2xVhBUJO1_ObL-78SUP-HWryZLYeaVOgPIEj8xd8Zoieb-FL5-UVRIz7yRghuv13gXLFaMNs7yKhlXSdz_OA2e4GrVLH2qi4uQEa3mSGQw-15kpveNYAYPuQDpaRcPhRNFZtmcT_7IgHTyP","scope":"get_civicid_profile
         parcels"}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 19:23:47 GMT
+  recorded_at: Tue, 16 Sep 2014 19:49:00 GMT
 - request:
     method: get
     uri: https://apis.accela.com/v4/parcels?isPrimary=N
@@ -86,14 +86,14 @@ http_interactions:
       - ASP.NET
       - ASP.NET
       X-Accela-Traceid:
-      - 140916192347627-fc934d18
+      - 140916194900839-b6303424
       Date:
-      - Tue, 16 Sep 2014 19:23:47 GMT
+      - Tue, 16 Sep 2014 19:49:01 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"result":[{"parcelNumber":"-","isPrimary":"N","id":"-","status":{"value":"A","text":"Active"}},{"parcelNumber":"005010004","isPrimary":"N","id":"005010004","parcelArea":7927920.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010005","isPrimary":"N","id":"005010005","parcelArea":1.3068E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010008","isPrimary":"N","id":"005010008","parcelArea":1062000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010010","isPrimary":"N","id":"005010010","parcelArea":5052960.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010011","isPrimary":"N","id":"005010011","parcelArea":4791600.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010016","isPrimary":"N","id":"005010016","parcelArea":9300.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010022","isPrimary":"N","id":"005010022","parcelArea":5445000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010023","isPrimary":"N","id":"005010023","parcelArea":1.646568E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010024","isPrimary":"N","id":"005010024","parcelArea":1001880.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010026","isPrimary":"N","id":"005010026","parcelArea":8102160.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010027","isPrimary":"N","id":"005010027","parcelArea":5401440.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010028","isPrimary":"N","id":"005010028","parcelArea":8189280.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010029","isPrimary":"N","id":"005010029","parcelArea":1.071576E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010030","isPrimary":"N","id":"005010030","parcelArea":4356000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010031","isPrimary":"N","id":"005010031","parcelArea":4486680.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010032","isPrimary":"N","id":"005010032","parcelArea":6229080.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010033","isPrimary":"N","id":"005010033","parcelArea":7927920.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010034","isPrimary":"N","id":"005010034","parcelArea":1.250172E7,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005010036","isPrimary":"N","id":"005010036","parcelArea":8058600.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020003","isPrimary":"N","id":"005020003","parcelArea":8145720.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020016","isPrimary":"N","id":"005020016","parcelArea":2720000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020017","isPrimary":"N","id":"005020017","parcelArea":1500000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020018","isPrimary":"N","id":"005020018","parcelArea":648000.0,"status":{"value":"A","text":"Active"}},{"parcelNumber":"005020019","isPrimary":"N","id":"005020019","parcelArea":1568160.0,"status":{"value":"A","text":"Active"}}],"status":200,"page":{"offset":0,"limit":25,"hasmore":true}}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 19:23:48 GMT
+  recorded_at: Tue, 16 Sep 2014 19:49:01 GMT
 recorded_with: VCR 2.9.2
