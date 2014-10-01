@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://apis.accela.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=mdeveloper&password=accela&scope=records
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Accela-Appid:
+      - '635395466279594650'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '905'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - '-1'
+      Server:
+      - Microsoft-IIS/8.5
+      X-Accela-Traceid:
+      - 140930154040883-781efd4b
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 30 Sep 2014 15:40:41 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"xrWrmbLisKkiBniryq-MqkypZoBIU5TZfo0CdbZwqNRJHWrEZO3TugO7JEUpnD_MM5Xtzt7pyx9qy2Ir5XC_SfzNRM5isFENPhqw6LomBh6hTvErmDOSSqVifJsRGbQpQ5h2Ig7ke7J1sY0_K0TG7OaHY0nRdGDDJEX0-wnWm3aIHaBa3BrA7wPzlYDys5U3l6Iqf_t-B3fwabTpsF4_4Lq71i0cqOBXMBvlSzxgIP6PcGJOzeaV_uk9sz9g4_NijHCRsXyfrq6Z_rTK5A2ZI778iVd5JNcsS9HC2_mLeLD2qz2WOa6q6Ho3fU-iC-6TW-5P9UU0BrY5ctP932Eow74yvZ-6HebTNxZE3S20Q4QbcSqAurP7g-9eZmDk50wgWmh9rvnhoW4bbnlg-WyLUs_CSxm8i24UMHxHtLx-rf1NrNaFTaz9N1X2Xgjm79VB0","token_type":"bearer","expires_in":"86400","refresh_token":"drO6!IAAAAApt10LttcUh038TlP5bsG_q1SpO8acSfgB4yGoFb4Wi0QAAAAGhSolVMyQlkADMMFCNOYlq1_LW827tTY_TpN6eixiUWn9evASX2GINR4y27GqKgH3pqqcjXFGGTHGn1rBal522pyhSp_h4DC1p-TAIsotNGMdAaDUosS4L13fPxHjYfvxucIZjADo8tT1Bu9vK9e2PsgEtx3bqbImbml_c_TdYP4bNwTqhxor9XsTvzCTFHC6XOjgrNGm5BOI6e8e07Q06NzRNDBA0JaCKybT8lvTz0Tt2UszSY4-IshIr7PNN19PBLpwJ92v2FYKM5bGX56ou","scope":"get_civicid_profile
+        records"}'
+    http_version: 
+  recorded_at: Tue, 30 Sep 2014 15:40:41 GMT
+- request:
+    method: get
+    uri: https://apis.accela.com/v4/records/describe/create
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Accela-Appid:
+      - '635395466279594650'
+      Authorization:
+      - xrWrmbLisKkiBniryq-MqkypZoBIU5TZfo0CdbZwqNRJHWrEZO3TugO7JEUpnD_MM5Xtzt7pyx9qy2Ir5XC_SfzNRM5isFENPhqw6LomBh6hTvErmDOSSqVifJsRGbQpQ5h2Ig7ke7J1sY0_K0TG7OaHY0nRdGDDJEX0-wnWm3aIHaBa3BrA7wPzlYDys5U3l6Iqf_t-B3fwabTpsF4_4Lq71i0cqOBXMBvlSzxgIP6PcGJOzeaV_uk9sz9g4_NijHCRsXyfrq6Z_rTK5A2ZI778iVd5JNcsS9HC2_mLeLD2qz2WOa6q6Ho3fU-iC-6TW-5P9UU0BrY5ctP932Eow74yvZ-6HebTNxZE3S20Q4QbcSqAurP7g-9eZmDk50wgWmh9rvnhoW4bbnlg-WyLUs_CSxm8i24UMHxHtLx-rf1NrNaFTaz9N1X2Xgjm79VB0
+      X-Accela-Agency:
+      - islandton
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '2937'
+      Content-Type:
+      - application/json
+      Expires:
+      - '-1'
+      Server:
+      - Microsoft-IIS/7.5
+      - Microsoft-IIS/8.5
+      - unknow
+      X-Accela-Resp-Gateway-Version:
+      - 3.1.0.1
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET
+      X-Accela-Traceid:
+      - 140930154042404-18e4bcdf
+      Date:
+      - Tue, 30 Sep 2014 15:40:42 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"result":{"fields":[{"name":"customId","isRequired":false},{"name":"customForms","isRequired":false},{"name":"type","isRequired":true},{"name":"misdemeanor","isRequired":false},{"name":"inspectorName","isRequired":false},{"name":"enforceDepartment","isRequired":false},{"name":"scheduledDate","isRequired":false},{"name":"customTables","isRequired":false},{"name":"completeUser","isRequired":false},{"name":"housingUnits","isRequired":false},{"name":"description","isRequired":false},{"name":"priority","isRequired":false},{"name":"value","isRequired":false},{"name":"recordClass","isRequired":false},{"name":"enforceUser","isRequired":false},{"name":"inspectorId","isRequired":false},{"name":"estimatedDueDate","isRequired":false},{"name":"actualProductionUnit","isRequired":false},{"name":"defendantSignature","isRequired":false},{"name":"status","isRequired":false},{"name":"appearanceDayOfWeek","isRequired":false},{"name":"trackingId","isRequired":false},{"name":"publicOwned","isRequired":false},{"name":"assignedDate","isRequired":false},{"name":"enforceUserId","isRequired":false},{"name":"completedDate","isRequired":false},{"name":"reportedDate","isRequired":false},{"name":"completedByUser","isRequired":false},{"name":"inPossessionTime","isRequired":false},{"name":"createdByCloning","isRequired":false},{"name":"closedByUser","isRequired":false},{"name":"overallApplicationTime","isRequired":false},{"name":"offenseWitnessed","isRequired":false},{"name":"appearanceDate","isRequired":false},{"name":"closedDate","isRequired":false},{"name":"estimatedProductionUnit","isRequired":false},{"name":"statusDate","isRequired":false},{"name":"infraction","isRequired":false},{"name":"completedByDepartment","isRequired":false},{"name":"completeDate","isRequired":false},{"name":"reportedChannel","isRequired":false},{"name":"assignedToDepartment","isRequired":false},{"name":"closedByDepartment","isRequired":false},{"name":"booking","isRequired":false},{"name":"initiatedProduct","isRequired":false},{"name":"openedDate","isRequired":false},{"name":"reportedType","isRequired":false},{"name":"numberOfBuildings","isRequired":false},{"name":"constructionType","isRequired":false},{"name":"assignedUser","isRequired":false},{"name":"severity","isRequired":false},{"name":"renewalInfo","isRequired":false},{"name":"firstIssuedDate","isRequired":false},{"name":"statusReason","isRequired":false},{"name":"inspectorDepartment","isRequired":false},{"name":"shortNotes","isRequired":false}],"elements":[{"name":"parcels","isRequired":true,"isReference":false},{"name":"addresses","isRequired":false,"isReference":false},{"name":"owners","isRequired":true,"isReference":false},{"name":"professionals","isRequired":true,"isReference":false},{"name":"contacts","isRequired":true,"isReference":false,"types":[{"value":"Veterinarian","maxOccurance":1,"minOccurance":0},{"value":"Advocate","maxOccurance":1,"minOccurance":1}]}]}}'
+    http_version: 
+  recorded_at: Tue, 30 Sep 2014 15:40:42 GMT
+recorded_with: VCR 2.9.2

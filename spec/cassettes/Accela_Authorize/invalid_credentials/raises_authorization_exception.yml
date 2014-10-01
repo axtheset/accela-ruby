@@ -5,7 +5,7 @@ http_interactions:
     uri: https://apis.accela.com/oauth2/token
     body:
       encoding: UTF-8
-      string: grant_type=password&agency_name=ISLANDTON-APP&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=developer&password=oops&scope=records%20addresses
+      string: grant_type=password&agency_name=islandton&environment=TEST&client_id=635395466279594650&client_secret=3b1e4026d95e4478a0f8dd1f7a1b7028&username=mdeveloper&password=oops&scope=records%20addresses
     headers:
       Content-Type:
       - application/x-www-form-urlencoded
@@ -25,23 +25,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Expires:
-      - "-1"
+      - '-1'
       Server:
-      - Microsoft-IIS/7.5
+      - Microsoft-IIS/8.5
       X-Accela-Resp-Message:
       - Invalid user name or password.
       X-Accela-Traceid:
-      - 140916194852949-22f77f71
+      - 140930155452474-80c33b76
       X-Aspnet-Version:
       - 4.0.30319
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 16 Sep 2014 19:48:53 GMT
+      - Tue, 30 Sep 2014 15:54:53 GMT
     body:
       encoding: UTF-8
       string: '{"error":"invalid_request","error_description":"Invalid user name or
         password."}'
     http_version: 
-  recorded_at: Tue, 16 Sep 2014 19:48:54 GMT
+  recorded_at: Tue, 30 Sep 2014 15:54:53 GMT
 recorded_with: VCR 2.9.2

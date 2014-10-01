@@ -2,7 +2,7 @@ module Accela
   class Model
     include Inflector
 
-    attr_reader :raw, :types
+    attr_reader :raw
     @@sub_graphs = []
 
     def initialize(input={})
@@ -77,7 +77,7 @@ module Accela
 
       primatives = [:integer, :long, :string, :boolean, :double, :date, :dateTime]
 
-      type = types[property.to_sym]
+      type = @types[property.to_sym]
 
       primative = primatives.include?(type)
       has_many = type.is_a?(Array) && value.is_a?(Array) && value.inject(true) {|m, v|

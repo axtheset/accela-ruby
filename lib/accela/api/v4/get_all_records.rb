@@ -2,8 +2,8 @@ module Accela
   module V4
     class GetAllRecords < Base
 
-      def call
-        get("records", :no_auth)
+      def call(*args)
+        get("records", :no_auth, *args)
       end
 
     end

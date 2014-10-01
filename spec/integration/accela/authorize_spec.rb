@@ -3,9 +3,9 @@ require File.expand_path(File.dirname(__FILE__) + "/../spec_helper")
 describe Accela::Authorize, :vcr do
   let(:app_id) { "635395466279594650" }
   let(:app_secret) {"3b1e4026d95e4478a0f8dd1f7a1b7028" }
-  let(:agency) { "ISLANDTON-APP" }
+  let(:agency) { "islandton" }
   let(:environment) { "TEST" }
-  let(:username) { "developer" }
+  let(:username) { "mdeveloper" }
   let(:password) { "accela" }
   let(:scope) { "records addresses" }
 
@@ -33,8 +33,8 @@ describe Accela::Authorize, :vcr do
 
   context "invalid credentials" do
     let(:password) { "oops" }
-    it "returns nil" do
-      expect(token).to be_nil
+    it "raises authorization exception" do
+      expect {token}.to raise_error Accela::AuthorizationError
     end
   end
 end

@@ -17,10 +17,11 @@ module Accela
                  *args)
     end
 
-    def get_all_records
+    def get_all_records(opts={})
       fetch_many(Accela::V4::GetAllRecords,
                  RecordTranslator,
-                 Record)
+                 Record,
+                 opts)
     end
 
     def get_all_addresses_for_record

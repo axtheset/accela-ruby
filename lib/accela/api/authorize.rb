@@ -18,6 +18,9 @@ module Accela
                                body: complete_body)
       if response.code == 200
         Token.new(response.parsed_response)
+      else
+        #binding.pry
+        raise AuthorizationError.new(response.parsed_response["error_description"])
       end
     end
 
