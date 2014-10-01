@@ -33,10 +33,12 @@ module Accela
     def method_missing(name, *args, &block)
       if is_property?(name)
         if has_one?(name)
-          model = model_for_name(name)
+          relation = has_one?(name)
+          model = relation.last[:model] || model_for_name(name)
           model.new(value_for_property(name))
         elsif has_many?(name)
-          model = model_for_name(singularize(name))
+          relation = has_many?(name)
+          model = relation.last[:model] || model_for_name(singularize(name))
           items = value_for_property(name)
           items.map {|item| model.new(item) }
         else
@@ -49,13 +51,27 @@ module Accela
 
     def self.has_one(*relations)
       Array(relations).each do |relation|
-        @@sub_graphs << [:has_one, relation]
+        @@sub_graphs << [:has_one, relation, {}]
       end
     end
 
     def self.has_many(*relations)
-      Array(relations).each do |relation|
-        @@sub_graphs << [:has_many, relation]
+      if relations.last.is_a? Hash
+        if relations.length == 2
+          relation, opts = relations
+          if opts[:model]
+            relation_opts = { model: opts[:model] }
+          else
+            relation_opts = {}
+          end
+          @@sub_graphs << [:has_many, relation, relation_opts]
+        else
+          raise "When passing in options for a has many relationship provide no more than one relationship."
+        end
+      else
+        relations.each do |relation|
+          @@sub_graphs << [:has_many, relation, {}]
+        end
       end
     end
 
