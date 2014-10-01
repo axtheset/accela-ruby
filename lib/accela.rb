@@ -4,6 +4,7 @@ require "httparty"
 require "active_support/core_ext/string/inflections"
 
 require "accela/inflector"
+require "accela/escaper"
 require "accela/translator"
 require "accela/model"
 require "accela/configuration"

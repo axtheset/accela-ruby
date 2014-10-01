@@ -1,5 +1,6 @@
 module Accela
   class API
+    include Escaper
 
     def self.connection
       new
@@ -12,24 +13,34 @@ module Accela
     def get(path, auth_type, query={})
       uri = config.base_uri + path
       headers = headers(auth_type)
-      HTTParty.get(uri, headers: headers , query: query)
+      escaped_query = escape_query_values(query)
+      HTTParty.get(uri, headers: headers , query: escaped_query)
     end
 
     def put(path, auth_type, query={}, body={})
       uri = config.base_uri + path
       headers = headers(auth_type)
       json_body = JSON.generate(body)
-      HTTParty.put(uri, headers: headers, query: query, body: json_body)
+      escaped_query = escape_query_values(query)
+      HTTParty.put(uri, headers: headers, query: escaped_query, body: json_body)
     end
 
     def post(path, auth_type, query={}, body={})
       uri = config.base_uri + path
       headers = headers(auth_type)
       json_body = JSON.generate(body)
-      HTTParty.post(uri, headers: headers, query: query, body: json_body)
+      escaped_query = escape_query_values(query)
+      HTTParty.post(uri, headers: headers, query: escaped_query, body: json_body)
     end
 
     private
+
+    def escape_query_values(q)
+      q.inject({}) {|r, (key, val)|
+        r[key] = escape(val)
+        r
+      }
+    end
 
     def headers(auth_type)
       base_headers = {
